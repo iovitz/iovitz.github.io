@@ -52,4 +52,10 @@ cherry-pick
 git cherry-pick <hash>
 ```
 
+fetch
+
+```shell
+git fetch
+```
+
 # Git 其他操作
