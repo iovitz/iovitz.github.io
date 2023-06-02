@@ -1,20 +1,20 @@
 # 相关配置说明
-  # favicon: 网站图标
-  # avatar: 主题用户头像与昵称
-  # rss: rss订阅
-  # gtag: Google 分析
-  # comments: 文章评论系统
-    # gitalk
-    # disqus
-  # navbar: 主题页面导航栏
-  # catalog: 文章目录
-  # prevnext: 文章末尾的上一页与下一页
-  # friends: 友链
-  # footer: 页脚信息
-  # search: 文章搜索
-  # colorSwitch: 深/浅配色切换
-  # postShare: 文章分享
-  # codeBlock: 代码块配置
+# favicon: 网站图标
+# avatar: 主题用户头像与昵称
+# rss: rss订阅
+# gtag: Google 分析
+# comments: 文章评论系统
+# gitalk
+# disqus
+# navbar: 主题页面导航栏
+# catalog: 文章目录
+# prevnext: 文章末尾的上一页与下一页
+# friends: 友链
+# footer: 页脚信息
+# search: 文章搜索
+# colorSwitch: 深/浅配色切换
+# postShare: 文章分享
+# codeBlock: 代码块配置
 
 # enable: 是否开启相应功能，可选true || false
 
@@ -22,12 +22,12 @@
 favicon:
   enable: true
   icon: /images/avatar.png
-  touch_icon: /images/favicon.png
+  touch_icon: /images/avatar.png
 
 # 用户头像与昵称
 avatar:
   author_photo: /images/avatar.png
-  author_nickname: Iovitz
+  author_nickname: iovitz
   path: /
 
 # Google 分析
@@ -71,7 +71,7 @@ comments:
     # 例：我注册配置完毕后的网址为zxcxxxx.disqus.com，https-zxcxxxx-github-io即为shortname
     enable: false
     shortname: https-zxcxxxx-github-io
-  
+
   # waline https://waline.js.org
   waline:
     enable: false
@@ -79,18 +79,15 @@ comments:
 
 # 主题页面导航栏
 navbar:
-  -
-    name: Home
+  - name: Home
     enable: true
     path: /
     key: home
-  -
-    name: Archives
+  - name: Archives
     enable: true
     path: /archives/
     key: archives
-  -
-    name: Categories
+  - name: Categories
     enable: false
     path: /categories/
     key: categories
@@ -104,8 +101,7 @@ navbar:
   #   enable: true
   #   path: /friends/
   #   key: friends
-  -
-    name: About
+  - name: About
     enable: true
     path: /about/
     key: about
@@ -123,12 +119,10 @@ friends:
   # nickname: 昵称
   # site: 地址
   # meta: 描述
-  -
-    nickname: Zcheng
+  - nickname: Zcheng
     site: https://zcheng.site/
     meta:
-  -
-    nickname: Hexo
+  - nickname: Hexo
     site: https://hexo.io/
     meta:
 
@@ -142,12 +136,10 @@ footer:
     # path: 地址
 
     # 按需取消注释以启用
-    -
-      name: iovitz
+    - name: iovitz
       icon: github
       path: https://github.com/iovitz
-    -
-      name: email
+    - name: email
       icon: envelope
       path: mailto:iovitz1999@gmail.com
     # -
@@ -171,11 +163,9 @@ footer:
     # 支持变量显示，可自定义扩展，具体见主题/layout/_partial/footer.ejs
     # 一般用来显示根据各种场景需要切换的文本，如时间年份
     # 如：{thisYear} 会被替换为今年年份
-    -
-      name: Copyright © {thisYear} Oranges
+    - name: Copyright © {thisYear} Oranges
       path: https://github.com/zchengsite/hexo-theme-oranges
-    -
-      name: Theme by Oranges | Powered by Hexo
+    - name: Theme by Oranges | Powered by Hexo
       path: https://github.com/zchengsite/hexo-theme-oranges
 
   # 浏览量统计
@@ -184,18 +174,15 @@ footer:
     enable: false
     provider: '//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'
     item:
-      -
-        enable: true
+      - enable: true
         id: busuanzi_value_site_pv
         name: 本站总访问量
         unit: 次
-      -
-        enable: true
+      - enable: true
         id: busuanzi_value_page_pv
         name: 本文总阅读量
         unit: 次
-      -
-        enable: true
+      - enable: true
         id: busuanzi_value_site_uv
         name: 本站访客数
         unit: 人
@@ -203,7 +190,7 @@ footer:
 # 文章搜索
 search:
   enable: true
-  placeholder: 
+  placeholder:
 
 # 深/浅配色切换
 colorSwitch:
