@@ -11,16 +11,22 @@ tags:
 - [Git 官网](https://git-scm.com/)
 - [Git 官方文档](https://git-scm.com/about)
 
-**Git 学习工具**
-
-- [Learn Git Branching](https://learngitbranching.js.org/)
-
 **Git 的 GUI 工具**
 
 - [Github Desktop](https://desktop.github.com/)
 - [Sourcetree](https://www.sourcetreeapp.com/)
 
+**Git 的一些其他资源**
+
+- [Learn Git Branching](https://learngitbranching.js.org/)
+
 # Git 常用指令
+
+克隆仓库
+
+```shell
+git clone <rep url>
+```
 
 暂存
 
@@ -38,6 +44,12 @@ git commit -m "<commit message>"
 
 ```shell
 git reset --soft HEAD^
+```
+
+cherry-pick
+
+```shell
+git cherry-pick <hash>
 ```
 
 # Git 其他操作
