@@ -17,10 +17,13 @@
 <ul>
 <li><a href="https://learngitbranching.js.org/">Learn Git Branching</a></li>
 </ul>
-<h1 id="Git-常用指令"><a href="#Git-常用指令" class="headerlink" title="Git 常用指令"></a>Git 常用指令</h1><p>克隆仓库</p>
+<h1 id="Git-仓库操作"><a href="#Git-仓库操作" class="headerlink" title="Git 仓库操作"></a>Git 仓库操作</h1><p>克隆仓库</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone &lt;rep url&gt;</span><br></pre></td></tr></table></figure>
 
-<p>暂存</p>
+<p>设置远程仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:iovitz/&lt;repo name&gt;.git</span><br></pre></td></tr></table></figure>
+
+<h1 id="Git-常用指令"><a href="#Git-常用指令" class="headerlink" title="Git 常用指令"></a>Git 常用指令</h1><p>暂存</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
 
 <p>提交</p>
@@ -34,8 +37,7 @@
 
 <p>fetch</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>
-
-<h1 id="Git-其他操作"><a href="#Git-其他操作" class="headerlink" title="Git 其他操作"></a>Git 其他操作</h1>]]></content>
+]]></content>
       <categories>
         <category>研发基建</category>
       </categories>
