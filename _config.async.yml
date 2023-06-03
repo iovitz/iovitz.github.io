@@ -92,12 +92,12 @@ icons:
 top_bars:
   - title: 首页
     url: /
-  - title: 归档
+  - title: 笔记检索
     url: /archives
     children:
-      - title: 分类
+      - title: 分类检索
         url: /categories/
-      - title: 标签
+      - title: 标签检索
         url: /tags/
   - title: 钢盆我呀
     url: /about
@@ -116,7 +116,7 @@ banner:
     videoUrl:
   archive:
     type: img
-    bannerText: 文档检索
+    bannerText: 笔记检索
     bannerTitle: 找得到算你输
   about:
     bannerTitle: 我怎么向你介绍自己啊<br>我只是一个平平无奇的饭桶嘤
