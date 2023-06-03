@@ -116,7 +116,8 @@ banner:
     videoUrl:
   archive:
     type: img
-    bannerText: 笔记检索
+    title: 笔记归档
+    bannerText: 笔记归档
     bannerTitle: 找得到算你输
   about:
     bannerTitle: 我怎么向你介绍自己啊<br>我只是一个平平无奇的饭桶嘤
