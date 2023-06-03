@@ -105,4 +105,3 @@ deploy:
   type: git
   repo: https://github.com/iovitz/iovitz.github.io.git
   branch: main
-  
