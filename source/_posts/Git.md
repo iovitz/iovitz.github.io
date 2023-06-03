@@ -1,7 +1,10 @@
 ---
 title: Git
 date: 2023-06-02 18:46:03
+categories: 研发基建
 tags:
+  - Git
+  - 研发基建
 ---
 
 # Git 学习相关文档
