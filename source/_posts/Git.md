@@ -23,13 +23,21 @@ tags:
 
 - [Learn Git Branching](https://learngitbranching.js.org/)
 
-# Git 常用指令
+# Git 仓库操作
 
 克隆仓库
 
 ```shell
 git clone <rep url>
 ```
+
+设置远程仓库
+
+```shell
+git remote add origin git@github.com:iovitz/<repo name>.git
+```
+
+# Git 常用指令
 
 暂存
 
@@ -60,5 +68,3 @@ fetch
 ```shell
 git fetch
 ```
-
-# Git 其他操作
