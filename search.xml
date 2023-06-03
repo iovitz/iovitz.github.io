@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>Git</title>
+    <url>/2023/06/02/Git/</url>
+    <content><![CDATA[<h1 id="Git-学习相关文档"><a href="#Git-学习相关文档" class="headerlink" title="Git 学习相关文档"></a>Git 学习相关文档</h1><p><strong>Git 的官方文档</strong></p>
+<ul>
+<li><a href="https://git-scm.com/">Git 官网</a></li>
+<li><a href="https://git-scm.com/about">Git 官方文档</a></li>
+</ul>
+<p><strong>Git 的 GUI 工具</strong></p>
+<ul>
+<li><a href="https://desktop.github.com/">Github Desktop</a></li>
+<li><a href="https://www.sourcetreeapp.com/">Sourcetree</a></li>
+</ul>
+<p><strong>Git 的一些其他资源</strong></p>
+<ul>
+<li><a href="https://learngitbranching.js.org/">Learn Git Branching</a></li>
+</ul>
+<h1 id="Git-常用指令"><a href="#Git-常用指令" class="headerlink" title="Git 常用指令"></a>Git 常用指令</h1><p>克隆仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone &lt;rep url&gt;</span><br></pre></td></tr></table></figure>
+
+<p>暂存</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>提交</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;&lt;commit message&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>回退</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
+
+<p>cherry-pick</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git cherry-pick &lt;hash&gt;</span><br></pre></td></tr></table></figure>
+
+<p>fetch</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>
+
+<h1 id="Git-其他操作"><a href="#Git-其他操作" class="headerlink" title="Git 其他操作"></a>Git 其他操作</h1>]]></content>
+      <categories>
+        <category>研发基建</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+        <tag>研发基建</tag>
+      </tags>
+  </entry>
+</search>
