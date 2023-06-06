@@ -54,21 +54,20 @@
   <entry>
     <title>前端请求建设</title>
     <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
-    <content><![CDATA[<p>&lt;–&gt;</p>
-<h1 id="接口封装"><a href="#接口封装" class="headerlink" title="接口封装"></a>接口封装</h1><h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h2><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>常见的接口重试策略有两种：</p>
+    <content><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h2><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>接口重试是接口稳定性中非常重要的点，接口重试的应用场景主要有：</p>
 <ul>
-<li><p>定时重试</p>
-</li>
-<li><p>退避重试</p>
-</li>
-<li><p>最大重试次数</p>
-</li>
-<li><p>处理后端重试错误码</p>
-</li>
+<li>用户网络情况较差</li>
+<li>服务端出现故障抖动，无法及时响应前端请求</li>
+</ul>
+<p>接口重试需要设计好重试的策略，并且定好最大重试次数（一般情况下需要避免无限重试），同时也要做好对后端错误码的处理，前端和后端应该约定好几个固定的重复语义的错误码，前端收到错误码时，根据错误码判断是否需要重试</p>
+<p>常见的接口重试策略有两种：</p>
+<ul>
+<li>定时重试（3，3，3，3，3…）：重试时间固定</li>
+<li>冪次退避重试（1，4，9，16，25…）：重试间隔会慢慢变长，当服务器出现故障时，采取退避重试可以避免对服务器造成大冲击</li>
 </ul>
 <figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fetchRemoteData = (retryTime = <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">retry</span> = (<span class="params">err: <span class="built_in">any</span></span>)=&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (retryTime &gt; <span class="number">3</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(err);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(</span><br><span class="line">        <span class="function">() =&gt;</span> <span class="title function_">fetchRemoteData</span>().<span class="title function_">then</span>(resolve, reject), <span class="title class_">Math</span>.<span class="title function_">pow</span>(retryTime, <span class="number">2</span>) * <span class="number">1000</span>,</span><br><span class="line">      );</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> axios.<span class="title function_">get</span>(<span class="string">&#x27;/api/config&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  &#125;, <span class="function">() =&gt;</span> <span class="title function_">retry</span>(retryTime + <span class="number">1</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="域名下发"><a href="#域名下发" class="headerlink" title="域名下发"></a>域名下发</h2>]]></content>
+<h2 id="接口并发限制"><a href="#接口并发限制" class="headerlink" title="接口并发限制"></a>接口并发限制</h2>]]></content>
       <categories>
         <category>前端</category>
       </categories>
