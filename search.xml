@@ -54,7 +54,8 @@
   <entry>
     <title>前端请求建设</title>
     <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
-    <content><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h2><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>接口重试是接口稳定性中非常重要的点，接口重试的应用场景主要有：</p>
+    <content><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><h1 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h1><p>前端和服务端应该有统一的错误码规范，每个错误码都应该有唯一的语义，后端返回给前端错误码时，前端根据不同的错误码执行不同的操作，</p>
+<h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>接口重试是接口稳定性中非常重要的点，接口重试的应用场景主要有：</p>
 <ul>
 <li>用户网络情况较差</li>
 <li>服务端出现故障抖动，无法及时响应前端请求</li>
