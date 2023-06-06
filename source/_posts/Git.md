@@ -3,7 +3,6 @@ title: Git
 description: Git学习笔记
 author: 不锈钢盆
 date: 2023-06-02 18:46:03
-single_column: true
 categories: 研发基建
 tags:
   - Git
