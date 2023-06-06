@@ -1,10 +1,10 @@
 ---
 title: Linux
-description: Linux学习笔记
 author: 不锈钢盆
-date: 2023-06-06 17:04:20
 single_column: true
 toc: true
+date: 2023-06-06 17:04:20
+description:
 categories:
 tags:
 ---
