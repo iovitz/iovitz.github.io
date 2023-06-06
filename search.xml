@@ -54,7 +54,8 @@
   <entry>
     <title>前端请求建设</title>
     <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
-    <content><![CDATA[<h1 id="接口封装"><a href="#接口封装" class="headerlink" title="接口封装"></a>接口封装</h1><h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h2><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>常见的接口重试策略有两种：</p>
+    <content><![CDATA[<p>&lt;–&gt;</p>
+<h1 id="接口封装"><a href="#接口封装" class="headerlink" title="接口封装"></a>接口封装</h1><h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h2><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>常见的接口重试策略有两种：</p>
 <ul>
 <li><p>定时重试</p>
 </li>
