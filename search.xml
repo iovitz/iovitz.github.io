@@ -55,6 +55,19 @@
       </tags>
   </entry>
   <entry>
+    <title>NestJS</title>
+    <url>/2023/06/14/NestJS/</url>
+    <content><![CDATA[<h1 id="NestJS笔记"><a href="#NestJS笔记" class="headerlink" title="NestJS笔记"></a>NestJS笔记</h1>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>NestJS</tag>
+        <tag>NodeJS</tag>
+        <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端请求建设</title>
     <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
     <content><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><p>Axios原生请求功能太多了，开发中不一定需要这么多功能，所以这里简单封装一下Axios，简化一下使用流程，并且提供更好的Typescript支持，实际使用时可以根据具体情况对代码进行更改</p>
