@@ -70,6 +70,30 @@
       </tags>
   </entry>
   <entry>
+    <title>MongoDB</title>
+    <url>/2023/06/14/MongoDB/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>MongoDB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL</title>
+    <url>/2023/06/14/MySQL/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NestJS</title>
     <url>/2023/06/14/NestJS/</url>
     <content><![CDATA[<h1 id="NestJS笔记"><a href="#NestJS笔记" class="headerlink" title="NestJS笔记"></a>NestJS笔记</h1>]]></content>
@@ -80,6 +104,18 @@
         <tag>NestJS</tag>
         <tag>NodeJS</tag>
         <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Radis</title>
+    <url>/2023/06/14/Radis/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>Radis</tag>
       </tags>
   </entry>
   <entry>
