@@ -131,6 +131,19 @@
       </tags>
   </entry>
   <entry>
+    <title>前端工程质量</title>
+    <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>研发基建</category>
+      </categories>
+      <tags>
+        <tag>研发基建</tag>
+        <tag>工程化</tag>
+        <tag>工程质量</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端请求建设</title>
     <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
     <content><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><p>Axios原生请求功能太多了，开发中不一定需要这么多功能，所以这里简单封装一下Axios，简化一下使用流程，并且提供更好的Typescript支持，实际使用时可以根据具体情况对代码进行更改</p>
