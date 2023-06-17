@@ -25,9 +25,56 @@ npm install -g @vue/cli
 vue create -p dcloudio/uni-preset-vue#vue3 <project-name>
 ```
 
-这里创建的只是一个空架子项目，如果需要添加Eslint或者Prettier等一些前端工程质量相关的建设，可以参考{% post_link 前端工程质量 前端工程质量 %}
+项目创建好之后，如果需要添加Eslint或者Prettier等一些前端工程质量相关的建设，可以参考{% post_link 前端工程质量 前端工程质量 %}
 
-# 工具方法
+项目的包管理工具推荐实用`pnpm`，因为真的很好用！
+
+# 最佳实践
+
+## ACSS
+
+acss能够为样式开发带来很大的便捷，这里推荐的ACSS样式方案是Bootstrap的Style Utilities
+
+## 状态管理
+
+[vuex](https://vuex.vuejs.org/zh/)和[pinia](https://pinia.vuejs.org/)都是很优秀的状态管理库，不过这里推荐实用pinia，vuex用起来巨麻烦！！！修改一个store可能要改动到多个文件，而且对typescript的支持也很差。pinia有比较好的typescript支持，而且使用起来很灵活，推荐！
+
+安装pinia
+
+```shell
+pnpm i pinia
+```
+
+同时建议安装`pinia-plugin-persistedstate`这个库，用来做状态持久化
+
+```shell
+pnpm i pinia-plugin-persistedstate
+```
+
+建议使用pinia作为
+
+```ts
+import { createPinia } from 'pinia';
+import { createPersistedState } from 'pinia-plugin-persistedstate';
+
+export const pinia = createPinia();
+
+// 数据持久化
+pinia.use(
+  createPersistedState({
+    storage: {
+      getItem(key: string): string | null {
+        key = 'pinia_store_' + key
+        return uni.getStorageSync(key)
+      },
+      setItem(key: string, value: string) {
+        key = 'pinia_store_' + key
+        uni.setStorageSync(key, value)
+      },
+    },
+  }),
+)
+```
 
 ## 网络请求
 
@@ -113,8 +160,6 @@ class ShortChain {
 
 ```
 
-
-
 ## 存储
 
 对storage进行一些封装，原生Storage直接使用的话不安全，本地存储满了的话，回导致线上白屏，所以这里简单进行一层封装
@@ -175,3 +220,5 @@ class Storage {
   }
 }
 ```
+
+# 稳定性
