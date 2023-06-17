@@ -27,84 +27,151 @@ vue create -p dcloudio/uni-preset-vue#vue3 <project-name>
 
 这里创建的只是一个空架子项目，如果需要添加Eslint或者Prettier等一些前端工程质量相关的建设，可以参考{% post_link 前端工程质量 前端工程质量 %}
 
-
-
 # 工具方法
 
 ## 网络请求
+
+### HTTP
 
 为了保持跨端良好的兼容性，uniapp中提供了封装好的支持跨端的网络请求接口`uni.request`，网页中的`axios`库无法在uniapp中正常工作，所以这里封装一个类用来统一处理请求的发送
 
 ```ts
 type Header = Record<string, string>;
 interface RequestConfig {
-	baseURL: string;
-	timeout: number;
-	header: Header;
+    baseURL: string;
+    timeout: number;
+    header: Header;
 }
 
 // 前后端约定好的Response数据结构
 interface Response<T = any> {
-	code: number;
-	data: T;
-	message: string;
+    code: number;
+    data: T;
+    message: string;
 }
 
 class ShortChain {
-	private config: RequestConfig;
+    private config: RequestConfig;
 
-	constructor(config: RequestConfig) {
-		this.config = config;
-	}
+    constructor(config: RequestConfig) {
+        this.config = config;
+    }
 
-	public setHeader(key: string, value: string) {
-		this.config.header[key] = value;
-	}
+    public setHeader(key: string, value: string) {
+        this.config.header[key] = value;
+    }
 
-	public delHeader(key: string) {
-		delete this.config.header[key];
-	}
+    public delHeader(key: string) {
+        delete this.config.header[key];
+    }
 
-	private request(
-		method: UniNamespace.RequestOptions['method'],
-		url: string,
-		data: any,
-		requestHeader: Header = {}
-	) {
-		return new Promise<UniApp.RequestSuccessCallbackResult>((success, fail) => {
-			const { header, baseURL, timeout } = this.config;
-			uni.request({
-				url: baseURL + url,
-				data,
-				method,
-				success,
-				fail,
-				timeout,
-				header: {
-					...header,
-					...requestHeader,
-				},
-			});
-		}).then((res: UniApp.RequestSuccessCallbackResult) => {
-			const data = res.data as any;
-			if (data.code !== 0) {
-				uni.showToast({
-					icon: 'error',
-					title: data.message,
-				});
-			}
-			return data;
-		});
-	}
+    private request(
+        method: UniNamespace.RequestOptions['method'],
+        url: string,
+        data: any,
+        requestHeader: Header = {}
+    ) {
+        return new Promise<UniApp.RequestSuccessCallbackResult>((success, fail) => {
+            const { header, baseURL, timeout } = this.config;
+            uni.request({
+                url: baseURL + url,
+                data,
+                method,
+                success,
+                fail,
+                timeout,
+                header: {
+                    ...header,
+                    ...requestHeader,
+                },
+            });
+        }).then((res: UniApp.RequestSuccessCallbackResult) => {
+            const data = res.data as any;
+            if (data.code !== 0) {
+                uni.showToast({
+                    icon: 'error',
+                    title: data.message,
+                });
+            }
+            return data;
+        });
+    }
 
-	public get<T = unknown>(url: string, data: any = {}, header: Header = {}) {
-		return this.request('GET', url, data, header) as Promise<Response<T>>;
-	}
+    public get<T = unknown>(url: string, data: any = {}, header: Header = {}) {
+        return this.request('GET', url, data, header) as Promise<Response<T>>;
+    }
 
-	public post<T = unknown>(url: string, data: any = {}, header: Header = {}) {
-		return this.request('POST', url, data, header) as Promise<Response<T>>;
-	}
+    public post<T = unknown>(url: string, data: any = {}, header: Header = {}) {
+        return this.request('POST', url, data, header) as Promise<Response<T>>;
+    }
 }
+```
+
+### Web Socket
+
+```ts
+
+```
 
 
+
+## 存储
+
+对storage进行一些封装，原生Storage直接使用的话不安全，本地存储满了的话，回导致线上白屏，所以这里简单进行一层封装
+
+```ts
+class Storage {
+
+  /**
+   * set storage
+   * @param key storage key
+   * @param val storage value
+   * @param safely 出错时是否抛出异常
+   */
+  public set(key: string, val: any, safely = true) {
+    try {
+      val = typeof val === 'string' ? val : JSON.stringify(val)
+      uni.setStorageSync(key, val)
+    } catch (e) {
+      if (!safely) {
+        // TODO Report
+        throw e
+      }
+    }
+  }
+
+
+  /**
+   * get storage
+   * @param key storage key
+   */
+  public get<T = any>(key: string): T | null {
+    const val = uni.getStorageSync(key) as T
+    return val || null
+  }
+
+  /**
+   * remove storage item
+   * @param {string} key storage key
+   */
+  public remove(key: string) {
+    uni.removeStorageSync(key)
+  }
+
+  /**
+   * is storage has key
+   * @param {string} key 需要查询的key
+   * @return {boolean} 查询结果
+   */
+  public has(key: string): boolean {
+    return this.get(key) !== null
+  }
+
+  /**
+   * 清空本地存储
+   */
+  public clear() {
+    uni.clearStorageSync()
+  }
+}
 ```
