@@ -174,9 +174,21 @@
       </tags>
   </entry>
   <entry>
+    <title>《从一到无穷大》</title>
+    <url>/2023/08/31/%E4%BB%8E%E4%B8%80%E5%88%B0%E6%97%A0%E7%A9%B7%E5%A4%A7/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>阅读笔记</category>
+      </categories>
+      <tags>
+        <tag>阅读</tag>
+        <tag>物理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端工程质量</title>
     <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="Eslint和Prettier配置"><a href="#Eslint和Prettier配置" class="headerlink" title="Eslint和Prettier配置"></a>Eslint和Prettier配置</h1>]]></content>
       <categories>
         <category>研发基建</category>
       </categories>
@@ -223,7 +235,7 @@
 </ul>
 <figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fetchRemoteData = (retryTime = <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">retry</span> = (<span class="params">err: <span class="built_in">any</span></span>)=&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (retryTime &gt; <span class="number">3</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(err);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(</span><br><span class="line">        <span class="function">() =&gt;</span> <span class="title function_">fetchRemoteData</span>().<span class="title function_">then</span>(resolve, reject), <span class="title class_">Math</span>.<span class="title function_">pow</span>(retryTime, <span class="number">2</span>) * <span class="number">1000</span>,</span><br><span class="line">      );</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> axios.<span class="title function_">get</span>(<span class="string">&#x27;/api/config&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  &#125;, <span class="function">() =&gt;</span> <span class="title function_">retry</span>(retryTime + <span class="number">1</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="接口并发限制"><a href="#接口并发限制" class="headerlink" title="接口并发限制"></a>接口并发限制</h2>]]></content>
+<h2 id="接口并发调度"><a href="#接口并发调度" class="headerlink" title="接口并发调度"></a>接口并发调度</h2>]]></content>
       <categories>
         <category>前端</category>
       </categories>
