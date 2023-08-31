@@ -111,21 +111,21 @@ banner:
     position: top
     fit: cover
   index:
-    bannerText: 希望自己能成为一个能Cover住项目50%+事情的工程师
-    bannerTitle: 俺主要用来记一些学习笔记<br>因为笔记软件他不好用呀么不好用
+    bannerText: 希望自己能成为一个能独当一面的工程师
+    bannerTitle: 这个Blog用来记一些学习笔记<br>因为笔记软件他不好用呀么不好用
     videoUrl:
   archive:
     type: img
     bannerText: 笔记归档
     bannerTitle: 找得到算你输
   about:
-    bannerText: 这有什么好介绍的
+    bannerText: 少来探究我
     bannerTitle: 谁往下水道扔东西了<br>怎么连下水道的老鼠也要打扰吗
 
 # Sidebar settings
 sidebar:
   typedTextPrefix: 我是一个
-  typedText: ['前端开发工程师', '未来的架构师', '初级后端开发工程师', '饭桶']
+  typedText: ['平平无奇的饭桶', '未来的艺术家', 'Vimer']
   info:
     - key: 职业
       val: 前端开发工程师
@@ -138,10 +138,10 @@ sidebar:
 
 # About page settings
 about:
-  title: 这我要怎么说啊
-  introduction: 哦，反正就是自己的一些笔记，就这样
-  blog: 没什么
-  privacy: 只是个笔记网站，这需要什么隐私权和评论啊，而且好像还不能删掉这一项，如果删掉他就是空的，哎呀这就是设计缺陷
+  title: ♥
+  introduction: ♥
+  blog: ♥
+  privacy: ♥
 
 # Footer settings
 footer:
