@@ -7,18 +7,22 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="害，没啥好描述的，就一些学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="俺的一些笔记">
-<meta property="og:url" content="https://iovitz.github.io/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/index.html">
+<meta name="description" content="包管理工具的一些使用方法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端包管理工具设置淘宝源">
+<meta property="og:url" content="https://iovitz.github.io/2023/09/02/%E5%89%8D%E7%AB%AF%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%B7%98%E5%AE%9D%E6%BA%90/index.html">
 <meta property="og:site_name" content="俺的一些笔记">
-<meta property="og:description" content="害，没啥好描述的，就一些学习笔记">
+<meta property="og:description" content="包管理工具的一些使用方法">
 <meta property="og:locale">
+<meta property="article:published_time" content="2023-09-02T07:56:10.000Z">
+<meta property="article:modified_time" content="2023-09-03T16:31:47.899Z">
 <meta property="article:author" content="iovitz">
+<meta property="article:tag" content="研发基建">
+<meta property="article:tag" content="工程化">
 <meta name="twitter:card" content="summary">
 
 
-<title >俺的一些笔记</title>
+<title >前端包管理工具设置淘宝源</title>
 
 <!-- Favicon -->
 
@@ -60,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"iovitz.github.io","author":"iovitz","root":"/","typed_text":["平平无奇的饭桶","未来的艺术家","Vimer"],"theme_version":"2.0.9","theme":{"switch":true,"default":"style-dark"},"favicon":{"logo":"/images/icon.png","icon16":"/images/icon.png","icon32":"/images/icon.png","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/icon.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"},"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2023-09-02 14:31:58"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2023-09-04 00:31:47"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.9" id="trm-switch-style">
@@ -216,7 +220,8 @@
             <!-- top bar end -->
 
             <!-- body -->
-            <div class="trm-content-start">
+            
+<div class="trm-content-start">
     <!-- banner -->
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
@@ -237,10 +242,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            笔记归档
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            找得到算你输
+                            前端包管理工具设置淘宝源
                         </h1>
 
                         
@@ -250,7 +255,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        categories
+                                        2023
                                     </span
                                 ></li>
                             </ul>
@@ -282,7 +287,17 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
         <img alt="Avatar" class="trm-avatar" src="/images/avatar.jpg">
@@ -300,10 +315,10 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -337,7 +352,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -348,6 +363,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#淘宝源官网"  data-scroll-to="#淘宝源官网"><span class="toc-number">1.</span> <span class="toc-text">淘宝源官网</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#常用包管理工具的修改方案"  data-scroll-to="#常用包管理工具的修改方案"><span class="toc-number">2.</span> <span class="toc-text">常用包管理工具的修改方案</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#npm"  data-scroll-to="#npm"><span class="toc-number">2.1.</span> <span class="toc-text">npm</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#yarn"  data-scroll-to="#yarn"><span class="toc-number">2.2.</span> <span class="toc-text">yarn</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#pnpm"  data-scroll-to="#pnpm"><span class="toc-number">2.3.</span> <span class="toc-text">pnpm</span></a></li></ol></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#nrm源管理工具"  data-scroll-to="#nrm源管理工具"><span class="toc-number">3.</span> <span class="toc-text">nrm源管理工具</span></a></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -358,73 +380,112 @@
                 <div class="trm-content" id="trm-content">
                     <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list"><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/Linux/">Linux</a><span class="category-list-count">（1）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E5%89%8D%E7%AB%AF/">前端</a><span class="category-list-count">（4）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E5%90%8E%E7%AB%AF/">后端</a><span class="category-list-count">（1）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/">数据库</a><span class="category-list-count">（3）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E7%A0%94%E5%8F%91%E5%9F%BA%E5%BB%BA/">研发基建</a><span class="category-list-count">（2）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">阅读笔记</a><span class="category-list-count">（1）</span></li><li class="col-lg-4 trm-list-item " style="margin: 6px 0;"><a class="category-list-link" href="/categories/%E9%A1%B9%E7%9B%AE/">项目</a><span class="category-list-count">（1）</span></li></ul>
-                
-            </div>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            09/02
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            15:56
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            不锈钢盆
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="淘宝源官网"><a href="#淘宝源官网" class="headerlink" title="淘宝源官网"></a>淘宝源官网</h1><p><a target="_blank" rel="noopener" href="http://www.npmmirror.com/?spm=a1z389.11499242.0.0.65452413JRqluJ&utm_content=g_1000297192">npmmirror 镜像站</a></p>
+<h1 id="常用包管理工具的修改方案"><a href="#常用包管理工具的修改方案" class="headerlink" title="常用包管理工具的修改方案"></a>常用包管理工具的修改方案</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><strong>查看源</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm get registry </span><br></pre></td></tr></table></figure>
 
-<!-- history -->
+<p><strong>临时修改</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --registry https://registry.npmmirror.com install any-touch</span><br></pre></td></tr></table></figure>
 
-<div class="row">
+<p><strong>写入配置</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h2><p><strong>查看源</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn config get registry</span><br></pre></td></tr></table></figure>
+
+<p><strong>临时修改</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add any-touch@latest --registry=https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+
+<p><strong>写入配置</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn config set registry https://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h2><p><strong>查看源</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm get registry </span><br></pre></td></tr></table></figure>
+
+<p><strong>临时修改</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm --registry https://registry.npm.taobao.org install any-touch</span><br></pre></td></tr></table></figure>
+
+<p><strong>写入配置</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+
+<h1 id="nrm源管理工具"><a href="#nrm源管理工具" class="headerlink" title="nrm源管理工具"></a>nrm源管理工具</h1><p><strong>安装</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i nrm -g</span><br></pre></td></tr></table></figure>
+
+<p><strong>显示使用的源地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+
+<p><strong>设置源</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm add &lt;registry&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>切换源</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除源</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm del &lt;registry&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试速度</strong></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm test npm</span><br></pre></td></tr></table></figure>
+</article>
+    
+    
+
+</div>
+<div id="post-next-prev" class="row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                阅读笔记
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
+        <div class="trm-older-publication">
             
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/08/31/%E4%BB%8E%E4%B8%80%E5%88%B0%E6%97%A0%E7%A9%B7%E5%A4%A7/" class="trm-anima-link">
-                                        《从一到无穷大》
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">08/31</li>
-                                        <li class="trm-accent-color">10:51</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
+            <a class="trm-op-top trm-anima-link" href="/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/">
+                <span class="trm-op-cover">
+                    <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+                </span>
+                <h6 class="trm-op-title">项目:HaHaChat</h6>
+            </a>
+            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/06/14</li>
+                <li>19:42</li>
+                <li>项目</li>
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    
 
 
 
@@ -464,6 +525,10 @@
             <!-- body end -->
 
             <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
         <div class="trm-fixed-btn" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
@@ -549,6 +614,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
