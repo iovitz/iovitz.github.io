@@ -1,6 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Docker使用</title>
+    <url>/2024/02/05/Docker%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p>更新包版本</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<p>安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ca-certificates curl gnupg lsb-release software-properties-common</span><br></pre></td></tr></table></figure>
+
+<p>添加证书</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+
+<p>写入软件源信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h1><p>创建<code>docker-compose.yml</code>文件后，填入需要安装的软件对应的文件内容，执行<code>docker-compose up -d</code>就可以了</p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mysql_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mysql&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">--default-authentication-plugin=mysql_native_password</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">3306</span><span class="string">:3306</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mysql:/var/lib/mysql</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="MondoDB"><a href="#MondoDB" class="headerlink" title="MondoDB"></a>MondoDB</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mongo_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mongo&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># root账户用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">root</span></span><br><span class="line">      <span class="comment"># root账户密码</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27017</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mongo:/data/db</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;redis&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">command:</span> [<span class="string">&quot;redis-server&quot;</span>, <span class="string">&quot;--requirepass&quot;</span>, <span class="string">&quot;a123123.&quot;</span>]</span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">6379</span><span class="string">:6379</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/redis:/data</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>研发基建</category>
+      </categories>
+      <tags>
+        <tag>工程化</tag>
+        <tag>研发基建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Flutter</title>
     <url>/2023/06/14/Flutter/</url>
     <content><![CDATA[]]></content>
@@ -54,8 +90,8 @@
         <category>研发基建</category>
       </categories>
       <tags>
-        <tag>Git</tag>
         <tag>研发基建</tag>
+        <tag>Git</tag>
       </tags>
   </entry>
   <entry>
@@ -226,8 +262,8 @@
         <category>研发基建</category>
       </categories>
       <tags>
-        <tag>研发基建</tag>
         <tag>工程化</tag>
+        <tag>研发基建</tag>
       </tags>
   </entry>
   <entry>
@@ -238,8 +274,8 @@
         <category>研发基建</category>
       </categories>
       <tags>
-        <tag>研发基建</tag>
         <tag>工程化</tag>
+        <tag>研发基建</tag>
         <tag>工程质量</tag>
       </tags>
   </entry>

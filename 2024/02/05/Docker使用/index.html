@@ -7,18 +7,22 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="害，没啥好描述的，就一些学习笔记">
-<meta property="og:type" content="website">
-<meta property="og:title" content="俺的一些笔记">
-<meta property="og:url" content="https://iovitz.github.io/tags/Linux/index.html">
+<meta name="description" content="Docker的指令和常用软件安装脚本">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Docker使用">
+<meta property="og:url" content="https://iovitz.github.io/2024/02/05/Docker%E4%BD%BF%E7%94%A8/index.html">
 <meta property="og:site_name" content="俺的一些笔记">
-<meta property="og:description" content="害，没啥好描述的，就一些学习笔记">
+<meta property="og:description" content="Docker的指令和常用软件安装脚本">
 <meta property="og:locale">
+<meta property="article:published_time" content="2024-02-05T10:09:12.000Z">
+<meta property="article:modified_time" content="2024-02-05T10:15:52.347Z">
 <meta property="article:author" content="iovitz">
+<meta property="article:tag" content="工程化">
+<meta property="article:tag" content="研发基建">
 <meta name="twitter:card" content="summary">
 
 
-<title >俺的一些笔记</title>
+<title >Docker使用</title>
 
 <!-- Favicon -->
 
@@ -60,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"iovitz.github.io","author":"iovitz","root":"/","typed_text":["平平无奇的饭桶","未来的艺术家","Vimer"],"theme_version":"2.0.9","theme":{"switch":true,"default":"style-dark"},"favicon":{"logo":"/images/icon.png","icon16":"/images/icon.png","icon32":"/images/icon.png","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/icon.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"},"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-02-05 18:16:02"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-02-05 18:15:52"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.9" id="trm-switch-style">
@@ -216,7 +220,8 @@
             <!-- top bar end -->
 
             <!-- body -->
-            <div class="trm-content-start">
+            
+<div class="trm-content-start">
     <!-- banner -->
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
@@ -237,10 +242,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            笔记归档
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            找得到算你输
+                            Docker使用
                         </h1>
 
                         
@@ -250,7 +255,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        tags
+                                        2024
                                     </span
                                 ></li>
                             </ul>
@@ -282,7 +287,17 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
         <img alt="Avatar" class="trm-avatar" src="/images/avatar.jpg">
@@ -300,10 +315,10 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -337,7 +352,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -348,6 +363,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#安装Docker"  data-scroll-to="#安装Docker"><span class="toc-number">1.</span> <span class="toc-text">安装Docker</span></a></li><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#安装常用软件"  data-scroll-to="#安装常用软件"><span class="toc-number">2.</span> <span class="toc-text">安装常用软件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#MySQL"  data-scroll-to="#MySQL"><span class="toc-number">2.1.</span> <span class="toc-text">MySQL</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#MondoDB"  data-scroll-to="#MondoDB"><span class="toc-number">2.2.</span> <span class="toc-text">MondoDB</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#Redis"  data-scroll-to="#Redis"><span class="toc-number">2.3.</span> <span class="toc-text">Redis</span></a></li></ol></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -358,73 +380,91 @@
                 <div class="trm-content" id="trm-content">
                     <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-tag-list trm-list" itemprop="keywords"><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/Axios/" rel="tag">Axios</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/Flutter/" rel="tag">Flutter</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/MongoDB/" rel="tag">MongoDB</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/MySQL/" rel="tag">MySQL</a><span class="tag-list-count">2</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/NestJS/" rel="tag">NestJS</a><span class="tag-list-count">2</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/NodeJS/" rel="tag">NodeJS</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/Radis/" rel="tag">Radis</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/UniApp/" rel="tag">UniApp</a><span class="tag-list-count">2</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E5%90%8E%E7%AB%AF/" rel="tag">后端</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E7%A8%8B%E5%8C%96/" rel="tag">工程化</a><span class="tag-list-count">3</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/" rel="tag">工程质量</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" rel="tag">性能优化</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" rel="tag">数据库</a><span class="tag-list-count">3</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E7%A0%94%E5%8F%91%E5%9F%BA%E5%BB%BA/" rel="tag">研发基建</a><span class="tag-list-count">4</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E7%A8%B3%E5%AE%9A%E6%80%A7/" rel="tag">稳定性</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E8%AF%B7%E6%B1%82/" rel="tag">请求</a><span class="tag-list-count">1</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E8%B7%A8%E7%AB%AF%E5%BC%80%E5%8F%91/" rel="tag">跨端开发</a><span class="tag-list-count">2</span></li><li class="col-lg-4 trm-list-item"><a class="tag-list-link" href="/tags/%E9%A1%B9%E7%9B%AE/" rel="tag">项目</a><span class="tag-list-count">1</span></li></ul>
-                
-            </div>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            02/05
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            18:09
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            不锈钢盆
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p>更新包版本</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
 
-<!-- history -->
+<p>安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ca-certificates curl gnupg lsb-release software-properties-common</span><br></pre></td></tr></table></figure>
 
-<div class="row">
+<p>添加证书</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+
+<p>写入软件源信息</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h1><p>创建<code>docker-compose.yml</code>文件后，填入需要安装的软件对应的文件内容，执行<code>docker-compose up -d</code>就可以了</p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mysql_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mysql&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">--default-authentication-plugin=mysql_native_password</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">3306</span><span class="string">:3306</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mysql:/var/lib/mysql</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="MondoDB"><a href="#MondoDB" class="headerlink" title="MondoDB"></a>MondoDB</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mongo_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mongo&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># root账户用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">root</span></span><br><span class="line">      <span class="comment"># root账户密码</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27017</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mongo:/data/db</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;redis&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">command:</span> [<span class="string">&quot;redis-server&quot;</span>, <span class="string">&quot;--requirepass&quot;</span>, <span class="string">&quot;a123123.&quot;</span>]</span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">6379</span><span class="string">:6379</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/redis:/data</span></span><br></pre></td></tr></table></figure>
+
+</article>
+    
+    
+
+</div>
+<div id="post-next-prev" class="row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                Linux
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
+        <div class="trm-older-publication">
             
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/06/Linux/" class="trm-anima-link">
-                                        Linux
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/06</li>
-                                        <li class="trm-accent-color">17:04</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
+            <a class="trm-op-top trm-anima-link" href="/2023/09/02/%E5%89%8D%E7%AB%AF%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%B7%98%E5%AE%9D%E6%BA%90/">
+                <span class="trm-op-cover">
+                    <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+                </span>
+                <h6 class="trm-op-title">前端包管理工具设置淘宝源</h6>
+            </a>
+            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>23/09/02</li>
+                <li>15:56</li>
+                <li>研发基建</li>
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span>
-    </div>
-
-
+    
 
 
 
@@ -464,6 +504,10 @@
             <!-- body end -->
 
             <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
         <div class="trm-fixed-btn" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
@@ -549,6 +593,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
