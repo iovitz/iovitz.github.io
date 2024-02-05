@@ -9,9 +9,7 @@ tags:
   - 研发基建
 ---
 
-# 安装Docker和常用软件
-
-## 安装Docker
+# 安装Docker
 
 更新包版本
 
@@ -48,4 +46,67 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 ```shell
 systemctl start docker
+```
+
+# 安装常用软件
+
+创建`docker-compose.yml`文件后，填入需要安装的软件对应的文件内容，执行`docker-compose up -d`就可以了
+
+## MySQL
+
+```yml
+version: 'latest'
+
+services:
+  mysql_db:
+    container_name: 'mysql'
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 3306:3306
+    volumes:
+      - /home/mysql:/var/lib/mysql
+```
+
+## MondoDB
+
+```yml
+version: 'latest'
+
+services:
+  mongo_db:
+    container_name: 'mongo'
+    image: mongo
+    restart: always
+    environment:
+      # root账户用户名
+      MONGO_INITDB_ROOT_USERNAME: root
+      # root账户密码
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - 27017:27017
+    volumes:
+      - /home/mongo:/data/db
+```
+
+## Redis
+
+```yml
+version: 'latest'
+
+services:
+  redis_db:
+    container_name: 'redis'
+    image: redis
+    command: ["redis-server", "--requirepass", "a123123."]
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - 6379:6379
+    volumes:
+      - /home/redis:/data
 ```
