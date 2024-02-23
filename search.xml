@@ -226,20 +226,20 @@
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn config get registry</span><br></pre></td></tr></table></figure>
 
 <p><strong>临时修改</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn add any-touch@latest --registry=https://registry.npmjs.org/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn add any-touch@latest --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
 
 <p><strong>写入配置</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn config set registry https://registry.npm.taobao.org/</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
 
 
 <h2 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h2><p><strong>查看源</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm get registry </span><br></pre></td></tr></table></figure>
 
 <p><strong>临时修改</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm --registry https://registry.npm.taobao.org install any-touch</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm --registry https://registry.npmmirror.com install any-touch</span><br></pre></td></tr></table></figure>
 
 <p><strong>写入配置</strong></p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm config set registry https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
 
 <h1 id="nrm源管理工具"><a href="#nrm源管理工具" class="headerlink" title="nrm源管理工具"></a>nrm源管理工具</h1><p><strong>安装</strong></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm i nrm -g</span><br></pre></td></tr></table></figure>
