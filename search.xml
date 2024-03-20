@@ -106,6 +106,32 @@
       </tags>
   </entry>
   <entry>
+    <title>MAC下常用软件安装</title>
+    <url>/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>进入官网<a href="https://sspai.com/link?target=https://brew.sh/">https://brew.sh</a>复制以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>国内用户可用 CDN 安装命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>输入自己的密码，按 ENTER 继续</p>
+<p>运行命令将 homebrew 添加到您的 PATH 中</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">echo &#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; /Users/&lt;willshowyouruserdirectory&gt;/.zprofile</span><br></pre></td></tr></table></figure>
+
+<p>继续运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这时你就成功安装了 Homebrew</p>
+]]></content>
+      <categories>
+        <category>环境搭建</category>
+      </categories>
+      <tags>
+        <tag>MAC</tag>
+        <tag>环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MongoDB</title>
     <url>/2023/06/14/MongoDB/</url>
     <content><![CDATA[]]></content>
