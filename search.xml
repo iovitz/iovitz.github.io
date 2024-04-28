@@ -169,6 +169,42 @@
       </tags>
   </entry>
   <entry>
+    <title>Nginx学习笔记</title>
+    <url>/2024/04/28/Nginx%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h2 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h2><h3 id="准备依赖"><a href="#准备依赖" class="headerlink" title="准备依赖"></a>准备依赖</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">一定需要先update一下，否则直接安装依赖可能会找不到包</span></span><br><span class="line">apt-get update</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装依赖包</span></span><br><span class="line">apt-get install -y perl libperl-dev libgd3 libgd-dev libgeoip1 libgeoip-dev geoip-bin libxml2 libxml2-dev libxslt1-dev libssl-dev wget gnupg2 ca-certificates libpcre3-dev build-essential</span><br></pre></td></tr></table></figure>
+
+<h3 id="下载Nginx"><a href="#下载Nginx" class="headerlink" title="下载Nginx"></a>下载Nginx</h3><p>进入下载目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入自己的下载目录</span></span><br><span class="line">cd ~/downloads</span><br></pre></td></tr></table></figure>
+
+<p>下载指定版本的Nginx包 <a href="http://nginx.org/download/">http://nginx.org/download/</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.23.3.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>解压下载的压缩包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解压，压缩包可以留着以后使用</span></span><br><span class="line">tar -xvf nginx-1.23.3.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>移动目录到&#x2F;usr&#x2F;local中，旧的压缩包以后可能用得上</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mv nginx-1.23.3 /usr/local/nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><p>进入nginx目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/nginx</span><br></pre></td></tr></table></figure>
+
+<p>编译</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx \</span><br><span class="line">--conf-path=/usr/local/nginx/nginx.conf \</span><br><span class="line">--with-http_ssl_module \</span><br><span class="line">--with-http_v2_module \</span><br><span class="line">--with-http_realip_module \</span><br><span class="line">--with-http_stub_status_module \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--with-pcre \</span><br><span class="line">--with-stream \</span><br><span class="line">--with-stream_ssl_module \</span><br><span class="line">--with-stream_realip_module \</span><br><span class="line">--with-ipv6</span><br></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>Nginx常用指令</p>
+]]></content>
+      <categories>
+        <category>研发基建</category>
+      </categories>
+      <tags>
+        <tag>研发基建</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Radis</title>
     <url>/2023/06/14/Radis/</url>
     <content><![CDATA[]]></content>
@@ -351,6 +387,86 @@
         <tag>请求</tag>
         <tag>Axios</tag>
         <tag>稳定性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>积极心理学</title>
+    <url>/2024/04/18/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/</url>
+    <content><![CDATA[<h2 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h2><h2 id="人类的本能是消"><a href="#人类的本能是消" class="headerlink" title="人类的本能是消?"></a>人类的本能是消?</h2><h2 id="积极心理学的四位奠基人"><a href="#积极心理学的四位奠基人" class="headerlink" title="积极心理学的四位奠基人"></a>积极心理学的四位奠基人</h2><h2 id="ACE幸福能力模型"><a href="#ACE幸福能力模型" class="headerlink" title="ACE幸福能力模型"></a>ACE幸福能力模型</h2><h2 id="幸福的悖论"><a href="#幸福的悖论" class="headerlink" title="幸福的悖论"></a>幸福的悖论</h2><p>经济学家提出的自私悖论：</p>
+<blockquote>
+<p>一个人特别想得到自己的好处，最后反而越得不到</p>
+</blockquote>
+<p>爱出者爱返</p>
+<p>幸福越多越好？</p>
+<h3 id="果酱实验"><a href="#果酱实验" class="headerlink" title="果酱实验"></a>果酱实验</h3><table>
+<thead>
+<tr>
+<th>摊位上摆放的果酱数量</th>
+<th>试吃数量</th>
+<th>购买数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>6</td>
+<td>少</td>
+<td>多</td>
+</tr>
+<tr>
+<td>24</td>
+<td>多</td>
+<td>少</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>选择越多，越难做出选择</p>
+</blockquote>
+<p>需要从当下开始，用心体验用心挖掘</p>
+<h3 id="有意义的快乐"><a href="#有意义的快乐" class="headerlink" title="有意义的快乐"></a>有意义的快乐</h3><p>意义是人类幸福的一个重要因素</p>
+<p>意义：</p>
+<ul>
+<li>我是谁<ul>
+<li><blockquote>
+<p>家庭的责任</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>我从哪里来<ul>
+<li><blockquote>
+<p>来自于家庭</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>我要到哪里去</li>
+</ul>
+<p>三角定位理论：</p>
+<p>虚无主义：</p>
+<p>西西弗斯推巨石到山顶之后，巨石又会滚下来，西西弗斯周而复始的做这么一件事情，他的意义在于<code>下定决心重回山顶</code></p>
+<p>存在主义哲学家 萨特：存在先于本质</p>
+<blockquote>
+<p>与其花时间思考为什么活着，不如花时间想怎么活着</p>
+</blockquote>
+<p>积极心理学：<code>好好活着</code></p>
+<h2 id="痛苦的意义"><a href="#痛苦的意义" class="headerlink" title="痛苦的意义"></a>痛苦的意义</h2><p>痛苦的体验本身也是有意义的</p>
+<p>痛苦：</p>
+<ul>
+<li>思考意义</li>
+<li>发现自己的品格（顽强不息</li>
+<li>追求超越（不局限于享乐</li>
+</ul>
+<p>意义来自于成长过程中的发现</p>
+<p>意义就是：灵性悟性，感性，德性<br>意义感觉</p>
+<blockquote>
+<p>意义因人而异，需要自己探索，坚持自己所相信</p>
+</blockquote>
+<p>幸福因素非常多，但是积极是主观的</p>
+]]></content>
+      <categories>
+        <category>心理学</category>
+      </categories>
+      <tags>
+        <tag>-- 心理学</tag>
       </tags>
   </entry>
   <entry>
