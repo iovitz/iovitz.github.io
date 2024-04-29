@@ -194,7 +194,15 @@
 <p>安装</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
 
-<p>Nginx常用指令</p>
+<p>编辑<code>nginx.conf</code>文件，修改配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /usr/local/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>修改用户为root<br><img src="https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-04-29-11-09-20.png" alt="2024-04-29-11-09-20" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>添加到全局指令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/</span><br></pre></td></tr></table></figure>
+
+<p>防火墙放开端口，修改本机防火墙，放开指定端口，如果用的是云平台，可以去云平台防火墙放开端口</p>
+<h2 id="Nginx常用指令"><a href="#Nginx常用指令" class="headerlink" title="Nginx常用指令"></a>Nginx常用指令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启</span></span><br><span class="line">nginx -s reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭</span></span><br><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>研发基建</category>
