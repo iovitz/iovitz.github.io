@@ -80,4 +80,32 @@ cd /usr/local/nginx
 make && make install
 ```
 
-Nginx常用指令
+编辑`nginx.conf`文件，修改配置
+
+```shell
+vim /usr/local/nginx/nginx.conf
+```
+
+修改用户为root
+![2024-04-29-11-09-20](https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-04-29-11-09-20.png)
+
+添加到全局指令
+
+```shell
+ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/
+```
+
+防火墙放开端口，修改本机防火墙，放开指定端口，如果用的是云平台，可以去云平台防火墙放开端口
+
+## Nginx常用指令
+
+```shell
+# 启动
+nginx
+
+# 重启
+nginx -s reload
+
+# 关闭
+nginx -s stop
+```
