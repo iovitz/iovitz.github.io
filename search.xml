@@ -176,7 +176,7 @@
 <h3 id="下载Nginx"><a href="#下载Nginx" class="headerlink" title="下载Nginx"></a>下载Nginx</h3><p>进入下载目录</p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入自己的下载目录</span></span><br><span class="line">cd ~/downloads</span><br></pre></td></tr></table></figure>
 
-<p>下载指定版本的Nginx包 <a href="http://nginx.org/download/">http://nginx.org/download/</a></p>
+<p>下载指定版本的Nginx包，这里以<code>1.23.3</code>版本为例，更多版本参考 <a href="http://nginx.org/download/">http://nginx.org/download/</a></p>
 <figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.23.3.tar.gz</span><br></pre></td></tr></table></figure>
 
 <p>解压下载的压缩包</p>
@@ -203,6 +203,8 @@
 
 <p>防火墙放开端口，修改本机防火墙，放开指定端口，如果用的是云平台，可以去云平台防火墙放开端口</p>
 <h2 id="Nginx常用指令"><a href="#Nginx常用指令" class="headerlink" title="Nginx常用指令"></a>Nginx常用指令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启</span></span><br><span class="line">nginx -s reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭</span></span><br><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
+
+<h2 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h2><p><img src="https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-07-08-19-59-37.png" alt="2024-07-08-19-59-37" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
 ]]></content>
       <categories>
         <category>研发基建</category>
