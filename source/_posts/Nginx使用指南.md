@@ -30,7 +30,7 @@ apt-get install -y perl libperl-dev libgd3 libgd-dev libgeoip1 libgeoip-dev geoi
 cd ~/downloads
 ```
 
-下载指定版本的Nginx包 <http://nginx.org/download/>
+下载指定版本的Nginx包，这里以`1.23.3`版本为例，更多版本参考 <http://nginx.org/download/>
 
 ```shell
 wget http://nginx.org/download/nginx-1.23.3.tar.gz
@@ -109,3 +109,7 @@ nginx -s reload
 # 关闭
 nginx -s stop
 ```
+
+## Nginx常用配置
+
+![2024-07-08-19-59-37](https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-07-08-19-59-37.png)
