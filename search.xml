@@ -49,6 +49,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Flutter笔记</title>
+    <url>/2024/08/13/Flutter%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Git</title>
     <url>/2023/06/02/Git/</url>
     <content><![CDATA[<h1 id="Git-学习相关文档"><a href="#Git-学习相关文档" class="headerlink" title="Git 学习相关文档"></a>Git 学习相关文档</h1><p><strong>Git 的官方文档</strong></p>
@@ -95,9 +100,14 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux</title>
-    <url>/2023/06/06/Linux/</url>
+    <title>Ionic笔记</title>
+    <url>/2024/08/13/Ionic%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Linux学习笔记</title>
+    <url>/2023/06/06/Linux/</url>
+    <content><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
       <categories>
         <category>Linux</category>
       </categories>
@@ -215,6 +225,20 @@
       </tags>
   </entry>
   <entry>
+    <title>NodeJS的Web框架Sails.js</title>
+    <url>/2024/08/13/NodeJS%E7%9A%84Web%E6%A1%86%E6%9E%B6Sails-js/</url>
+    <content><![CDATA[<h1 id="Sails框架"><a href="#Sails框架" class="headerlink" title="Sails框架"></a>Sails框架</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="发"><a href="#发" class="headerlink" title="发"></a>发</h3><h3 id="接口开发"><a href="#接口开发" class="headerlink" title="接口开发"></a>接口开发</h3><h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>sails自带一个ORM，但是并不好用，并且资料也很少</p>
+<h2 id="日志方案"><a href="#日志方案" class="headerlink" title="日志方案"></a>日志方案</h2><h2 id="Rest-Client"><a href="#Rest-Client" class="headerlink" title="Rest Client"></a>Rest Client</h2><h2 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h2>]]></content>
+      <categories>
+        <category>服务端框架</category>
+      </categories>
+      <tags>
+        <tag>NodeJS</tag>
+        <tag>Web Framework</tag>
+        <tag>Javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Radis</title>
     <url>/2023/06/14/Radis/</url>
     <content><![CDATA[]]></content>
@@ -225,6 +249,11 @@
         <tag>数据库</tag>
         <tag>Radis</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>ReactNative笔记</title>
+    <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>UniApp最佳实践</title>
