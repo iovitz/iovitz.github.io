@@ -1,567 +1,569 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>Github Action</title>
-      <link href="/2024/09/27/Github-Action/"/>
-      <url>/2024/09/27/Github-Action/</url>
-      
-        <content type="html"><![CDATA[<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h2 id="分支限制"><a href="#分支限制" class="headerlink" title="分支限制"></a>分支限制</h2><h2 id="好用的Action"><a href="#好用的Action" class="headerlink" title="好用的Action"></a>好用的Action</h2><h3 id="Checkout"><a href="#Checkout" class="headerlink" title="Checkout"></a>Checkout</h3><h4 id="action-x2F-checkout"><a href="#action-x2F-checkout" class="headerlink" title="action&#x2F;checkout"></a>action&#x2F;checkout</h4><blockquote><p><a href="https://github.com/actions/checkout">https://github.com/actions/checkout</a></p></blockquote><h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><h4 id="SamKirkland-x2F-FTP-Deploy-Action"><a href="#SamKirkland-x2F-FTP-Deploy-Action" class="headerlink" title="SamKirkland&#x2F;FTP-Deploy-Action"></a>SamKirkland&#x2F;FTP-Deploy-Action</h4><blockquote><p><a href="https://github.com/SamKirkland/FTP-Deploy-Action">https://github.com/SamKirkland/FTP-Deploy-Action</a></p></blockquote><p>使用示例：</p><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过密码上传</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">With</span> <span class="string">FTP</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">SamKirkland/FTP-Deploy-Action@v4.3.5</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">server:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_SERVER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">local-dir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_LOCAL_DIR &#125;&#125;</span>&#x27;</span></span><br><span class="line">    <span class="attr">server-dir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_SERVER_DIR &#125;&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure><h4 id="appleboy-x2F-scp-action"><a href="#appleboy-x2F-scp-action" class="headerlink" title="appleboy&#x2F;scp-action"></a>appleboy&#x2F;scp-action</h4><blockquote><p><a href="https://github.com/appleboy/scp-action">https://github.com/appleboy/scp-action</a></p></blockquote><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过密码上传</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">With</span> <span class="string">FTP</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">sebastianpopp/ftp-action@releases/v2</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_SERVER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">user:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">localDir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_LOCAL_DIR &#125;&#125;</span>&#x27;</span></span><br><span class="line">    <span class="attr">remoteDir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_SERVER_DIR &#125;&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure><h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><h3 id="Node-JS"><a href="#Node-JS" class="headerlink" title="Node JS"></a>Node JS</h3><h4 id="actions-x2F-setup-node"><a href="#actions-x2F-setup-node" class="headerlink" title="actions&#x2F;setup-node"></a>actions&#x2F;setup-node</h4><blockquote><p><a href="https://github.com/actions/setup-node">https://github.com/actions/setup-node</a></p></blockquote><h4 id="pnpm-x2F-action-setup"><a href="#pnpm-x2F-action-setup" class="headerlink" title="pnpm&#x2F;action-setup"></a>pnpm&#x2F;action-setup</h4><blockquote><p><a href="https://github.com/pnpm/action-setup">https://github.com/pnpm/action-setup</a></p></blockquote>]]></content>
-      
-      
+<search>
+  <entry>
+    <title>Docker使用</title>
+    <url>/2024/02/05/Docker%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p>更新包版本</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
+
+<p>安装依赖</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install ca-certificates curl gnupg lsb-release software-properties-common</span><br></pre></td></tr></table></figure>
+
+<p>添加证书</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure>
+
+<p>写入软件源信息</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure>
+
+<p>启动</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure>
+
+<h1 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h1><p>创建<code>docker-compose.yml</code>文件后，填入需要安装的软件对应的文件内容，执行<code>docker-compose up -d</code>就可以了</p>
+<h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mysql_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mysql&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">--default-authentication-plugin=mysql_native_password</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">3306</span><span class="string">:3306</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mysql:/var/lib/mysql</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="MondoDB"><a href="#MondoDB" class="headerlink" title="MondoDB"></a>MondoDB</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mongo_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mongo&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># root账户用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">root</span></span><br><span class="line">      <span class="comment"># root账户密码</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27017</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mongo:/data/db</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;redis&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">command:</span> [<span class="string">&quot;redis-server&quot;</span>, <span class="string">&quot;--requirepass&quot;</span>, <span class="string">&quot;a123123.&quot;</span>]</span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">6379</span><span class="string">:6379</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/redis:/data</span></span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
-          
-          <category> 前端基建 </category>
-          
+        <category>研发基建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 研发基建 </tag>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>NodeJS的Web框架Sails.js</title>
-      <link href="/2024/08/13/NodeJS%E7%9A%84Web%E6%A1%86%E6%9E%B6Sails-js/"/>
-      <url>/2024/08/13/NodeJS%E7%9A%84Web%E6%A1%86%E6%9E%B6Sails-js/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Sails框架"><a href="#Sails框架" class="headerlink" title="Sails框架"></a>Sails框架</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="发"><a href="#发" class="headerlink" title="发"></a>发</h3><h3 id="接口开发"><a href="#接口开发" class="headerlink" title="接口开发"></a>接口开发</h3><h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>sails自带一个ORM，但是并不好用，并且资料也很少</p><h2 id="日志方案"><a href="#日志方案" class="headerlink" title="日志方案"></a>日志方案</h2><h2 id="Rest-Client"><a href="#Rest-Client" class="headerlink" title="Rest Client"></a>Rest Client</h2><h2 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h2>]]></content>
-      
-      
+      <tags>
+        <tag>工程化</tag>
+        <tag>研发基建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flutter</title>
+    <url>/2023/06/14/Flutter/</url>
+    <content><![CDATA[]]></content>
       <categories>
-          
-          <category> 服务端框架 </category>
-          
+        <category>前端</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> NodeJS </tag>
-            
-            <tag> Web Framework </tag>
-            
-            <tag> Javascript </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Flutter笔记</title>
-      <link href="/2024/08/13/Flutter%E7%AC%94%E8%AE%B0/"/>
-      <url>/2024/08/13/Flutter%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>ReactNative笔记</title>
-      <link href="/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/"/>
-      <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Ionic笔记</title>
-      <link href="/2024/08/13/Ionic%E7%AC%94%E8%AE%B0/"/>
-      <url>/2024/08/13/Ionic%E7%AC%94%E8%AE%B0/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Nginx学习笔记</title>
-      <link href="/2024/04/28/Nginx%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
-      <url>/2024/04/28/Nginx%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h2><h3 id="准备依赖"><a href="#准备依赖" class="headerlink" title="准备依赖"></a>准备依赖</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">一定需要先update一下，否则直接安装依赖可能会找不到包</span></span><br><span class="line">apt-get update</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装依赖包</span></span><br><span class="line">apt-get install -y perl libperl-dev libgd3 libgd-dev libgeoip1 libgeoip-dev geoip-bin libxml2 libxml2-dev libxslt1-dev libssl-dev wget gnupg2 ca-certificates libpcre3-dev build-essential</span><br></pre></td></tr></table></figure><h3 id="下载Nginx"><a href="#下载Nginx" class="headerlink" title="下载Nginx"></a>下载Nginx</h3><p>进入下载目录</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入自己的下载目录</span></span><br><span class="line">cd ~/downloads</span><br></pre></td></tr></table></figure><p>下载指定版本的Nginx包，这里以<code>1.23.3</code>版本为例，更多版本参考 <a href="http://nginx.org/download/">http://nginx.org/download/</a></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.23.3.tar.gz</span><br></pre></td></tr></table></figure><p>解压下载的压缩包</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解压，压缩包可以留着以后使用</span></span><br><span class="line">tar -xvf nginx-1.23.3.tar.gz</span><br></pre></td></tr></table></figure><p>移动目录到&#x2F;usr&#x2F;local中，旧的压缩包以后可能用得上</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv nginx-1.23.3 /usr/local/nginx</span><br></pre></td></tr></table></figure><h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><p>进入nginx目录</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/nginx</span><br></pre></td></tr></table></figure><p>编译</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx \</span><br><span class="line">--conf-path=/usr/local/nginx/nginx.conf \</span><br><span class="line">--with-http_ssl_module \</span><br><span class="line">--with-http_v2_module \</span><br><span class="line">--with-http_realip_module \</span><br><span class="line">--with-http_stub_status_module \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--with-pcre \</span><br><span class="line">--with-stream \</span><br><span class="line">--with-stream_ssl_module \</span><br><span class="line">--with-stream_realip_module \</span><br><span class="line">--with-ipv6</span><br></pre></td></tr></table></figure><p>安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure><p>编辑<code>nginx.conf</code>文件，修改配置</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /usr/local/nginx/nginx.conf</span><br></pre></td></tr></table></figure><p>修改用户为root<br><img src="https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-04-29-11-09-20.png" alt="2024-04-29-11-09-20" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p><p>添加到全局指令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/</span><br></pre></td></tr></table></figure><p>防火墙放开端口，修改本机防火墙，放开指定端口，如果用的是云平台，可以去云平台防火墙放开端口</p><h2 id="Nginx常用指令"><a href="#Nginx常用指令" class="headerlink" title="Nginx常用指令"></a>Nginx常用指令</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启</span></span><br><span class="line">nginx -s reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭</span></span><br><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure><h2 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h2><p><img src="https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-07-08-19-59-37.png" alt="2024-07-08-19-59-37" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>]]></content>
-      
-      
+      <tags>
+        <tag>Flutter</tag>
+        <tag>跨端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/2023/06/02/Git/</url>
+    <content><![CDATA[<h1 id="Git-学习相关文档"><a href="#Git-学习相关文档" class="headerlink" title="Git 学习相关文档"></a>Git 学习相关文档</h1><p><strong>Git 的官方文档</strong></p>
+<ul>
+<li><a href="https://git-scm.com/">Git 官网</a></li>
+<li><a href="https://git-scm.com/about">Git 官方文档</a></li>
+</ul>
+<p><strong>Git 的 GUI 工具</strong></p>
+<ul>
+<li><a href="https://desktop.github.com/">Github Desktop</a></li>
+<li><a href="https://www.sourcetreeapp.com/">Sourcetree</a></li>
+</ul>
+<p><strong>Git 的一些其他资源</strong></p>
+<ul>
+<li><a href="https://learngitbranching.js.org/">Learn Git Branching</a></li>
+</ul>
+<h1 id="Git-仓库操作"><a href="#Git-仓库操作" class="headerlink" title="Git 仓库操作"></a>Git 仓库操作</h1><p>克隆仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git clone &lt;rep url&gt;</span><br></pre></td></tr></table></figure>
+
+<p>设置远程仓库</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git remote add origin git@github.com:iovitz/&lt;repo name&gt;.git</span><br></pre></td></tr></table></figure>
+
+<h1 id="Git-常用指令"><a href="#Git-常用指令" class="headerlink" title="Git 常用指令"></a>Git 常用指令</h1><p>暂存</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+
+<p>提交</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git commit -m &quot;&lt;commit message&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>回退</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure>
+
+<p>cherry-pick</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git cherry-pick &lt;hash&gt;</span><br></pre></td></tr></table></figure>
+
+<p>fetch</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>
+]]></content>
       <categories>
-          
-          <category> 研发基建 </category>
-          
+        <category>研发基建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 研发基建 </tag>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>积极心理学</title>
-      <link href="/2024/04/18/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/"/>
-      <url>/2024/04/18/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/</url>
-      
-        <content type="html"><![CDATA[<h2 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h2><h2 id="人类的本能是消"><a href="#人类的本能是消" class="headerlink" title="人类的本能是消?"></a>人类的本能是消?</h2><h2 id="积极心理学的四位奠基人"><a href="#积极心理学的四位奠基人" class="headerlink" title="积极心理学的四位奠基人"></a>积极心理学的四位奠基人</h2><h2 id="ACE幸福能力模型"><a href="#ACE幸福能力模型" class="headerlink" title="ACE幸福能力模型"></a>ACE幸福能力模型</h2><h2 id="幸福的悖论"><a href="#幸福的悖论" class="headerlink" title="幸福的悖论"></a>幸福的悖论</h2><p>经济学家提出的自私悖论：</p><blockquote><p>一个人特别想得到自己的好处，最后反而越得不到</p></blockquote><p>爱出者爱返</p><p>幸福越多越好？</p><h3 id="果酱实验"><a href="#果酱实验" class="headerlink" title="果酱实验"></a>果酱实验</h3><table><thead><tr><th>摊位上摆放的果酱数量</th><th>试吃数量</th><th>购买数量</th></tr></thead><tbody><tr><td>6</td><td>少</td><td>多</td></tr><tr><td>24</td><td>多</td><td>少</td></tr></tbody></table><blockquote><p>选择越多，越难做出选择</p></blockquote><p>需要从当下开始，用心体验用心挖掘</p><h3 id="有意义的快乐"><a href="#有意义的快乐" class="headerlink" title="有意义的快乐"></a>有意义的快乐</h3><p>意义是人类幸福的一个重要因素</p><p>意义：</p><ul><li>我是谁<ul><li><blockquote><p>家庭的责任</p></blockquote></li></ul></li><li>我从哪里来<ul><li><blockquote><p>来自于家庭</p></blockquote></li></ul></li><li>我要到哪里去</li></ul><p>三角定位理论：</p><p>虚无主义：</p><p>西西弗斯推巨石到山顶之后，巨石又会滚下来，西西弗斯周而复始的做这么一件事情，他的意义在于<code>下定决心重回山顶</code></p><p>存在主义哲学家 萨特：存在先于本质</p><blockquote><p>与其花时间思考为什么活着，不如花时间想怎么活着</p></blockquote><p>积极心理学：<code>好好活着</code></p><h2 id="痛苦的意义"><a href="#痛苦的意义" class="headerlink" title="痛苦的意义"></a>痛苦的意义</h2><p>痛苦的体验本身也是有意义的</p><p>痛苦：</p><ul><li>思考意义</li><li>发现自己的品格（顽强不息</li><li>追求超越（不局限于享乐</li></ul><p>意义来自于成长过程中的发现</p><p>意义就是：灵性悟性，感性，德性<br>意义感觉</p><blockquote><p>意义因人而异，需要自己探索，坚持自己所相信</p></blockquote><p>幸福因素非常多，但是积极是主观的</p>]]></content>
-      
-      
+      <tags>
+        <tag>研发基建</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flutter笔记</title>
+    <url>/2024/08/13/Flutter%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Github Action</title>
+    <url>/2024/09/27/Github-Action/</url>
+    <content><![CDATA[<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h2 id="分支限制"><a href="#分支限制" class="headerlink" title="分支限制"></a>分支限制</h2><h2 id="好用的Action"><a href="#好用的Action" class="headerlink" title="好用的Action"></a>好用的Action</h2><h3 id="Checkout"><a href="#Checkout" class="headerlink" title="Checkout"></a>Checkout</h3><h4 id="action-x2F-checkout"><a href="#action-x2F-checkout" class="headerlink" title="action&#x2F;checkout"></a>action&#x2F;checkout</h4><blockquote>
+<p><a href="https://github.com/actions/checkout">https://github.com/actions/checkout</a></p>
+</blockquote>
+<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><h4 id="SamKirkland-x2F-FTP-Deploy-Action"><a href="#SamKirkland-x2F-FTP-Deploy-Action" class="headerlink" title="SamKirkland&#x2F;FTP-Deploy-Action"></a>SamKirkland&#x2F;FTP-Deploy-Action</h4><blockquote>
+<p><a href="https://github.com/SamKirkland/FTP-Deploy-Action">https://github.com/SamKirkland/FTP-Deploy-Action</a></p>
+</blockquote>
+<p>使用示例：</p>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过密码上传</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">With</span> <span class="string">FTP</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">SamKirkland/FTP-Deploy-Action@v4.3.5</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">server:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_SERVER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">local-dir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_LOCAL_DIR &#125;&#125;</span>&#x27;</span></span><br><span class="line">    <span class="attr">server-dir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_SERVER_DIR &#125;&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="appleboy-x2F-scp-action"><a href="#appleboy-x2F-scp-action" class="headerlink" title="appleboy&#x2F;scp-action"></a>appleboy&#x2F;scp-action</h4><blockquote>
+<p><a href="https://github.com/appleboy/scp-action">https://github.com/appleboy/scp-action</a></p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过密码上传</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">With</span> <span class="string">FTP</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">sebastianpopp/ftp-action@releases/v2</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_SERVER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">user:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">localDir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_LOCAL_DIR &#125;&#125;</span>&#x27;</span></span><br><span class="line">    <span class="attr">remoteDir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_SERVER_DIR &#125;&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><h4 id="easingthemes-x2F-ssh-deploy"><a href="#easingthemes-x2F-ssh-deploy" class="headerlink" title="easingthemes&#x2F;ssh-deploy"></a>easingthemes&#x2F;ssh-deploy</h4><blockquote>
+<p><a href="https://github.com/easingthemes/ssh-deploy">https://github.com/easingthemes/ssh-deploy</a></p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过SSH部署</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">server</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">easingthemes/ssh-deploy@main</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">SSH_PRIVATE_KEY:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_SSH_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">SOURCE:</span> <span class="string">.</span></span><br><span class="line">    <span class="attr">REMOTE_HOST:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">REMOTE_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">TARGET:</span> <span class="string">/root/duuk/serve</span></span><br><span class="line">    <span class="attr">EXCLUDE:</span> <span class="string">&quot;/dist/, /node_modules/&quot;</span></span><br><span class="line">    <span class="attr">SCRIPT_BEFORE:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      whoami</span></span><br><span class="line"><span class="string">      ls -al</span></span><br><span class="line"><span class="string"></span>    <span class="attr">SCRIPT_AFTER:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      whoami</span></span><br><span class="line"><span class="string">      ls -al</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="appleboy-x2F-ssh-action"><a href="#appleboy-x2F-ssh-action" class="headerlink" title="appleboy&#x2F;ssh-action"></a>appleboy&#x2F;ssh-action</h4><blockquote>
+<p><a href="https://github.com/appleboy/ssh-action">https://github.com/appleboy/ssh-action</a></p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过SSH部署</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">server</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@v1.0.3</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">key:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_SSH_KEY</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">script:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      whoami</span></span><br><span class="line"><span class="string">      ls -al</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight yml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 通过账号密码部署</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">server</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">appleboy/ssh-action@v1.0.3</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_HOST</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.SERVER_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">script:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      whoami</span></span><br><span class="line"><span class="string">      ls -al</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="Node-JS"><a href="#Node-JS" class="headerlink" title="Node JS"></a>Node JS</h3><h4 id="actions-x2F-setup-node"><a href="#actions-x2F-setup-node" class="headerlink" title="actions&#x2F;setup-node"></a>actions&#x2F;setup-node</h4><blockquote>
+<p><a href="https://github.com/actions/setup-node">https://github.com/actions/setup-node</a></p>
+</blockquote>
+<h4 id="pnpm-x2F-action-setup"><a href="#pnpm-x2F-action-setup" class="headerlink" title="pnpm&#x2F;action-setup"></a>pnpm&#x2F;action-setup</h4><blockquote>
+<p><a href="https://github.com/pnpm/action-setup">https://github.com/pnpm/action-setup</a></p>
+</blockquote>
+]]></content>
       <categories>
-          
-          <category> 心理学 </category>
-          
+        <category>前端基建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> -- 心理学 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MAC下常用软件安装</title>
-      <link href="/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/"/>
-      <url>/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>进入官网<a href="https://sspai.com/link?target=https://brew.sh/">https://brew.sh</a>复制以下命令</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure><p>国内用户可用 CDN 安装命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/install.sh)&quot;</span><br></pre></td></tr></table></figure><p>输入自己的密码，按 ENTER 继续</p><p>运行命令将 homebrew 添加到您的 PATH 中</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; /Users/&lt;willshowyouruserdirectory&gt;/.zprofile</span><br></pre></td></tr></table></figure><p>继续运行</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;</span><br></pre></td></tr></table></figure><p>这时你就成功安装了 Homebrew</p>]]></content>
-      
-      
+      <tags>
+        <tag>研发基建</tag>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Ionic笔记</title>
+    <url>/2024/08/13/Ionic%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Linux学习笔记</title>
+    <url>/2023/06/06/Linux/</url>
+    <content><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
       <categories>
-          
-          <category> 环境搭建 </category>
-          
+        <category>Linux</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MAC </tag>
-            
-            <tag> 环境搭建 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Docker使用</title>
-      <link href="/2024/02/05/Docker%E4%BD%BF%E7%94%A8/"/>
-      <url>/2024/02/05/Docker%E4%BD%BF%E7%94%A8/</url>
-      
-        <content type="html"><![CDATA[<h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p>更新包版本</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure><p>安装依赖</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install ca-certificates curl gnupg lsb-release software-properties-common</span><br></pre></td></tr></table></figure><p>添加证书</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -</span><br></pre></td></tr></table></figure><p>写入软件源信息</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository &quot;deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable&quot;</span><br></pre></td></tr></table></figure><p>安装</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install docker-ce docker-ce-cli containerd.io</span><br></pre></td></tr></table></figure><p>启动</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start docker</span><br></pre></td></tr></table></figure><h1 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h1><p>创建<code>docker-compose.yml</code>文件后，填入需要安装的软件对应的文件内容，执行<code>docker-compose up -d</code>就可以了</p><h2 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mysql_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mysql&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mysql</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">--default-authentication-plugin=mysql_native_password</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">3306</span><span class="string">:3306</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mysql:/var/lib/mysql</span></span><br></pre></td></tr></table></figure><h2 id="MondoDB"><a href="#MondoDB" class="headerlink" title="MondoDB"></a>MondoDB</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">mongo_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;mongo&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">mongo</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="comment"># root账户用户名</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_USERNAME:</span> <span class="string">root</span></span><br><span class="line">      <span class="comment"># root账户密码</span></span><br><span class="line">      <span class="attr">MONGO_INITDB_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">27017</span><span class="string">:27017</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/mongo:/data/db</span></span><br></pre></td></tr></table></figure><h2 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h2><figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">version:</span> <span class="string">&#x27;latest&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">redis_db:</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">&#x27;redis&#x27;</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">redis</span></span><br><span class="line">    <span class="attr">command:</span> [<span class="string">&quot;redis-server&quot;</span>, <span class="string">&quot;--requirepass&quot;</span>, <span class="string">&quot;a123123.&quot;</span>]</span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MYSQL_ROOT_PASSWORD:</span> <span class="string">root</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="number">6379</span><span class="string">:6379</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">/home/redis:/data</span></span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MAC下常用软件安装</title>
+    <url>/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
+    <content><![CDATA[<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>进入官网<a href="https://sspai.com/link?target=https://brew.sh/">https://brew.sh</a>复制以下命令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>国内用户可用 CDN 安装命令：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/bin/bash -c &quot;$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/install.sh)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>输入自己的密码，按 ENTER 继续</p>
+<p>运行命令将 homebrew 添加到您的 PATH 中</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">echo &#x27;eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;&#x27; &gt;&gt; /Users/&lt;willshowyouruserdirectory&gt;/.zprofile</span><br></pre></td></tr></table></figure>
+
+<p>继续运行</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">eval &quot;$(/opt/homebrew/bin/brew shellenv)&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这时你就成功安装了 Homebrew</p>
+]]></content>
       <categories>
-          
-          <category> 研发基建 </category>
-          
+        <category>环境搭建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 工程化 </tag>
-            
-            <tag> 研发基建 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>前端包管理工具设置淘宝源</title>
-      <link href="/2023/09/02/%E5%89%8D%E7%AB%AF%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%B7%98%E5%AE%9D%E6%BA%90/"/>
-      <url>/2023/09/02/%E5%89%8D%E7%AB%AF%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%B7%98%E5%AE%9D%E6%BA%90/</url>
-      
-        <content type="html"><![CDATA[<h1 id="淘宝源官网"><a href="#淘宝源官网" class="headerlink" title="淘宝源官网"></a>淘宝源官网</h1><p><a href="http://www.npmmirror.com/?spm=a1z389.11499242.0.0.65452413JRqluJ&utm_content=g_1000297192">npmmirror 镜像站</a></p><h1 id="常用包管理工具的修改方案"><a href="#常用包管理工具的修改方案" class="headerlink" title="常用包管理工具的修改方案"></a>常用包管理工具的修改方案</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><strong>查看源</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm get registry </span><br></pre></td></tr></table></figure><p><strong>临时修改</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm --registry https://registry.npmmirror.com install any-touch</span><br></pre></td></tr></table></figure><p><strong>写入配置</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><h2 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h2><p><strong>查看源</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn config get registry</span><br></pre></td></tr></table></figure><p><strong>临时修改</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn add any-touch@latest --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><p><strong>写入配置</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><h2 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h2><p><strong>查看源</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm get registry </span><br></pre></td></tr></table></figure><p><strong>临时修改</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm --registry https://registry.npmmirror.com install any-touch</span><br></pre></td></tr></table></figure><p><strong>写入配置</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure><h1 id="nrm源管理工具"><a href="#nrm源管理工具" class="headerlink" title="nrm源管理工具"></a>nrm源管理工具</h1><p><strong>安装</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i nrm -g</span><br></pre></td></tr></table></figure><p><strong>显示使用的源地址</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure><p><strong>设置源</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm add &lt;registry&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure><p><strong>切换源</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure><p><strong>删除源</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm del &lt;registry&gt;</span><br></pre></td></tr></table></figure><p><strong>测试速度</strong></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nrm test npm</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>MAC</tag>
+        <tag>环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MongoDB</title>
+    <url>/2023/06/14/MongoDB/</url>
+    <content><![CDATA[]]></content>
       <categories>
-          
-          <category> 研发基建 </category>
-          
+        <category>数据库</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 工程化 </tag>
-            
-            <tag> 研发基建 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>项目:HaHaChat</title>
-      <link href="/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/"/>
-      <url>/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>数据库</tag>
+        <tag>MongoDB</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL</title>
+    <url>/2023/06/14/MySQL/</url>
+    <content><![CDATA[]]></content>
       <categories>
-          
-          <category> 项目 </category>
-          
+        <category>数据库</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> MySQL </tag>
-            
-            <tag> NestJS </tag>
-            
-            <tag> UniApp </tag>
-            
-            <tag> 项目 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>前端性能优化</title>
-      <link href="/2023/06/14/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/"/>
-      <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>数据库</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NestJS最佳实践</title>
+    <url>/2023/06/14/NestJS%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
+    <content><![CDATA[<h1 id="NestJS笔记"><a href="#NestJS笔记" class="headerlink" title="NestJS笔记"></a>NestJS笔记</h1>]]></content>
       <categories>
-          
-          <category> 前端 </category>
-          
+        <category>后端</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 性能优化 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>前端工程质量</title>
-      <link href="/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/"/>
-      <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Eslint和Prettier配置"><a href="#Eslint和Prettier配置" class="headerlink" title="Eslint和Prettier配置"></a>Eslint和Prettier配置</h1>]]></content>
-      
-      
+      <tags>
+        <tag>NestJS</tag>
+        <tag>NodeJS</tag>
+        <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NodeJS的Web框架Sails.js</title>
+    <url>/2024/08/13/NodeJS%E7%9A%84Web%E6%A1%86%E6%9E%B6Sails-js/</url>
+    <content><![CDATA[<h1 id="Sails框架"><a href="#Sails框架" class="headerlink" title="Sails框架"></a>Sails框架</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="发"><a href="#发" class="headerlink" title="发"></a>发</h3><h3 id="接口开发"><a href="#接口开发" class="headerlink" title="接口开发"></a>接口开发</h3><h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>sails自带一个ORM，但是并不好用，并且资料也很少</p>
+<h2 id="日志方案"><a href="#日志方案" class="headerlink" title="日志方案"></a>日志方案</h2><h2 id="Rest-Client"><a href="#Rest-Client" class="headerlink" title="Rest Client"></a>Rest Client</h2><h2 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h2>]]></content>
       <categories>
-          
-          <category> 研发基建 </category>
-          
+        <category>服务端框架</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 工程化 </tag>
-            
-            <tag> 研发基建 </tag>
-            
-            <tag> 工程质量 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Radis</title>
-      <link href="/2023/06/14/Radis/"/>
-      <url>/2023/06/14/Radis/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>NodeJS</tag>
+        <tag>Web Framework</tag>
+        <tag>Javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nginx学习笔记</title>
+    <url>/2024/04/28/Nginx%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<h2 id="Nginx安装"><a href="#Nginx安装" class="headerlink" title="Nginx安装"></a>Nginx安装</h2><h3 id="准备依赖"><a href="#准备依赖" class="headerlink" title="准备依赖"></a>准备依赖</h3><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">一定需要先update一下，否则直接安装依赖可能会找不到包</span></span><br><span class="line">apt-get update</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">安装依赖包</span></span><br><span class="line">apt-get install -y perl libperl-dev libgd3 libgd-dev libgeoip1 libgeoip-dev geoip-bin libxml2 libxml2-dev libxslt1-dev libssl-dev wget gnupg2 ca-certificates libpcre3-dev build-essential</span><br></pre></td></tr></table></figure>
+
+<h3 id="下载Nginx"><a href="#下载Nginx" class="headerlink" title="下载Nginx"></a>下载Nginx</h3><p>进入下载目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">进入自己的下载目录</span></span><br><span class="line">cd ~/downloads</span><br></pre></td></tr></table></figure>
+
+<p>下载指定版本的Nginx包，这里以<code>1.23.3</code>版本为例，更多版本参考 <a href="http://nginx.org/download/">http://nginx.org/download/</a></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget http://nginx.org/download/nginx-1.23.3.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>解压下载的压缩包</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">解压，压缩包可以留着以后使用</span></span><br><span class="line">tar -xvf nginx-1.23.3.tar.gz</span><br></pre></td></tr></table></figure>
+
+<p>移动目录到&#x2F;usr&#x2F;local中，旧的压缩包以后可能用得上</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mv nginx-1.23.3 /usr/local/nginx</span><br></pre></td></tr></table></figure>
+
+<h3 id="编译安装"><a href="#编译安装" class="headerlink" title="编译安装"></a>编译安装</h3><p>进入nginx目录</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">cd /usr/local/nginx</span><br></pre></td></tr></table></figure>
+
+<p>编译</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">./configure --prefix=/usr/local/nginx \</span><br><span class="line">--conf-path=/usr/local/nginx/nginx.conf \</span><br><span class="line">--with-http_ssl_module \</span><br><span class="line">--with-http_v2_module \</span><br><span class="line">--with-http_realip_module \</span><br><span class="line">--with-http_stub_status_module \</span><br><span class="line">--with-http_gzip_static_module \</span><br><span class="line">--with-pcre \</span><br><span class="line">--with-stream \</span><br><span class="line">--with-stream_ssl_module \</span><br><span class="line">--with-stream_realip_module \</span><br><span class="line">--with-ipv6</span><br></pre></td></tr></table></figure>
+
+<p>安装</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">make &amp;&amp; make install</span><br></pre></td></tr></table></figure>
+
+<p>编辑<code>nginx.conf</code>文件，修改配置</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vim /usr/local/nginx/nginx.conf</span><br></pre></td></tr></table></figure>
+
+<p>修改用户为root<br><img src="https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-04-29-11-09-20.png" alt="2024-04-29-11-09-20" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+<p>添加到全局指令</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/</span><br></pre></td></tr></table></figure>
+
+<p>防火墙放开端口，修改本机防火墙，放开指定端口，如果用的是云平台，可以去云平台防火墙放开端口</p>
+<h2 id="Nginx常用指令"><a href="#Nginx常用指令" class="headerlink" title="Nginx常用指令"></a>Nginx常用指令</h2><figure class="highlight shell"><table><tr><td class="code"><pre><span class="line"><span class="meta prompt_"># </span><span class="language-bash">启动</span></span><br><span class="line">nginx</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">重启</span></span><br><span class="line">nginx -s reload</span><br><span class="line"><span class="meta prompt_"></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">关闭</span></span><br><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
+
+<h2 id="Nginx常用配置"><a href="#Nginx常用配置" class="headerlink" title="Nginx常用配置"></a>Nginx常用配置</h2><p><img src="https://iovitz.oss-cn-beijing.aliyuncs.com/markdown-image/2024-07-08-19-59-37.png" alt="2024-07-08-19-59-37" loading="lazy" onerror='this.onerror=null;this.src="/img/404.jpg"'></p>
+]]></content>
       <categories>
-          
-          <category> 数据库 </category>
-          
+        <category>研发基建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据库 </tag>
-            
-            <tag> Radis </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MongoDB</title>
-      <link href="/2023/06/14/MongoDB/"/>
-      <url>/2023/06/14/MongoDB/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>研发基建</tag>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Radis</title>
+    <url>/2023/06/14/Radis/</url>
+    <content><![CDATA[]]></content>
       <categories>
-          
-          <category> 数据库 </category>
-          
+        <category>数据库</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据库 </tag>
-            
-            <tag> MongoDB </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>MySQL</title>
-      <link href="/2023/06/14/MySQL/"/>
-      <url>/2023/06/14/MySQL/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>数据库</tag>
+        <tag>Radis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ReactNative笔记</title>
+    <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>UniApp最佳实践</title>
+    <url>/2023/06/14/UniApp%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
+    <content><![CDATA[<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><p>这里的 uniapp 项目使用 vue3 和 typescript 进行编写，要初始化一个 uniapp+vue3+typescript 的项目，可以使用 vue 的脚手架来选择模版进行创建</p>
+<p>先安装 vue 脚手架</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure>
+
+<p>然后通过脚手架选择 uniapp+vue3+tpescript 的模板进行创建</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue#vue3 &lt;project-name&gt;</span><br></pre></td></tr></table></figure>
+
+<p>项目创建好之后，如果需要添加 Eslint 或者 Prettier 等一些前端工程质量相关的建设，可以参考<a href="/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/" title="前端工程质量">前端工程质量</a></p>
+<p>项目的包管理工具推荐实用<code>pnpm</code>，因为真的很好用！</p>
+<h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><h2 id="ACSS"><a href="#ACSS" class="headerlink" title="ACSS"></a>ACSS</h2><p>acss 能够为样式开发带来很大的便捷，这里推荐的 ACSS 样式方案是 Bootstrap 的 Style Utilities</p>
+<h2 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h2><p><a href="https://vuex.vuejs.org/zh/">vuex</a>和<a href="https://pinia.vuejs.org/">pinia</a>都是很优秀的状态管理库，不过这里推荐实用 pinia，vuex 用起来巨麻烦！！！修改一个 store 可能要改动到多个文件，而且对 typescript 的支持也很差。pinia 有比较好的 typescript 支持，而且使用起来很灵活，推荐！</p>
+<p>安装 pinia</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm i pinia</span><br></pre></td></tr></table></figure>
+
+<p>同时建议安装<code>pinia-plugin-persistedstate</code>这个库，用来做状态持久化</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm i pinia-plugin-persistedstate</span><br></pre></td></tr></table></figure>
+
+<p>建议使用 pinia 作为</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createPinia &#125; <span class="keyword">from</span> <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createPersistedState &#125; <span class="keyword">from</span> <span class="string">&#x27;pinia-plugin-persistedstate&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> pinia = <span class="title function_">createPinia</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数据持久化</span></span><br><span class="line">pinia.<span class="title function_">use</span>(</span><br><span class="line">  <span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">    <span class="attr">storage</span>: &#123;</span><br><span class="line">      <span class="title function_">getItem</span>(<span class="attr">key</span>: <span class="built_in">string</span>): <span class="built_in">string</span> | <span class="literal">null</span> &#123;</span><br><span class="line">        key = <span class="string">&#x27;pinia_store_&#x27;</span> + key</span><br><span class="line">        <span class="keyword">return</span> uni.<span class="title function_">getStorageSync</span>(key)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="title function_">setItem</span>(<span class="params">key: <span class="built_in">string</span>, value: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">        key = <span class="string">&#x27;pinia_store_&#x27;</span> + key</span><br><span class="line">        uni.<span class="title function_">setStorageSync</span>(key, value)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="uni-ui"><a href="#uni-ui" class="headerlink" title="uni-ui"></a>uni-ui</h2><p>建议使用 <a href="https://uniapp.dcloud.net.cn/component/uniui/uni-ui.html">uni-ui</a> 作为 uni-app 的 ui 库</p>
+<p>安装 uni-ui 和相关依赖</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm i @dcloudio/uni-ui</span><br><span class="line">pnpm i sass sass-loader -D</span><br></pre></td></tr></table></figure>
+
+<p>打开项目根目录下的 pages.json 并添加 easycom 节点</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="attr">&quot;easycom&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">		<span class="attr">&quot;autoscan&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line">		<span class="attr">&quot;custom&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">			<span class="attr">&quot;^uni-(.*)&quot;</span><span class="punctuation">:</span> <span class="string">&quot;@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue&quot;</span></span><br><span class="line">		<span class="punctuation">&#125;</span></span><br><span class="line">	<span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pages&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">  ...</span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>创建 uni-ui 的主题色文件 <code>theme.scss</code></p>
+<figure class="highlight scss"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 主题色 */</span></span><br><span class="line"><span class="variable">$uni-color-primary</span>: <span class="number">#007aff</span>;</span><br><span class="line"><span class="variable">$uni-color-success</span>: <span class="number">#4cd964</span>;</span><br><span class="line"><span class="variable">$uni-color-warning</span>: <span class="number">#f0ad4e</span>;</span><br><span class="line"><span class="variable">$uni-color-error</span>: <span class="number">#dd524d</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 文字基本颜色 */</span></span><br><span class="line"><span class="variable">$uni-text-color</span>: <span class="number">#333</span>; <span class="comment">// 基本色</span></span><br><span class="line"><span class="variable">$uni-text-color-inverse</span>: <span class="number">#fff</span>; <span class="comment">// 反色</span></span><br><span class="line"><span class="variable">$uni-text-color-grey</span>: <span class="number">#999</span>; <span class="comment">// 辅助灰色，如加载更多的提示信息</span></span><br><span class="line"><span class="variable">$uni-text-color-placeholder</span>: <span class="number">#808080</span>;</span><br><span class="line"><span class="variable">$uni-text-color-disable</span>: <span class="number">#c0c0c0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 背景颜色 */</span></span><br><span class="line"><span class="variable">$uni-bg-color</span>: <span class="number">#ffffff</span>;</span><br><span class="line"><span class="variable">$uni-bg-color-grey</span>: <span class="number">#f8f8f8</span>;</span><br><span class="line"><span class="variable">$uni-bg-color-hover</span>: <span class="number">#f1f1f1</span>; <span class="comment">// 点击状态颜色</span></span><br><span class="line"><span class="variable">$uni-bg-color-mask</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.4</span>); <span class="comment">// 遮罩颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 边框颜色 */</span></span><br><span class="line"><span class="variable">$uni-border-color</span>: <span class="number">#c8c7cc</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 尺寸变量 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 文字尺寸 */</span></span><br><span class="line"><span class="variable">$uni-font-size-sm</span>: <span class="number">12px</span>;</span><br><span class="line"><span class="variable">$uni-font-size-base</span>: <span class="number">14px</span>;</span><br><span class="line"><span class="variable">$uni-font-size-lg</span>: <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 图片尺寸 */</span></span><br><span class="line"><span class="variable">$uni-img-size-sm</span>: <span class="number">20px</span>;</span><br><span class="line"><span class="variable">$uni-img-size-base</span>: <span class="number">26px</span>;</span><br><span class="line"><span class="variable">$uni-img-size-lg</span>: <span class="number">40px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Border Radius */</span></span><br><span class="line"><span class="variable">$uni-border-radius-sm</span>: <span class="number">2px</span>;</span><br><span class="line"><span class="variable">$uni-border-radius-base</span>: <span class="number">3px</span>;</span><br><span class="line"><span class="variable">$uni-border-radius-lg</span>: <span class="number">6px</span>;</span><br><span class="line"><span class="variable">$uni-border-radius-circle</span>: <span class="number">50%</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 水平间距 */</span></span><br><span class="line"><span class="variable">$uni-spacing-row-sm</span>: <span class="number">5px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-row-base</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-row-lg</span>: <span class="number">15px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 垂直间距 */</span></span><br><span class="line"><span class="variable">$uni-spacing-col-sm</span>: <span class="number">4px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-col-base</span>: <span class="number">8px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-col-lg</span>: <span class="number">12px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 透明度 */</span></span><br><span class="line"><span class="variable">$uni-opacity-disabled</span>: <span class="number">0.3</span>; <span class="comment">// 组件禁用态的透明度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 文章场景相关 */</span></span><br><span class="line"><span class="variable">$uni-color-title</span>: <span class="number">#2c405a</span>; <span class="comment">// 文章标题颜色</span></span><br><span class="line"><span class="variable">$uni-font-size-title</span>: <span class="number">20px</span>;</span><br><span class="line"><span class="variable">$uni-color-subtitle</span>: <span class="number">#555</span>; <span class="comment">// 二级标题颜色</span></span><br><span class="line"><span class="variable">$uni-font-size-subtitle</span>: <span class="number">18px</span>;</span><br><span class="line"><span class="variable">$uni-color-paragraph</span>: <span class="number">#3f536e</span>; <span class="comment">// 文章段落颜色</span></span><br><span class="line"><span class="variable">$uni-font-size-paragraph</span>: <span class="number">15px</span>;</span><br></pre></td></tr></table></figure>
+
+<p>安装好了之后需要修改一下 <code>vite.config.ts</code></p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="comment">// vite.config.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> uni <span class="keyword">from</span> <span class="string">&#x27;@dcloudio/vite-plugin-uni&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// https://vitejs.dev/config/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  ...<span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">    <span class="attr">plugins</span>: [<span class="title function_">uni</span>()],</span><br><span class="line">  &#125;),</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这里一定要加上全局scss引入，否则会找不到变量</span></span><br><span class="line">  <span class="comment">// 这个问题没找到文档，我是真的试了很多方法才解决的</span></span><br><span class="line">  <span class="attr">css</span>: &#123;</span><br><span class="line">    <span class="attr">preprocessorOptions</span>: &#123;</span><br><span class="line">      <span class="attr">scss</span>: &#123;</span><br><span class="line">        <span class="comment">// 这里要引入前面创建的theme.scss文件</span></span><br><span class="line">        <span class="attr">additionalData</span>: <span class="string">&#x27;@import &quot;@/common/theme.scss&quot;;&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">transpileDependencies</span>: [<span class="string">&#x27;@dcloudio/uni-ui&#x27;</span>],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h2><h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>为了保持跨端良好的兼容性，uniapp 中提供了封装好的支持跨端的网络请求接口<code>uni.request</code>，网页中的<code>axios</code>库无法在 uniapp 中正常工作，所以这里封装一个类用来统一处理请求的发送</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Header</span> = <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">RequestConfig</span> &#123;</span><br><span class="line">  <span class="attr">baseURL</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">timeout</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">header</span>: <span class="title class_">Header</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 前后端约定好的Response数据结构</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Response</span>&lt;T = <span class="built_in">any</span>&gt; &#123;</span><br><span class="line">  <span class="attr">code</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">data</span>: T</span><br><span class="line">  <span class="attr">message</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ShortChain</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="attr">config</span>: <span class="title class_">RequestConfig</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">config: RequestConfig</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">config</span> = config</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">setHeader</span>(<span class="params">key: <span class="built_in">string</span>, value: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">config</span>.<span class="property">header</span>[key] = value</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">delHeader</span>(<span class="params">key: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="keyword">delete</span> <span class="variable language_">this</span>.<span class="property">config</span>.<span class="property">header</span>[key]</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> <span class="title function_">request</span>(<span class="params">method: UniNamespace.RequestOptions[<span class="string">&#x27;method&#x27;</span>], url: <span class="built_in">string</span>, data: <span class="built_in">any</span>, requestHeader: Header = &#123;&#125;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>&lt;<span class="title class_">UniApp</span>.<span class="property">RequestSuccessCallbackResult</span>&gt;(<span class="function">(<span class="params">success, fail</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> &#123; header, baseURL, timeout &#125; = <span class="variable language_">this</span>.<span class="property">config</span></span><br><span class="line">      uni.<span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: baseURL + url,</span><br><span class="line">        data,</span><br><span class="line">        method,</span><br><span class="line">        success,</span><br><span class="line">        fail,</span><br><span class="line">        timeout,</span><br><span class="line">        <span class="attr">header</span>: &#123;</span><br><span class="line">          ...header,</span><br><span class="line">          ...requestHeader,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res: UniApp.RequestSuccessCallbackResult</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> data = res.<span class="property">data</span> <span class="keyword">as</span> <span class="built_in">any</span></span><br><span class="line">      <span class="keyword">if</span> (data.<span class="property">code</span> !== <span class="number">0</span>) &#123;</span><br><span class="line">        uni.<span class="title function_">showToast</span>(&#123;</span><br><span class="line">          <span class="attr">icon</span>: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">          <span class="attr">title</span>: data.<span class="property">message</span>,</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> data</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> get&lt;T = <span class="built_in">unknown</span>&gt;(<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="built_in">any</span> = &#123;&#125;, <span class="attr">header</span>: <span class="title class_">Header</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">request</span>(<span class="string">&#x27;GET&#x27;</span>, url, data, header) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">Response</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> post&lt;T = <span class="built_in">unknown</span>&gt;(<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="built_in">any</span> = &#123;&#125;, <span class="attr">header</span>: <span class="title class_">Header</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">request</span>(<span class="string">&#x27;POST&#x27;</span>, url, data, header) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">Response</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Web-Socket"><a href="#Web-Socket" class="headerlink" title="Web Socket"></a>Web Socket</h3><figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p>对 storage 进行一些封装，原生 Storage 直接使用的话不安全，本地存储满了的话，回导致线上白屏，所以这里简单进行一层封装</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Storage</span> &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * set storage</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> key storage key</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> val storage value</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> safely 出错时是否抛出异常</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">set</span>(<span class="params">key: <span class="built_in">string</span>, val: <span class="built_in">any</span>, safely = <span class="literal">true</span></span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      val = <span class="keyword">typeof</span> val === <span class="string">&#x27;string&#x27;</span> ? val : <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(val)</span><br><span class="line">      uni.<span class="title function_">setStorageSync</span>(key, val)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="keyword">if</span> (!safely) &#123;</span><br><span class="line">        <span class="comment">// TODO Report</span></span><br><span class="line">        <span class="keyword">throw</span> e</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * get storage</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> key storage key</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> get&lt;T = <span class="built_in">any</span>&gt;(<span class="attr">key</span>: <span class="built_in">string</span>): T | <span class="literal">null</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> val = uni.<span class="title function_">getStorageSync</span>(key) <span class="keyword">as</span> T</span><br><span class="line">    <span class="keyword">return</span> val || <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * remove storage item</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; key storage key</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">remove</span>(<span class="params">key: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    uni.<span class="title function_">removeStorageSync</span>(key)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * is storage has key</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; key 需要查询的key</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125; 查询结果</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">has</span>(<span class="attr">key</span>: <span class="built_in">string</span>): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">get</span>(key) !== <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 清空本地存储</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">clear</span>(<span class="params"></span>) &#123;</span><br><span class="line">    uni.<span class="title function_">clearStorageSync</span>()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="踩坑汇总"><a href="#踩坑汇总" class="headerlink" title="踩坑汇总"></a>踩坑汇总</h1><h2 id="scroll-view-高度计算"><a href="#scroll-view-高度计算" class="headerlink" title="scroll-view 高度计算"></a>scroll-view 高度计算</h2><figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 计算高度最好放在mounted中，因为init中不一定能拿到准确的参数（未加载）</span></span><br><span class="line"><span class="title function_">mounted</span>(<span class="params"></span>) &#123;</span><br><span class="line">  uni.<span class="title function_">getSystemInfo</span>(&#123;</span><br><span class="line">    <span class="attr">success</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 拿到可用window高度</span></span><br><span class="line">      <span class="comment">// 可用window高度 = 窗口高度 - 状态栏高度 - bottom占用（底部的tabBar高度，H5下为0，app下计算高度）</span></span><br><span class="line">      <span class="keyword">const</span> windowHeight =</span><br><span class="line">        (res.<span class="property">safeArea</span>?.<span class="property">height</span> || res.<span class="property">windowHeight</span> - (res.<span class="property">statusBarHeight</span> ?? <span class="number">0</span>)) -</span><br><span class="line">        res.<span class="property">windowBottom</span>;</span><br><span class="line">      <span class="comment">// 如果有NavBar需要减去NavBar高度</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">swiperHeight</span> = windowHeight - uni.<span class="title function_">upx2px</span>(<span class="number">100</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h1>]]></content>
       <categories>
-          
-          <category> 数据库 </category>
-          
+        <category>前端</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 数据库 </tag>
-            
-            <tag> MySQL </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Flutter</title>
-      <link href="/2023/06/14/Flutter/"/>
-      <url>/2023/06/14/Flutter/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
+      <tags>
+        <tag>跨端开发</tag>
+        <tag>UniApp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端包管理工具设置淘宝源</title>
+    <url>/2023/09/02/%E5%89%8D%E7%AB%AF%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%B7%98%E5%AE%9D%E6%BA%90/</url>
+    <content><![CDATA[<h1 id="淘宝源官网"><a href="#淘宝源官网" class="headerlink" title="淘宝源官网"></a>淘宝源官网</h1><p><a href="http://www.npmmirror.com/?spm=a1z389.11499242.0.0.65452413JRqluJ&utm_content=g_1000297192">npmmirror 镜像站</a></p>
+<h1 id="常用包管理工具的修改方案"><a href="#常用包管理工具的修改方案" class="headerlink" title="常用包管理工具的修改方案"></a>常用包管理工具的修改方案</h1><h2 id="npm"><a href="#npm" class="headerlink" title="npm"></a>npm</h2><p><strong>查看源</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm get registry </span><br></pre></td></tr></table></figure>
+
+<p><strong>临时修改</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm --registry https://registry.npmmirror.com install any-touch</span><br></pre></td></tr></table></figure>
+
+<p><strong>写入配置</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<h2 id="yarn"><a href="#yarn" class="headerlink" title="yarn"></a>yarn</h2><p><strong>查看源</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn config get registry</span><br></pre></td></tr></table></figure>
+
+<p><strong>临时修改</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn add any-touch@latest --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<p><strong>写入配置</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">yarn config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="pnpm"><a href="#pnpm" class="headerlink" title="pnpm"></a>pnpm</h2><p><strong>查看源</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm get registry </span><br></pre></td></tr></table></figure>
+
+<p><strong>临时修改</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm --registry https://registry.npmmirror.com install any-touch</span><br></pre></td></tr></table></figure>
+
+<p><strong>写入配置</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">pnpm config set registry https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+
+<h1 id="nrm源管理工具"><a href="#nrm源管理工具" class="headerlink" title="nrm源管理工具"></a>nrm源管理工具</h1><p><strong>安装</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">npm i nrm -g</span><br></pre></td></tr></table></figure>
+
+<p><strong>显示使用的源地址</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nrm ls</span><br></pre></td></tr></table></figure>
+
+<p><strong>设置源</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nrm add &lt;registry&gt; &lt;url&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>切换源</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nrm use taobao</span><br></pre></td></tr></table></figure>
+
+<p><strong>删除源</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nrm del &lt;registry&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>测试速度</strong></p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">nrm test npm</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-          
-          <category> 前端 </category>
-          
+        <category>研发基建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Flutter </tag>
-            
-            <tag> 跨端开发 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>UniApp最佳实践</title>
-      <link href="/2023/06/14/UniApp%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
-      <url>/2023/06/14/UniApp%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
-      
-        <content type="html"><![CDATA[<h1 id="初始化项目"><a href="#初始化项目" class="headerlink" title="初始化项目"></a>初始化项目</h1><p>这里的 uniapp 项目使用 vue3 和 typescript 进行编写，要初始化一个 uniapp+vue3+typescript 的项目，可以使用 vue 的脚手架来选择模版进行创建</p><p>先安装 vue 脚手架</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br></pre></td></tr></table></figure><p>然后通过脚手架选择 uniapp+vue3+tpescript 的模板进行创建</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vue create -p dcloudio/uni-preset-vue#vue3 &lt;project-name&gt;</span><br></pre></td></tr></table></figure><p>项目创建好之后，如果需要添加 Eslint 或者 Prettier 等一些前端工程质量相关的建设，可以参考<a href="/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/" title="前端工程质量">前端工程质量</a></p><p>项目的包管理工具推荐实用<code>pnpm</code>，因为真的很好用！</p><h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><h2 id="ACSS"><a href="#ACSS" class="headerlink" title="ACSS"></a>ACSS</h2><p>acss 能够为样式开发带来很大的便捷，这里推荐的 ACSS 样式方案是 Bootstrap 的 Style Utilities</p><h2 id="状态管理"><a href="#状态管理" class="headerlink" title="状态管理"></a>状态管理</h2><p><a href="https://vuex.vuejs.org/zh/">vuex</a>和<a href="https://pinia.vuejs.org/">pinia</a>都是很优秀的状态管理库，不过这里推荐实用 pinia，vuex 用起来巨麻烦！！！修改一个 store 可能要改动到多个文件，而且对 typescript 的支持也很差。pinia 有比较好的 typescript 支持，而且使用起来很灵活，推荐！</p><p>安装 pinia</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm i pinia</span><br></pre></td></tr></table></figure><p>同时建议安装<code>pinia-plugin-persistedstate</code>这个库，用来做状态持久化</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm i pinia-plugin-persistedstate</span><br></pre></td></tr></table></figure><p>建议使用 pinia 作为</p><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createPinia &#125; <span class="keyword">from</span> <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; createPersistedState &#125; <span class="keyword">from</span> <span class="string">&#x27;pinia-plugin-persistedstate&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> pinia = <span class="title function_">createPinia</span>()</span><br><span class="line"></span><br><span class="line"><span class="comment">// 数据持久化</span></span><br><span class="line">pinia.<span class="title function_">use</span>(</span><br><span class="line">  <span class="title function_">createPersistedState</span>(&#123;</span><br><span class="line">    <span class="attr">storage</span>: &#123;</span><br><span class="line">      <span class="title function_">getItem</span>(<span class="attr">key</span>: <span class="built_in">string</span>): <span class="built_in">string</span> | <span class="literal">null</span> &#123;</span><br><span class="line">        key = <span class="string">&#x27;pinia_store_&#x27;</span> + key</span><br><span class="line">        <span class="keyword">return</span> uni.<span class="title function_">getStorageSync</span>(key)</span><br><span class="line">      &#125;,</span><br><span class="line">      <span class="title function_">setItem</span>(<span class="params">key: <span class="built_in">string</span>, value: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">        key = <span class="string">&#x27;pinia_store_&#x27;</span> + key</span><br><span class="line">        uni.<span class="title function_">setStorageSync</span>(key, value)</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;)</span><br><span class="line">)</span><br></pre></td></tr></table></figure><h2 id="uni-ui"><a href="#uni-ui" class="headerlink" title="uni-ui"></a>uni-ui</h2><p>建议使用 <a href="https://uniapp.dcloud.net.cn/component/uniui/uni-ui.html">uni-ui</a> 作为 uni-app 的 ui 库</p><p>安装 uni-ui 和相关依赖</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pnpm i @dcloudio/uni-ui</span><br><span class="line">pnpm i sass sass-loader -D</span><br></pre></td></tr></table></figure><p>打开项目根目录下的 pages.json 并添加 easycom 节点</p><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;easycom&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;autoscan&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span><span class="punctuation">,</span></span><br><span class="line"><span class="attr">&quot;custom&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line"><span class="attr">&quot;^uni-(.*)&quot;</span><span class="punctuation">:</span> <span class="string">&quot;@dcloudio/uni-ui/lib/uni-$1/uni-$1.vue&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;pages&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">  ...</span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure><p>创建 uni-ui 的主题色文件 <code>theme.scss</code></p><figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 主题色 */</span></span><br><span class="line"><span class="variable">$uni-color-primary</span>: <span class="number">#007aff</span>;</span><br><span class="line"><span class="variable">$uni-color-success</span>: <span class="number">#4cd964</span>;</span><br><span class="line"><span class="variable">$uni-color-warning</span>: <span class="number">#f0ad4e</span>;</span><br><span class="line"><span class="variable">$uni-color-error</span>: <span class="number">#dd524d</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 文字基本颜色 */</span></span><br><span class="line"><span class="variable">$uni-text-color</span>: <span class="number">#333</span>; <span class="comment">// 基本色</span></span><br><span class="line"><span class="variable">$uni-text-color-inverse</span>: <span class="number">#fff</span>; <span class="comment">// 反色</span></span><br><span class="line"><span class="variable">$uni-text-color-grey</span>: <span class="number">#999</span>; <span class="comment">// 辅助灰色，如加载更多的提示信息</span></span><br><span class="line"><span class="variable">$uni-text-color-placeholder</span>: <span class="number">#808080</span>;</span><br><span class="line"><span class="variable">$uni-text-color-disable</span>: <span class="number">#c0c0c0</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 背景颜色 */</span></span><br><span class="line"><span class="variable">$uni-bg-color</span>: <span class="number">#ffffff</span>;</span><br><span class="line"><span class="variable">$uni-bg-color-grey</span>: <span class="number">#f8f8f8</span>;</span><br><span class="line"><span class="variable">$uni-bg-color-hover</span>: <span class="number">#f1f1f1</span>; <span class="comment">// 点击状态颜色</span></span><br><span class="line"><span class="variable">$uni-bg-color-mask</span>: <span class="built_in">rgba</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.4</span>); <span class="comment">// 遮罩颜色</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 边框颜色 */</span></span><br><span class="line"><span class="variable">$uni-border-color</span>: <span class="number">#c8c7cc</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 尺寸变量 */</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 文字尺寸 */</span></span><br><span class="line"><span class="variable">$uni-font-size-sm</span>: <span class="number">12px</span>;</span><br><span class="line"><span class="variable">$uni-font-size-base</span>: <span class="number">14px</span>;</span><br><span class="line"><span class="variable">$uni-font-size-lg</span>: <span class="number">16</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 图片尺寸 */</span></span><br><span class="line"><span class="variable">$uni-img-size-sm</span>: <span class="number">20px</span>;</span><br><span class="line"><span class="variable">$uni-img-size-base</span>: <span class="number">26px</span>;</span><br><span class="line"><span class="variable">$uni-img-size-lg</span>: <span class="number">40px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* Border Radius */</span></span><br><span class="line"><span class="variable">$uni-border-radius-sm</span>: <span class="number">2px</span>;</span><br><span class="line"><span class="variable">$uni-border-radius-base</span>: <span class="number">3px</span>;</span><br><span class="line"><span class="variable">$uni-border-radius-lg</span>: <span class="number">6px</span>;</span><br><span class="line"><span class="variable">$uni-border-radius-circle</span>: <span class="number">50%</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 水平间距 */</span></span><br><span class="line"><span class="variable">$uni-spacing-row-sm</span>: <span class="number">5px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-row-base</span>: <span class="number">10px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-row-lg</span>: <span class="number">15px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 垂直间距 */</span></span><br><span class="line"><span class="variable">$uni-spacing-col-sm</span>: <span class="number">4px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-col-base</span>: <span class="number">8px</span>;</span><br><span class="line"><span class="variable">$uni-spacing-col-lg</span>: <span class="number">12px</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 透明度 */</span></span><br><span class="line"><span class="variable">$uni-opacity-disabled</span>: <span class="number">0.3</span>; <span class="comment">// 组件禁用态的透明度</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/* 文章场景相关 */</span></span><br><span class="line"><span class="variable">$uni-color-title</span>: <span class="number">#2c405a</span>; <span class="comment">// 文章标题颜色</span></span><br><span class="line"><span class="variable">$uni-font-size-title</span>: <span class="number">20px</span>;</span><br><span class="line"><span class="variable">$uni-color-subtitle</span>: <span class="number">#555</span>; <span class="comment">// 二级标题颜色</span></span><br><span class="line"><span class="variable">$uni-font-size-subtitle</span>: <span class="number">18px</span>;</span><br><span class="line"><span class="variable">$uni-color-paragraph</span>: <span class="number">#3f536e</span>; <span class="comment">// 文章段落颜色</span></span><br><span class="line"><span class="variable">$uni-font-size-paragraph</span>: <span class="number">15px</span>;</span><br></pre></td></tr></table></figure><p>安装好了之后需要修改一下 <code>vite.config.ts</code></p><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// vite.config.ts</span></span><br><span class="line"><span class="keyword">import</span> &#123; defineConfig &#125; <span class="keyword">from</span> <span class="string">&#x27;vite&#x27;</span></span><br><span class="line"><span class="keyword">import</span> uni <span class="keyword">from</span> <span class="string">&#x27;@dcloudio/vite-plugin-uni&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// https://vitejs.dev/config/</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  ...<span class="title function_">defineConfig</span>(&#123;</span><br><span class="line">    <span class="attr">plugins</span>: [<span class="title function_">uni</span>()],</span><br><span class="line">  &#125;),</span><br><span class="line"></span><br><span class="line">  <span class="comment">// 这里一定要加上全局scss引入，否则会找不到变量</span></span><br><span class="line">  <span class="comment">// 这个问题没找到文档，我是真的试了很多方法才解决的</span></span><br><span class="line">  <span class="attr">css</span>: &#123;</span><br><span class="line">    <span class="attr">preprocessorOptions</span>: &#123;</span><br><span class="line">      <span class="attr">scss</span>: &#123;</span><br><span class="line">        <span class="comment">// 这里要引入前面创建的theme.scss文件</span></span><br><span class="line">        <span class="attr">additionalData</span>: <span class="string">&#x27;@import &quot;@/common/theme.scss&quot;;&#x27;</span>,</span><br><span class="line">      &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">transpileDependencies</span>: [<span class="string">&#x27;@dcloudio/uni-ui&#x27;</span>],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="网络请求"><a href="#网络请求" class="headerlink" title="网络请求"></a>网络请求</h2><h3 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h3><p>为了保持跨端良好的兼容性，uniapp 中提供了封装好的支持跨端的网络请求接口<code>uni.request</code>，网页中的<code>axios</code>库无法在 uniapp 中正常工作，所以这里封装一个类用来统一处理请求的发送</p><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> <span class="title class_">Header</span> = <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span>&gt;</span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">RequestConfig</span> &#123;</span><br><span class="line">  <span class="attr">baseURL</span>: <span class="built_in">string</span></span><br><span class="line">  <span class="attr">timeout</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">header</span>: <span class="title class_">Header</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 前后端约定好的Response数据结构</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">Response</span>&lt;T = <span class="built_in">any</span>&gt; &#123;</span><br><span class="line">  <span class="attr">code</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">data</span>: T</span><br><span class="line">  <span class="attr">message</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">ShortChain</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="attr">config</span>: <span class="title class_">RequestConfig</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span>(<span class="params">config: RequestConfig</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">config</span> = config</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">setHeader</span>(<span class="params">key: <span class="built_in">string</span>, value: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">config</span>.<span class="property">header</span>[key] = value</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">delHeader</span>(<span class="params">key: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    <span class="keyword">delete</span> <span class="variable language_">this</span>.<span class="property">config</span>.<span class="property">header</span>[key]</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> <span class="title function_">request</span>(<span class="params">method: UniNamespace.RequestOptions[<span class="string">&#x27;method&#x27;</span>], url: <span class="built_in">string</span>, data: <span class="built_in">any</span>, requestHeader: Header = &#123;&#125;</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>&lt;<span class="title class_">UniApp</span>.<span class="property">RequestSuccessCallbackResult</span>&gt;(<span class="function">(<span class="params">success, fail</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> &#123; header, baseURL, timeout &#125; = <span class="variable language_">this</span>.<span class="property">config</span></span><br><span class="line">      uni.<span class="title function_">request</span>(&#123;</span><br><span class="line">        <span class="attr">url</span>: baseURL + url,</span><br><span class="line">        data,</span><br><span class="line">        method,</span><br><span class="line">        success,</span><br><span class="line">        fail,</span><br><span class="line">        timeout,</span><br><span class="line">        <span class="attr">header</span>: &#123;</span><br><span class="line">          ...header,</span><br><span class="line">          ...requestHeader,</span><br><span class="line">        &#125;,</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;).<span class="title function_">then</span>(<span class="function">(<span class="params">res: UniApp.RequestSuccessCallbackResult</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">const</span> data = res.<span class="property">data</span> <span class="keyword">as</span> <span class="built_in">any</span></span><br><span class="line">      <span class="keyword">if</span> (data.<span class="property">code</span> !== <span class="number">0</span>) &#123;</span><br><span class="line">        uni.<span class="title function_">showToast</span>(&#123;</span><br><span class="line">          <span class="attr">icon</span>: <span class="string">&#x27;error&#x27;</span>,</span><br><span class="line">          <span class="attr">title</span>: data.<span class="property">message</span>,</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> data</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> get&lt;T = <span class="built_in">unknown</span>&gt;(<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="built_in">any</span> = &#123;&#125;, <span class="attr">header</span>: <span class="title class_">Header</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">request</span>(<span class="string">&#x27;GET&#x27;</span>, url, data, header) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">Response</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">public</span> post&lt;T = <span class="built_in">unknown</span>&gt;(<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="built_in">any</span> = &#123;&#125;, <span class="attr">header</span>: <span class="title class_">Header</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">request</span>(<span class="string">&#x27;POST&#x27;</span>, url, data, header) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">Response</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="Web-Socket"><a href="#Web-Socket" class="headerlink" title="Web Socket"></a>Web Socket</h3><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure><h2 id="存储"><a href="#存储" class="headerlink" title="存储"></a>存储</h2><p>对 storage 进行一些封装，原生 Storage 直接使用的话不安全，本地存储满了的话，回导致线上白屏，所以这里简单进行一层封装</p><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Storage</span> &#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * set storage</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> key storage key</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> val storage value</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> safely 出错时是否抛出异常</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">set</span>(<span class="params">key: <span class="built_in">string</span>, val: <span class="built_in">any</span>, safely = <span class="literal">true</span></span>) &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">      val = <span class="keyword">typeof</span> val === <span class="string">&#x27;string&#x27;</span> ? val : <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(val)</span><br><span class="line">      uni.<span class="title function_">setStorageSync</span>(key, val)</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">      <span class="keyword">if</span> (!safely) &#123;</span><br><span class="line">        <span class="comment">// TODO Report</span></span><br><span class="line">        <span class="keyword">throw</span> e</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * get storage</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> key storage key</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> get&lt;T = <span class="built_in">any</span>&gt;(<span class="attr">key</span>: <span class="built_in">string</span>): T | <span class="literal">null</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> val = uni.<span class="title function_">getStorageSync</span>(key) <span class="keyword">as</span> T</span><br><span class="line">    <span class="keyword">return</span> val || <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * remove storage item</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; key storage key</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">remove</span>(<span class="params">key: <span class="built_in">string</span></span>) &#123;</span><br><span class="line">    uni.<span class="title function_">removeStorageSync</span>(key)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * is storage has key</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param</span> &#123;<span class="type">string</span>&#125; key 需要查询的key</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@return</span> &#123;<span class="type">boolean</span>&#125; 查询结果</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">has</span>(<span class="attr">key</span>: <span class="built_in">string</span>): <span class="built_in">boolean</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="title function_">get</span>(key) !== <span class="literal">null</span></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 清空本地存储</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="keyword">public</span> <span class="title function_">clear</span>(<span class="params"></span>) &#123;</span><br><span class="line">    uni.<span class="title function_">clearStorageSync</span>()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="踩坑汇总"><a href="#踩坑汇总" class="headerlink" title="踩坑汇总"></a>踩坑汇总</h1><h2 id="scroll-view-高度计算"><a href="#scroll-view-高度计算" class="headerlink" title="scroll-view 高度计算"></a>scroll-view 高度计算</h2><figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 计算高度最好放在mounted中，因为init中不一定能拿到准确的参数（未加载）</span></span><br><span class="line"><span class="title function_">mounted</span>(<span class="params"></span>) &#123;</span><br><span class="line">  uni.<span class="title function_">getSystemInfo</span>(&#123;</span><br><span class="line">    <span class="attr">success</span>: <span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="comment">// 拿到可用window高度</span></span><br><span class="line">      <span class="comment">// 可用window高度 = 窗口高度 - 状态栏高度 - bottom占用（底部的tabBar高度，H5下为0，app下计算高度）</span></span><br><span class="line">      <span class="keyword">const</span> windowHeight =</span><br><span class="line">        (res.<span class="property">safeArea</span>?.<span class="property">height</span> || res.<span class="property">windowHeight</span> - (res.<span class="property">statusBarHeight</span> ?? <span class="number">0</span>)) -</span><br><span class="line">        res.<span class="property">windowBottom</span>;</span><br><span class="line">      <span class="comment">// 如果有NavBar需要减去NavBar高度</span></span><br><span class="line">      <span class="variable language_">this</span>.<span class="property">swiperHeight</span> = windowHeight - uni.<span class="title function_">upx2px</span>(<span class="number">100</span>);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="稳定性"><a href="#稳定性" class="headerlink" title="稳定性"></a>稳定性</h1>]]></content>
-      
-      
+      <tags>
+        <tag>工程化</tag>
+        <tag>研发基建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端工程质量</title>
+    <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/</url>
+    <content><![CDATA[<h1 id="Eslint和Prettier配置"><a href="#Eslint和Prettier配置" class="headerlink" title="Eslint和Prettier配置"></a>Eslint和Prettier配置</h1>]]></content>
       <categories>
-          
-          <category> 前端 </category>
-          
+        <category>研发基建</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 跨端开发 </tag>
-            
-            <tag> UniApp </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>NestJS最佳实践</title>
-      <link href="/2023/06/14/NestJS%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/"/>
-      <url>/2023/06/14/NestJS%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
-      
-        <content type="html"><![CDATA[<h1 id="NestJS笔记"><a href="#NestJS笔记" class="headerlink" title="NestJS笔记"></a>NestJS笔记</h1>]]></content>
-      
-      
+      <tags>
+        <tag>工程化</tag>
+        <tag>研发基建</tag>
+        <tag>工程质量</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端性能优化</title>
+    <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[]]></content>
       <categories>
-          
-          <category> 后端 </category>
-          
+        <category>前端</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> NestJS </tag>
-            
-            <tag> NodeJS </tag>
-            
-            <tag> 后端 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>前端请求建设</title>
-      <link href="/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/"/>
-      <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
-      
-        <content type="html"><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><p>Axios原生请求功能太多了，开发中不一定需要这么多功能，所以这里简单封装一下Axios，简化一下使用流程，并且提供更好的Typescript支持，实际使用时可以根据具体情况对代码进行更改</p><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> axios, &#123;<span class="keyword">type</span> <span class="title class_">AxiosInstance</span>, <span class="keyword">type</span> <span class="title class_">AxiosRequestConfig</span>, <span class="keyword">type</span> <span class="title class_">AxiosResponse</span>&#125; <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 和服务端约定的数据返回格式</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ResponseData</span>&lt;<span class="title class_">Data</span>&gt; &#123;</span><br><span class="line">  <span class="attr">code</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">data</span>: <span class="title class_">Data</span></span><br><span class="line">  <span class="attr">message</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">ShortChain</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="attr">axios</span>: <span class="title class_">AxiosInstance</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span> (<span class="keyword">private</span> <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span>&lt;<span class="built_in">any</span>&gt;) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">axios</span> = axios.<span class="title function_">create</span>(config)</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(<span class="function">(<span class="params">res: AxiosResponse</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> res.<span class="property">data</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  get&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">params</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span> | <span class="built_in">number</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">get</span>(url, &#123;</span><br><span class="line">      ...config,</span><br><span class="line">      params,</span><br><span class="line">    &#125;) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  post&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">unknown</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">post</span>(</span><br><span class="line">        url,</span><br><span class="line">        &#123;</span><br><span class="line">          ...data,</span><br><span class="line">        &#125;,</span><br><span class="line">        config,</span><br><span class="line">    ) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  put&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">unknown</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">put</span>(</span><br><span class="line">        url,</span><br><span class="line">        &#123;</span><br><span class="line">          ...data,</span><br><span class="line">        &#125;,</span><br><span class="line">        config,</span><br><span class="line">    ) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  patch&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">unknown</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">patch</span>(</span><br><span class="line">        url,</span><br><span class="line">        &#123;</span><br><span class="line">          ...data,</span><br><span class="line">        &#125;,</span><br><span class="line">        config,</span><br><span class="line">    ) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  setHeader (<span class="attr">key</span>: <span class="built_in">string</span>, <span class="attr">value</span>: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="property">defaults</span>.<span class="property">headers</span>.<span class="property">common</span>[key] = value</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  delHeader (<span class="attr">key</span>: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">delete</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="property">defaults</span>.<span class="property">headers</span>.<span class="property">common</span>[key]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="接口Mock"><a href="#接口Mock" class="headerlink" title="接口Mock"></a>接口Mock</h1><p>在接口开发过程中，一般是后端给出接口文档，标注出接口响应体的数据结构，前端和后端并行开发。在后端没有完全开发好之前，前端需要Mock返回的数据，并编写对数据进行处理的逻辑，除了对数据进行手动Mock之外，这里也提供一些更接近真实场景Mock数据的方案</p><h2 id="Mock-JS"><a href="#Mock-JS" class="headerlink" title="Mock.JS"></a>Mock.JS</h2><p><a href="https://github.com/nuysoft/Mock">MockJS</a></p><p><a href="http://mockjs.com/examples.html">Mock示例</a></p><h2 id="本地服务器"><a href="#本地服务器" class="headerlink" title="本地服务器"></a>本地服务器</h2><h2 id="接口Mock平台"><a href="#接口Mock平台" class="headerlink" title="接口Mock平台"></a>接口Mock平台</h2><h3 id="Yapi"><a href="#Yapi" class="headerlink" title="Yapi"></a>Yapi</h3><p><a href="https://github.com/YMFE/yapi">Yapi</a></p><h3 id="Rap2"><a href="#Rap2" class="headerlink" title="Rap2"></a>Rap2</h3><p><a href="https://github.com/thx/rap2-delos">Rap2</a></p><h2 id="Apifox"><a href="#Apifox" class="headerlink" title="Apifox"></a>Apifox</h2><p>Apifox是比较好用也比较推荐实用</p><h1 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h1><p>前端和服务端应该有统一的错误码规范，每个错误码都应该有唯一的语义，后端返回给前端错误码时，前端根据不同的错误码执行不同的操作</p><h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>接口重试是接口稳定性中非常重要的点，接口重试的应用场景主要有：</p><ul><li>用户网络情况较差</li><li>服务端出现故障抖动，无法及时响应前端请求</li></ul><p>接口重试需要设计好重试的策略，并且定好最大重试次数（一般情况下需要避免无限重试），同时也要做好对后端错误码的处理，前端和后端应该约定好几个固定的重复语义的错误码，前端收到错误码时，根据错误码判断是否需要重试</p><p>常见的接口重试策略有两种：</p><ul><li>定时重试（3，3，3，3，3…）：重试时间固定</li><li>冪次退避重试（1，4，9，16，25…）：重试间隔会慢慢变长，当服务器出现故障时，采取退避重试可以避免对服务器造成大冲击</li></ul><figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> fetchRemoteData = (retryTime = <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">retry</span> = (<span class="params">err: <span class="built_in">any</span></span>)=&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (retryTime &gt; <span class="number">3</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(err);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(</span><br><span class="line">        <span class="function">() =&gt;</span> <span class="title function_">fetchRemoteData</span>().<span class="title function_">then</span>(resolve, reject), <span class="title class_">Math</span>.<span class="title function_">pow</span>(retryTime, <span class="number">2</span>) * <span class="number">1000</span>,</span><br><span class="line">      );</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> axios.<span class="title function_">get</span>(<span class="string">&#x27;/api/config&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  &#125;, <span class="function">() =&gt;</span> <span class="title function_">retry</span>(retryTime + <span class="number">1</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h2 id="接口并发调度"><a href="#接口并发调度" class="headerlink" title="接口并发调度"></a>接口并发调度</h2>]]></content>
-      
-      
+      <tags>
+        <tag>性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端请求建设</title>
+    <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
+    <content><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><p>Axios原生请求功能太多了，开发中不一定需要这么多功能，所以这里简单封装一下Axios，简化一下使用流程，并且提供更好的Typescript支持，实际使用时可以根据具体情况对代码进行更改</p>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> axios, &#123;<span class="keyword">type</span> <span class="title class_">AxiosInstance</span>, <span class="keyword">type</span> <span class="title class_">AxiosRequestConfig</span>, <span class="keyword">type</span> <span class="title class_">AxiosResponse</span>&#125; <span class="keyword">from</span> <span class="string">&#x27;axios&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 和服务端约定的数据返回格式</span></span><br><span class="line"><span class="keyword">interface</span> <span class="title class_">ResponseData</span>&lt;<span class="title class_">Data</span>&gt; &#123;</span><br><span class="line">  <span class="attr">code</span>: <span class="built_in">number</span></span><br><span class="line">  <span class="attr">data</span>: <span class="title class_">Data</span></span><br><span class="line">  <span class="attr">message</span>: <span class="built_in">string</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">class</span> <span class="title class_">ShortChain</span> &#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="attr">axios</span>: <span class="title class_">AxiosInstance</span></span><br><span class="line"></span><br><span class="line">  <span class="title function_">constructor</span> (<span class="keyword">private</span> <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span>&lt;<span class="built_in">any</span>&gt;) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">axios</span> = axios.<span class="title function_">create</span>(config)</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="property">interceptors</span>.<span class="property">response</span>.<span class="title function_">use</span>(<span class="function">(<span class="params">res: AxiosResponse</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> res.<span class="property">data</span></span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  get&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">params</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">string</span> | <span class="built_in">number</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">get</span>(url, &#123;</span><br><span class="line">      ...config,</span><br><span class="line">      params,</span><br><span class="line">    &#125;) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  post&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">unknown</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">post</span>(</span><br><span class="line">        url,</span><br><span class="line">        &#123;</span><br><span class="line">          ...data,</span><br><span class="line">        &#125;,</span><br><span class="line">        config,</span><br><span class="line">    ) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  put&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">unknown</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">put</span>(</span><br><span class="line">        url,</span><br><span class="line">        &#123;</span><br><span class="line">          ...data,</span><br><span class="line">        &#125;,</span><br><span class="line">        config,</span><br><span class="line">    ) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  patch&lt;T&gt; (<span class="attr">url</span>: <span class="built_in">string</span>, <span class="attr">data</span>: <span class="title class_">Record</span>&lt;<span class="built_in">string</span>, <span class="built_in">unknown</span>&gt; = &#123;&#125;, <span class="attr">config</span>: <span class="title class_">AxiosRequestConfig</span> = &#123;&#125;) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="title function_">patch</span>(</span><br><span class="line">        url,</span><br><span class="line">        &#123;</span><br><span class="line">          ...data,</span><br><span class="line">        &#125;,</span><br><span class="line">        config,</span><br><span class="line">    ) <span class="keyword">as</span> <span class="title class_">Promise</span>&lt;<span class="title class_">ResponseData</span>&lt;T&gt;&gt;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  setHeader (<span class="attr">key</span>: <span class="built_in">string</span>, <span class="attr">value</span>: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="property">defaults</span>.<span class="property">headers</span>.<span class="property">common</span>[key] = value</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  delHeader (<span class="attr">key</span>: <span class="built_in">string</span>) &#123;</span><br><span class="line">    <span class="keyword">delete</span> <span class="variable language_">this</span>.<span class="property">axios</span>.<span class="property">defaults</span>.<span class="property">headers</span>.<span class="property">common</span>[key]</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="接口Mock"><a href="#接口Mock" class="headerlink" title="接口Mock"></a>接口Mock</h1><p>在接口开发过程中，一般是后端给出接口文档，标注出接口响应体的数据结构，前端和后端并行开发。在后端没有完全开发好之前，前端需要Mock返回的数据，并编写对数据进行处理的逻辑，除了对数据进行手动Mock之外，这里也提供一些更接近真实场景Mock数据的方案</p>
+<h2 id="Mock-JS"><a href="#Mock-JS" class="headerlink" title="Mock.JS"></a>Mock.JS</h2><p><a href="https://github.com/nuysoft/Mock">MockJS</a></p>
+<p><a href="http://mockjs.com/examples.html">Mock示例</a></p>
+<h2 id="本地服务器"><a href="#本地服务器" class="headerlink" title="本地服务器"></a>本地服务器</h2><h2 id="接口Mock平台"><a href="#接口Mock平台" class="headerlink" title="接口Mock平台"></a>接口Mock平台</h2><h3 id="Yapi"><a href="#Yapi" class="headerlink" title="Yapi"></a>Yapi</h3><p><a href="https://github.com/YMFE/yapi">Yapi</a></p>
+<h3 id="Rap2"><a href="#Rap2" class="headerlink" title="Rap2"></a>Rap2</h3><p><a href="https://github.com/thx/rap2-delos">Rap2</a></p>
+<h2 id="Apifox"><a href="#Apifox" class="headerlink" title="Apifox"></a>Apifox</h2><p>Apifox是比较好用也比较推荐实用</p>
+<h1 id="错误码规范"><a href="#错误码规范" class="headerlink" title="错误码规范"></a>错误码规范</h1><p>前端和服务端应该有统一的错误码规范，每个错误码都应该有唯一的语义，后端返回给前端错误码时，前端根据不同的错误码执行不同的操作</p>
+<h1 id="接口稳定性"><a href="#接口稳定性" class="headerlink" title="接口稳定性"></a>接口稳定性</h1><h2 id="接口重试"><a href="#接口重试" class="headerlink" title="接口重试"></a>接口重试</h2><p>接口重试是接口稳定性中非常重要的点，接口重试的应用场景主要有：</p>
+<ul>
+<li>用户网络情况较差</li>
+<li>服务端出现故障抖动，无法及时响应前端请求</li>
+</ul>
+<p>接口重试需要设计好重试的策略，并且定好最大重试次数（一般情况下需要避免无限重试），同时也要做好对后端错误码的处理，前端和后端应该约定好几个固定的重复语义的错误码，前端收到错误码时，根据错误码判断是否需要重试</p>
+<p>常见的接口重试策略有两种：</p>
+<ul>
+<li>定时重试（3，3，3，3，3…）：重试时间固定</li>
+<li>冪次退避重试（1，4，9，16，25…）：重试间隔会慢慢变长，当服务器出现故障时，采取退避重试可以避免对服务器造成大冲击</li>
+</ul>
+<figure class="highlight ts"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> fetchRemoteData = (retryTime = <span class="number">1</span>) &#123;</span><br><span class="line">  <span class="keyword">const</span> <span class="title function_">retry</span> = (<span class="params">err: <span class="built_in">any</span></span>)=&gt; &#123;</span><br><span class="line">    <span class="keyword">if</span> (retryTime &gt; <span class="number">3</span>) &#123;</span><br><span class="line">      <span class="keyword">return</span> <span class="title class_">Promise</span>.<span class="title function_">reject</span>(err);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function">(<span class="params">resolve, reject</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="built_in">setTimeout</span>(</span><br><span class="line">        <span class="function">() =&gt;</span> <span class="title function_">fetchRemoteData</span>().<span class="title function_">then</span>(resolve, reject), <span class="title class_">Math</span>.<span class="title function_">pow</span>(retryTime, <span class="number">2</span>) * <span class="number">1000</span>,</span><br><span class="line">      );</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> axios.<span class="title function_">get</span>(<span class="string">&#x27;/api/config&#x27;</span>).<span class="title function_">then</span>(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line"></span><br><span class="line">  &#125;, <span class="function">() =&gt;</span> <span class="title function_">retry</span>(retryTime + <span class="number">1</span>))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="接口并发调度"><a href="#接口并发调度" class="headerlink" title="接口并发调度"></a>接口并发调度</h2>]]></content>
       <categories>
-          
-          <category> 前端 </category>
-          
+        <category>前端</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 前端 </tag>
-            
-            <tag> 请求 </tag>
-            
-            <tag> Axios </tag>
-            
-            <tag> 稳定性 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Linux学习笔记</title>
-      <link href="/2023/06/06/Linux/"/>
-      <url>/2023/06/06/Linux/</url>
-      
-        <content type="html"><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
-      
-      
+      <tags>
+        <tag>前端</tag>
+        <tag>请求</tag>
+        <tag>Axios</tag>
+        <tag>稳定性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>积极心理学</title>
+    <url>/2024/04/18/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/</url>
+    <content><![CDATA[<h2 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h2><h2 id="人类的本能是消"><a href="#人类的本能是消" class="headerlink" title="人类的本能是消?"></a>人类的本能是消?</h2><h2 id="积极心理学的四位奠基人"><a href="#积极心理学的四位奠基人" class="headerlink" title="积极心理学的四位奠基人"></a>积极心理学的四位奠基人</h2><h2 id="ACE幸福能力模型"><a href="#ACE幸福能力模型" class="headerlink" title="ACE幸福能力模型"></a>ACE幸福能力模型</h2><h2 id="幸福的悖论"><a href="#幸福的悖论" class="headerlink" title="幸福的悖论"></a>幸福的悖论</h2><p>经济学家提出的自私悖论：</p>
+<blockquote>
+<p>一个人特别想得到自己的好处，最后反而越得不到</p>
+</blockquote>
+<p>爱出者爱返</p>
+<p>幸福越多越好？</p>
+<h3 id="果酱实验"><a href="#果酱实验" class="headerlink" title="果酱实验"></a>果酱实验</h3><table>
+<thead>
+<tr>
+<th>摊位上摆放的果酱数量</th>
+<th>试吃数量</th>
+<th>购买数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>6</td>
+<td>少</td>
+<td>多</td>
+</tr>
+<tr>
+<td>24</td>
+<td>多</td>
+<td>少</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>选择越多，越难做出选择</p>
+</blockquote>
+<p>需要从当下开始，用心体验用心挖掘</p>
+<h3 id="有意义的快乐"><a href="#有意义的快乐" class="headerlink" title="有意义的快乐"></a>有意义的快乐</h3><p>意义是人类幸福的一个重要因素</p>
+<p>意义：</p>
+<ul>
+<li>我是谁<ul>
+<li><blockquote>
+<p>家庭的责任</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>我从哪里来<ul>
+<li><blockquote>
+<p>来自于家庭</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>我要到哪里去</li>
+</ul>
+<p>三角定位理论：</p>
+<p>虚无主义：</p>
+<p>西西弗斯推巨石到山顶之后，巨石又会滚下来，西西弗斯周而复始的做这么一件事情，他的意义在于<code>下定决心重回山顶</code></p>
+<p>存在主义哲学家 萨特：存在先于本质</p>
+<blockquote>
+<p>与其花时间思考为什么活着，不如花时间想怎么活着</p>
+</blockquote>
+<p>积极心理学：<code>好好活着</code></p>
+<h2 id="痛苦的意义"><a href="#痛苦的意义" class="headerlink" title="痛苦的意义"></a>痛苦的意义</h2><p>痛苦的体验本身也是有意义的</p>
+<p>痛苦：</p>
+<ul>
+<li>思考意义</li>
+<li>发现自己的品格（顽强不息</li>
+<li>追求超越（不局限于享乐</li>
+</ul>
+<p>意义来自于成长过程中的发现</p>
+<p>意义就是：灵性悟性，感性，德性<br>意义感觉</p>
+<blockquote>
+<p>意义因人而异，需要自己探索，坚持自己所相信</p>
+</blockquote>
+<p>幸福因素非常多，但是积极是主观的</p>
+]]></content>
       <categories>
-          
-          <category> Linux </category>
-          
+        <category>心理学</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Git</title>
-      <link href="/2023/06/02/Git/"/>
-      <url>/2023/06/02/Git/</url>
-      
-        <content type="html"><![CDATA[<h1 id="Git-学习相关文档"><a href="#Git-学习相关文档" class="headerlink" title="Git 学习相关文档"></a>Git 学习相关文档</h1><p><strong>Git 的官方文档</strong></p><ul><li><a href="https://git-scm.com/">Git 官网</a></li><li><a href="https://git-scm.com/about">Git 官方文档</a></li></ul><p><strong>Git 的 GUI 工具</strong></p><ul><li><a href="https://desktop.github.com/">Github Desktop</a></li><li><a href="https://www.sourcetreeapp.com/">Sourcetree</a></li></ul><p><strong>Git 的一些其他资源</strong></p><ul><li><a href="https://learngitbranching.js.org/">Learn Git Branching</a></li></ul><h1 id="Git-仓库操作"><a href="#Git-仓库操作" class="headerlink" title="Git 仓库操作"></a>Git 仓库操作</h1><p>克隆仓库</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone &lt;rep url&gt;</span><br></pre></td></tr></table></figure><p>设置远程仓库</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:iovitz/&lt;repo name&gt;.git</span><br></pre></td></tr></table></figure><h1 id="Git-常用指令"><a href="#Git-常用指令" class="headerlink" title="Git 常用指令"></a>Git 常用指令</h1><p>暂存</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure><p>提交</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m &quot;&lt;commit message&gt;&quot;</span><br></pre></td></tr></table></figure><p>回退</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git reset --soft HEAD^</span><br></pre></td></tr></table></figure><p>cherry-pick</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git cherry-pick &lt;hash&gt;</span><br></pre></td></tr></table></figure><p>fetch</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git fetch</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
+      <tags>
+        <tag>-- 心理学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目:HaHaChat</title>
+    <url>/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/</url>
+    <content><![CDATA[]]></content>
       <categories>
-          
-          <category> 研发基建 </category>
-          
+        <category>项目</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 研发基建 </tag>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>MySQL</tag>
+        <tag>NestJS</tag>
+        <tag>UniApp</tag>
+        <tag>项目</tag>
+      </tags>
+  </entry>
 </search>
