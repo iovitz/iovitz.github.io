@@ -7,18 +7,22 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="希望自己能够成为一个牛逼的工程师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="学习笔记">
-<meta property="og:url" content="https://iovitz.github.io/archives/2023/index.html">
+<meta name="description" content="基本语法分支限制好用的ActionCheckoutaction&#x2F;checkout https:&#x2F;&#x2F;github.com&#x2F;actions&#x2F;checkout  FTPSamKirkland&#x2F;FTP-Deploy-Action https:&#x2F;&#x2F;github.com&#x2F;SamKirkland&#x2F;FTP-Deploy-Action  使用示例： 123456789# 通过密码上传- name">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Action">
+<meta property="og:url" content="https://iovitz.github.io/2024/09/27/Github-Action/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="希望自己能够成为一个牛逼的工程师">
+<meta property="og:description" content="基本语法分支限制好用的ActionCheckoutaction&#x2F;checkout https:&#x2F;&#x2F;github.com&#x2F;actions&#x2F;checkout  FTPSamKirkland&#x2F;FTP-Deploy-Action https:&#x2F;&#x2F;github.com&#x2F;SamKirkland&#x2F;FTP-Deploy-Action  使用示例： 123456789# 通过密码上传- name">
 <meta property="og:locale">
+<meta property="article:published_time" content="2024-09-27T07:38:21.000Z">
+<meta property="article:modified_time" content="2024-09-27T08:07:13.177Z">
 <meta property="article:author" content="iovitz">
+<meta property="article:tag" content="研发基建">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
 
 
-<title >学习笔记</title>
+<title >Github Action</title>
 
 <!-- Favicon -->
 
@@ -60,7 +64,7 @@
 
 <!-- Variable -->
 <script>window.ASYNC_CONFIG = {"hostname":"iovitz.github.io","author":"iovitz","root":"/","typed_text":["平平无奇的饭桶","未来的艺术家","Vimer"],"theme_version":"2.0.9","theme":{"switch":true,"default":"style-dark"},"favicon":{"logo":"/images/icon.png","icon16":"/images/icon.png","icon32":"/images/icon.png","appleTouchIcon":null,"webmanifest":null,"visibilitychange":false,"hidden":"/icon.ico","showText":"(/≧▽≦/)咦！又好了！","hideText":"(●—●)喔哟，崩溃啦！"},"i18n":{"placeholder":"搜索文章...","empty":"找不到您查询的内容: ${query}","hits":"找到 ${hits} 条结果","hits_time":"找到 ${hits} 条结果（用时 ${time} 毫秒）","author":"本文作者：","copyright_link":"本文链接：","copyright_license_title":"版权声明：","copyright_license_content":"本博客所有文章除特别声明外，均默认采用 undefined 许可协议。","copy_success":"复制成功","copy_failure":"复制失败","open_read_mode":"进入阅读模式","exit_read_mode":"退出阅读模式","notice_outdate_message":"距离上次更新已经 undefined 天了, 文章内容可能已经过时。","just":"刚刚","min":"分钟前","hour":"小时前","day":"天前","month":"个月前"},"swup":false,"plugin":{"flickr_justified_gallery":"https://unpkg.com/flickr-justified-gallery@latest/dist/fjGallery.min.js"},"icons":{"sun":"far fa-sun","moon":"far fa-moon","play":"fas fa-play","email":"far fa-envelope","next":"fas fa-arrow-right","calendar":"far fa-calendar-alt","clock":"far fa-clock","user":"far fa-user","back_top":"fas fa-arrow-up","close":"fas fa-times","search":"fas fa-search","reward":"fas fa-hand-holding-usd","user_tag":"fas fa-user-alt","toc_tag":"fas fa-th-list","read":"fas fa-book-reader","arrows":"fas fa-arrows-alt-h","double_arrows":"fas fa-angle-double-down","copy":"fas fa-copy"},"icontype":"font","highlight":{"plugin":"highlighjs","theme":true,"copy":true,"lang":true,"title":"default","height_limit":false},"notice_outdate":{"enable":true,"style":"flat","limit_day":365,"position":"top"},"search":{"enable":true,"type":"local","href":"https://www.google.com/search?q=site:","domain":null,"path":"search.xml"}};</script>
-<script id="async-page-config">window.PAGE_CONFIG = {"isPost":false,"isHome":false,"postUpdate":"2024-09-27 16:07:20"};</script>
+<script id="async-page-config">window.PAGE_CONFIG = {"isPost":true,"isHome":false,"postUpdate":"2024-09-27 16:07:13"};</script>
 
 <!-- Theme mode css -->
 <link data-swup-theme rel="stylesheet" href="/css/index.css?v=2.0.9" id="trm-switch-style">
@@ -216,7 +220,8 @@
             <!-- top bar end -->
 
             <!-- body -->
-            <div class="trm-content-start">
+            
+<div class="trm-content-start">
     <!-- banner -->
     <div class="trm-banner" data-scroll data-scroll-direction="vertical">
     
@@ -237,10 +242,10 @@
                     <!-- banner title -->
                     <div class="trm-banner-text ">
                         <div class="trm-label trm-mb-20">
-                            笔记归档
+                            NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            找得到算你输
+                            Github Action
                         </h1>
 
                         
@@ -250,7 +255,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        archives
+                                        2024
                                     </span
                                 ></li>
                             </ul>
@@ -282,7 +287,17 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
         <img alt="Avatar" class="trm-avatar" src="/images/avatar.jpg">
@@ -300,10 +315,10 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -337,7 +352,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -348,6 +363,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#基本语法"  data-scroll-to="#基本语法"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#分支限制"  data-scroll-to="#分支限制"><span class="toc-number">2.</span> <span class="toc-text">分支限制</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#好用的Action"  data-scroll-to="#好用的Action"><span class="toc-number">3.</span> <span class="toc-text">好用的Action</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#Checkout"  data-scroll-to="#Checkout"><span class="toc-number">3.1.</span> <span class="toc-text">Checkout</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#FTP"  data-scroll-to="#FTP"><span class="toc-number">3.2.</span> <span class="toc-text">FTP</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#SSH"  data-scroll-to="#SSH"><span class="toc-number">3.3.</span> <span class="toc-text">SSH</span></a></li><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#Node-JS"  data-scroll-to="#Node-JS"><span class="toc-number">3.4.</span> <span class="toc-text">Node JS</span></a></li></ol></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -358,307 +380,87 @@
                 <div class="trm-content" id="trm-content">
                     <div data-scroll data-scroll-repeat data-scroll-offset="500" id="about-triger"></div>
 
-                    <div class="row">
-    <div class="col-lg-12">
-        <div class="trm-card">
-            <div style="padding: 0 20px;">
-                
-                    <ul class="row trm-list" style="margin-bottom: 0px;"><li class="col-lg-4 trm-list-item" style="margin: 6px 0;"><a class="archive-list-link" href="/archives/2024/">2024</a><span class="archive-list-count">（9）</span></li><li class="col-lg-4 trm-list-item" style="margin: 6px 0;"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">（13）</span></li></ul>
-                
-            </div>
+                    <div id="post-info" class="row hidden-sm">
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
+            09/27
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-clock trm-icon"></i><br>
+            15:38
+        </div>
+    </div>
+    <div class="col-sm-4">
+        <div id="post-author" class="trm-card trm-label trm-label-light text-center">
+            <i class="iconfont far fa-user trm-icon"></i><br>
+            不锈钢盆
         </div>
     </div>
 </div>
+<div class="trm-card ">
+    <article id="article-container" class="trm-publication">
+    <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h2 id="分支限制"><a href="#分支限制" class="headerlink" title="分支限制"></a>分支限制</h2><h2 id="好用的Action"><a href="#好用的Action" class="headerlink" title="好用的Action"></a>好用的Action</h2><h3 id="Checkout"><a href="#Checkout" class="headerlink" title="Checkout"></a>Checkout</h3><h4 id="action-x2F-checkout"><a href="#action-x2F-checkout" class="headerlink" title="action&#x2F;checkout"></a>action&#x2F;checkout</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/actions/checkout">https://github.com/actions/checkout</a></p>
+</blockquote>
+<h3 id="FTP"><a href="#FTP" class="headerlink" title="FTP"></a>FTP</h3><h4 id="SamKirkland-x2F-FTP-Deploy-Action"><a href="#SamKirkland-x2F-FTP-Deploy-Action" class="headerlink" title="SamKirkland&#x2F;FTP-Deploy-Action"></a>SamKirkland&#x2F;FTP-Deploy-Action</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/SamKirkland/FTP-Deploy-Action">https://github.com/SamKirkland/FTP-Deploy-Action</a></p>
+</blockquote>
+<p>使用示例：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过密码上传</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">With</span> <span class="string">FTP</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">SamKirkland/FTP-Deploy-Action@v4.3.5</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">server:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_SERVER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">username:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">local-dir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_LOCAL_DIR &#125;&#125;</span>&#x27;</span></span><br><span class="line">    <span class="attr">server-dir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_SERVER_DIR &#125;&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<!-- history -->
+<h4 id="appleboy-x2F-scp-action"><a href="#appleboy-x2F-scp-action" class="headerlink" title="appleboy&#x2F;scp-action"></a>appleboy&#x2F;scp-action</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/appleboy/scp-action">https://github.com/appleboy/scp-action</a></p>
+</blockquote>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通过密码上传</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">With</span> <span class="string">FTP</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">sebastianpopp/ftp-action@releases/v2</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">host:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_SERVER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">user:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_USERNAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">password:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.FTP_PASSWORD</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">localDir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_LOCAL_DIR &#125;&#125;</span>&#x27;</span></span><br><span class="line">    <span class="attr">remoteDir:</span> <span class="string">&#x27;$<span class="template-variable">&#123;&#123; secrets.FTP_SERVER_DIR &#125;&#125;</span>&#x27;</span></span><br></pre></td></tr></table></figure>
 
-<div class="row">
+<h3 id="SSH"><a href="#SSH" class="headerlink" title="SSH"></a>SSH</h3><h3 id="Node-JS"><a href="#Node-JS" class="headerlink" title="Node JS"></a>Node JS</h3><h4 id="actions-x2F-setup-node"><a href="#actions-x2F-setup-node" class="headerlink" title="actions&#x2F;setup-node"></a>actions&#x2F;setup-node</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/actions/setup-node">https://github.com/actions/setup-node</a></p>
+</blockquote>
+<h4 id="pnpm-x2F-action-setup"><a href="#pnpm-x2F-action-setup" class="headerlink" title="pnpm&#x2F;action-setup"></a>pnpm&#x2F;action-setup</h4><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/pnpm/action-setup">https://github.com/pnpm/action-setup</a></p>
+</blockquote>
+
+</article>
+    
+    
+
+</div>
+<div id="post-next-prev" class="row">
     <div class="col-lg-12">
         <!-- title -->
         <h5 class="trm-title-with-divider">
-            
-                2023 年的归档
-            
-            <span data-number="01"></span>
+            其他文章
+            <span data-number="02"></span>
         </h5>
     </div>
-    <div class="col-lg-12">
-        <!-- timeline -->
-        <div class="trm-timeline">
+    
+    
+        <div class="col-lg-6">
+    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
+        <div class="trm-older-publication">
             
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/09/02/%E5%89%8D%E7%AB%AF%E5%8C%85%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7%E8%AE%BE%E7%BD%AE%E6%B7%98%E5%AE%9D%E6%BA%90/" class="trm-anima-link">
-                                        前端包管理工具设置淘宝源
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">09/02</li>
-                                        <li class="trm-accent-color">15:56</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/" class="trm-anima-link">
-                                        项目:HaHaChat
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:42</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="trm-anima-link">
-                                        前端性能优化
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:36</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/" class="trm-anima-link">
-                                        前端工程质量
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:35</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/Radis/" class="trm-anima-link">
-                                        Radis
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:31</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/MongoDB/" class="trm-anima-link">
-                                        MongoDB
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:31</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/MySQL/" class="trm-anima-link">
-                                        MySQL
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:31</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/Flutter/" class="trm-anima-link">
-                                        Flutter
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:28</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/UniApp%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="trm-anima-link">
-                                        UniApp最佳实践
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:27</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
-            <div class="trm-timeline-item trm-scroll-animation" data-scroll data-scroll-offset="40">
-                <div class="trm-timeline-mark-light"></div>
-                <div class="trm-timeline-mark"></div>
-                <div class="trm-a trm-timeline-content more">
-                    
-                        <div class="trm-card-header">
-                            <div class="trm-left-side">
-                                <h6>
-                                    <a href="/2023/06/14/NestJS%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/" class="trm-anima-link">
-                                        NestJS最佳实践
-                                    </a>
-                                </h6>
-                                <div class="trm-text-sm trm-accent-color trm-mt-15">
-                                    <ul class="trm-card-data trm-label ">
-                                        <li class="trm-accent-color">06/14</li>
-                                        <li class="trm-accent-color">19:25</li>
-                                        
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        
-                    
-                </div>
-            </div>
-            
+            <a class="trm-op-top trm-anima-link" href="/2024/08/13/NodeJS%E7%9A%84Web%E6%A1%86%E6%9E%B6Sails-js/">
+                <span class="trm-op-cover">
+                    <img alt="cover" class="no-fancybox" src="/img/block.jpg">
+                </span>
+                <h6 class="trm-op-title">NodeJS的Web框架Sails.js</h6>
+            </a>
+            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
+            <ul class="trm-card-data trm-label">
+                <li>24/08/13</li>
+                <li>14:20</li>
+                <li>服务端框架</li>
+            </ul>
         </div>
-        <!-- timeline end -->
     </div>
 </div>
+    
+</div>
 
-<!-- history end -->
-
-
-    <div class="trm-pagination">
-        <span class="page-number current">1</span><a class="page-number" href="/archives/2023/page/2/">2</a>
-    </div>
-
-
+    
 
 
 
@@ -698,6 +500,10 @@
             <!-- body end -->
 
             <div class="trm-fixed-container" data-scroll data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="-10">
+    
+        <div class="trm-fixed-btn" data-title="阅读模式" onclick="asyncFun.switchReadMode()">
+            <i class="iconfont fas fa-book-reader"></i>
+        </div>
     
     
         <div class="trm-fixed-btn" data-title="单栏和双栏切换" onclick="asyncFun.switchSingleColumn()">
@@ -783,6 +589,10 @@
     
 
     <!-- 评论插件 -->
+    
+        
+
+        
     
 
 
