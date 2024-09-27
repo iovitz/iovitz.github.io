@@ -59,6 +59,59 @@ tags:
 
 ### SSH
 
+#### easingthemes/ssh-deploy
+
+> <https://github.com/easingthemes/ssh-deploy>
+
+```yml
+      # 通过SSH部署
+      - name: Deploy to server
+        uses: easingthemes/ssh-deploy@main
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SERVER_SSH_KEY }}
+          SOURCE: .
+          REMOTE_HOST: ${{ secrets.SERVER_HOST }}
+          REMOTE_USER: ${{ secrets.SERVER_USERNAME }}
+          TARGET: /root/duuk/serve
+          EXCLUDE: "/dist/, /node_modules/"
+          SCRIPT_BEFORE: |
+            whoami
+            ls -al
+          SCRIPT_AFTER: |
+            whoami
+            ls -al
+```
+
+#### appleboy/ssh-action
+
+> <https://github.com/appleboy/ssh-action>
+
+```yml
+      # 通过SSH部署
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            whoami
+            ls -al
+```
+
+```yml
+      # 通过账号密码部署
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            whoami
+            ls -al
+```
+
 ### Node JS
 
 #### actions/setup-node
