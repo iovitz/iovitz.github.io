@@ -112,20 +112,20 @@ banner:
     fit: cover
   index:
     bannerText: 希望自己能成为一个能独当一面的工程师
-    bannerTitle: 这个Blog用来记一些学习笔记<br>因为笔记软件他不好用呀么不好用
+    bannerTitle: 这个Blog用来记一些学习笔记
     videoUrl:
   archive:
     type: img
     bannerText: 笔记归档
-    bannerTitle: 找得到算你输
+    bannerTitle: 杂七杂八
   about:
-    bannerText: 少来探究我
-    bannerTitle: 谁往下水道扔东西了<br>怎么连下水道的老鼠也要打扰吗
+    bannerText: 谁往下水道扔东西了，怎么连下水道的老鼠也要打扰吗
+    bannerTitle: 路边一条
 
 # Sidebar settings
 sidebar:
   typedTextPrefix: 我是一个
-  typedText: ['平平无奇的饭桶', '未来的艺术家', 'Vimer']
+  typedText: ['艺术家', '饭桶', 'Vimer']
   info:
     - key: 职业
       val: 前端开发工程师
@@ -138,9 +138,9 @@ sidebar:
 
 # About page settings
 about:
-  title: ♥
-  introduction: ♥
-  blog: ♥
+  title: 就是很垃圾
+  introduction: 一个饭桶
+  blog: https://iovitz.github.io/
   privacy: ♥
 
 # Footer settings

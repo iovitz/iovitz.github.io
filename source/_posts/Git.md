@@ -29,13 +29,13 @@ tags:
 
 克隆仓库
 
-```shell
+```bash
 git clone <rep url>
 ```
 
 设置远程仓库
 
-```shell
+```bash
 git remote add origin git@github.com:iovitz/<repo name>.git
 ```
 
@@ -43,30 +43,30 @@ git remote add origin git@github.com:iovitz/<repo name>.git
 
 暂存
 
-```shell
+```bash
 git add .
 ```
 
 提交
 
-```shell
+```bash
 git commit -m "<commit message>"
 ```
 
 回退
 
-```shell
+```bash
 git reset --soft HEAD^
 ```
 
 cherry-pick
 
-```shell
+```bash
 git cherry-pick <hash>
 ```
 
 fetch
 
-```shell
+```bash
 git fetch
 ```

@@ -13,13 +13,13 @@ tags:
 
 进入官网[https://brew.sh](https://sspai.com/link?target=https%3A%2F%2Fbrew.sh%2F)复制以下命令
 
-```shell
+```bash
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 国内用户可用 CDN 安装命令：
 
-```shell
+```bash
 /bin/bash -c "$(curl -fsSL https://cdn.jsdelivr.net/gh/duzyn/homebrew-cn/install.sh)"
 ```
 
@@ -27,13 +27,13 @@ tags:
 
 运行命令将 homebrew 添加到您的 PATH 中
 
-```shell
+```bash
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/<willshowyouruserdirectory>/.zprofile
 ```
 
 继续运行
 
-```shell
+```bash
 eval "$(/opt/homebrew/bin/brew shellenv)"
 ```
 

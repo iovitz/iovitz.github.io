@@ -13,7 +13,7 @@ tags:
 
 ### 准备依赖
 
-```shell
+```bash
 # 一定需要先update一下，否则直接安装依赖可能会找不到包
 apt-get update
 
@@ -25,27 +25,27 @@ apt-get install -y perl libperl-dev libgd3 libgd-dev libgeoip1 libgeoip-dev geoi
 
 进入下载目录
 
-```shell
+```bash
 # 进入自己的下载目录
 cd ~/downloads
 ```
 
 下载指定版本的Nginx包，这里以`1.23.3`版本为例，更多版本参考 <http://nginx.org/download/>
 
-```shell
+```bash
 wget http://nginx.org/download/nginx-1.23.3.tar.gz
 ```
 
 解压下载的压缩包
 
-```shell
+```bash
 # 解压，压缩包可以留着以后使用
 tar -xvf nginx-1.23.3.tar.gz
 ```
 
 移动目录到/usr/local中，旧的压缩包以后可能用得上
 
-```shell
+```bash
 mv nginx-1.23.3 /usr/local/nginx
 ```
 
@@ -53,13 +53,13 @@ mv nginx-1.23.3 /usr/local/nginx
 
 进入nginx目录
 
-```shell
+```bash
 cd /usr/local/nginx
 ```
 
 编译
 
-```shell
+```bash
 ./configure --prefix=/usr/local/nginx \
 --conf-path=/usr/local/nginx/nginx.conf \
 --with-http_ssl_module \
@@ -76,13 +76,13 @@ cd /usr/local/nginx
 
 安装
 
-```shell
+```bash
 make && make install
 ```
 
 编辑`nginx.conf`文件，修改配置
 
-```shell
+```bash
 vim /usr/local/nginx/nginx.conf
 ```
 
@@ -91,7 +91,7 @@ vim /usr/local/nginx/nginx.conf
 
 添加到全局指令
 
-```shell
+```bash
 ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/
 ```
 
@@ -99,7 +99,7 @@ ln -s /usr/local/nginx/sbin/nginx /usr/local/bin/
 
 ## Nginx常用指令
 
-```shell
+```bash
 # 启动
 nginx
 

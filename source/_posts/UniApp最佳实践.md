@@ -15,13 +15,13 @@ tags:
 
 先安装 vue 脚手架
 
-```shell
+```bash
 npm install -g @vue/cli
 ```
 
 然后通过脚手架选择 uniapp+vue3+tpescript 的模板进行创建
 
-```shell
+```bash
 vue create -p dcloudio/uni-preset-vue#vue3 <project-name>
 ```
 
@@ -41,13 +41,13 @@ acss 能够为样式开发带来很大的便捷，这里推荐的 ACSS 样式方
 
 安装 pinia
 
-```shell
+```bash
 pnpm i pinia
 ```
 
 同时建议安装`pinia-plugin-persistedstate`这个库，用来做状态持久化
 
-```shell
+```bash
 pnpm i pinia-plugin-persistedstate
 ```
 
@@ -82,7 +82,7 @@ pinia.use(
 
 安装 uni-ui 和相关依赖
 
-```shell
+```bash
 pnpm i @dcloudio/uni-ui
 pnpm i sass sass-loader -D
 ```

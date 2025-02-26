@@ -13,38 +13,38 @@ tags:
 
 更新包版本
 
-```shell
+```bash
 sudo apt update
 sudo apt upgrade
 ```
 
 安装依赖
 
-```shell
+```bash
 sudo apt-get install ca-certificates curl gnupg lsb-release software-properties-common
 ```
 
 添加证书
 
-```shell
+```bash
 curl -fsSL http://mirrors.aliyun.com/docker-ce/linux/ubuntu/gpg | sudo apt-key add -
 ```
 
 写入软件源信息
 
-```shell
+```bash
 sudo add-apt-repository "deb [arch=amd64] http://mirrors.aliyun.com/docker-ce/linux/ubuntu $(lsb_release -cs) stable"
 ```
 
 安装
 
-```shell
+```bash
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 
 启动
 
-```shell
+```bash
 systemctl start docker
 ```
 
@@ -54,59 +54,149 @@ systemctl start docker
 
 ## MySQL
 
-```yml
-version: 'latest'
+使用Docker安装MySQL，如果需要再宿主机管理配置，需要现在宿主机创建mysql的配置文件
 
+```bash
+vi ~/mysql/my.cnf
+```
+
+把下面的内容粘贴进去
+
+```text
+# For advice on how to change settings please see
+# http://dev.mysql.com/doc/refman/8.4/en/server-configuration-defaults.html
+
+[mysqld]
+#
+# Remove leading # and set to the amount of RAM for the most important data
+# cache in MySQL. Start at 70% of total RAM for dedicated server, else 10%.
+# innodb_buffer_pool_size = 128M
+#
+# Remove leading # to turn on a very important data integrity option: logging
+# changes to the binary log between backups.
+# log_bin
+#
+# Remove leading # to set options mainly useful for reporting servers.
+# The server defaults are faster for transactions and fast SELECTs.
+# Adjust sizes as needed, experiment to find the optimal values.
+# join_buffer_size = 128M
+# sort_buffer_size = 2M
+# read_rnd_buffer_size = 2M
+
+host-cache-size=0
+skip-name-resolve
+datadir=/var/lib/mysql
+socket=/var/run/mysqld/mysqld.sock
+secure-file-priv=/var/lib/mysql-files
+user=mysql
+
+pid-file=/var/run/mysqld/mysqld.pid
+[client]
+socket=/var/run/mysqld/mysqld.sock
+
+!includedir /etc/mysql/conf.d/
+```
+
+我们还需要安装MySQL的可视化管理工具Adminer，这是可选的，但是太好用了，所以顺便一起安装上。并且我在开发中很喜欢使用SQLite，Adminer无法直接打开不需要密码的数据库，所以需要添加Adminer插件进行支持，我们把插件放在`~/mysql/adminer`目录下，同时在这个目录下我们新增一个`login-password-less.php`的的插件
+
+```bash
+vi ~/mysql/adminer/login-password-less.php
+```
+
+在文件中填入以下内容，然后保存，这样你就能通过`a123123.`作为密码，来访问不需要密码的数据库了
+
+```php
+<?php
+require_once('plugins/login-password-less.php');
+
+/** Set allowed password
+ * @param string result of password_hash
+ */
+return new AdminerLoginPasswordLess(
+ $password_hash = password_hash('a123123.', PASSWORD_DEFAULT)
+);
+```
+
+处理好上面流程之后，再通过下面的 `docker-compose.yml` 文件拉取镜像
+
+```yml
 services:
-  mysql_db:
-    container_name: 'mysql'
-    image: mysql
-    command: --default-authentication-plugin=mysql_native_password
+  mysql:
+    image: mysql:8.4.3
+    container_name: my-app-mysql
     restart: always
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: a123123.
+      TZ: Asia/Shanghai
     ports:
-      - 3306:3306
+      - 33066:3306
     volumes:
-      - /home/mysql:/var/lib/mysql
+      - ~/mysql/data:/var/lib/mysql
+      - ~/mysql/my.cnf:/etc/my.cnf
+      - ~/mysql/log/:/var/log/mysql
+    command:
+      - --mysql-native-password=on
+
+  adminer:
+    image: adminer
+    container_name: my-app-adminer
+    restart: always
+    ports:
+      - 58080:8080
+    volumes:
+      # 新建Sqlite目录并映射到容器内部，这样容器就能访问sqlite目录下的DB文件了
+      - ~/sqlite:/sqlite/
+      # 把插件目录映射到容器内部，让容器内部能够使用插件
+      - ~/adminer:/var/www/html/plugins-enabled/
+
 ```
 
 ## MondoDB
 
 ```yml
-version: 'latest'
-
 services:
-  mongo_db:
-    container_name: 'mongo'
+  my-app-mongo:
     image: mongo
+    container_name: my-app-mongo
     restart: always
     environment:
-      # root账户用户名
       MONGO_INITDB_ROOT_USERNAME: root
-      # root账户密码
-      MONGO_INITDB_ROOT_PASSWORD: root
+      MONGO_INITDB_ROOT_PASSWORD: <MONGODB_PASSWORD>
     ports:
       - 27017:27017
-    volumes:
-      - /home/mongo:/data/db
+
+  my-app-mongo-express:
+    image: mongo-express
+    container_name: my-app-mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: <MONGO_EXPRESS_PASSWORD>
+      ME_CONFIG_MONGODB_URL: mongodb://root:<MONGODB_PASSWORD>@mongo:27017/
+      ME_CONFIG_BASICAUTH: false
 ```
 
 ## Redis
 
 ```yml
-version: 'latest'
-
 services:
-  redis_db:
-    container_name: 'redis'
-    image: redis
-    command: ["redis-server", "--requirepass", "a123123."]
+  redis:
+    image: redis:latest
+    container_name: redis
     restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: root
     ports:
       - 6379:6379
+    command: >
+      sh -c '
+      if [ -z "a123123." ]; then
+        redis-server /etc/redis/redis.conf
+      else
+        redis-server /etc/redis/redis.conf --requirepass a123123.
+      fi'
     volumes:
-      - /home/redis:/data
+      - ~/redis/data:/data
+      - ~/redis/redis.conf:/etc/redis/redis.conf
+      - ~/redis/logs:/logs
 ```
