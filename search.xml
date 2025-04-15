@@ -211,18 +211,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MySQL</title>
-    <url>/2023/06/14/MySQL/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>MySQL</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>NestJS最佳实践</title>
     <url>/2023/06/14/NestJS%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<h1 id="NestJS笔记"><a href="#NestJS笔记" class="headerlink" title="NestJS笔记"></a>NestJS笔记</h1>]]></content>
@@ -233,6 +221,18 @@
         <tag>NestJS</tag>
         <tag>NodeJS</tag>
         <tag>后端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL</title>
+    <url>/2023/06/14/MySQL/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -303,9 +303,10 @@
 <h4 id="安装一些常用的小软件"><a href="#安装一些常用的小软件" class="headerlink" title="安装一些常用的小软件"></a>安装一些常用的小软件</h4><ul>
 <li>curl: 有一些软件，用 <code>curl</code> 安装会很方便</li>
 <li>vim&#x2F;neovim: 比 <code>vi</code> 更好用的编辑器</li>
-<li>ufw：防火墙软件</li>
+<li>ufw：防火墙</li>
+<li>rsync：文件夹同步</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install curl vim ufw</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt install curl vim ufw rsync</span><br></pre></td></tr></table></figure>
 
 <p>安装完 <code>ufw</code> 之后，需要开启防火墙，同时开放常用端口</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ufw <span class="built_in">enable</span> &amp;&amp; sudo ufw allow 21,22,23,80,443/tcp</span><br></pre></td></tr></table></figure>
@@ -343,8 +344,8 @@
 <p>配置好registry之后，可以继续安装其他常用npm包了</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install pnpm pm2 yarn live-server nodemon -g</span><br><span class="line"></span><br><span class="line"><span class="comment"># 设置pnpm</span></span><br><span class="line">pnpm setup &amp;&amp; <span class="built_in">source</span> ~/.bashrc</span><br></pre></td></tr></table></figure>
 
-<h3 id="新建用户"><a href="#新建用户" class="headerlink" title="新建用户"></a>新建用户</h3><p>为每个部署的服务都新增一个单独的user</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">user add &lt;username&gt; -m &amp;&amp; passwd &lt;username&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="新建部署用户"><a href="#新建部署用户" class="headerlink" title="新建部署用户"></a>新建部署用户</h3><p>为每个部署的服务都新增一个单独的user，避免直接使用Root权限操作</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">useradd &lt;username&gt; -m &amp;&amp; sudo usermod -aG sudo &lt;username&gt; &amp;&amp; passwd &lt;username&gt;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>NodeJS</category>
@@ -635,8 +636,8 @@
         <category>项目</category>
       </categories>
       <tags>
-        <tag>MySQL</tag>
         <tag>NestJS</tag>
+        <tag>MySQL</tag>
         <tag>UniApp</tag>
         <tag>项目</tag>
       </tags>
