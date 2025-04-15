@@ -24,10 +24,11 @@ apt update
 
 * curl: 有一些软件，用 `curl` 安装会很方便
 * vim/neovim: 比 `vi` 更好用的编辑器
-* ufw：防火墙软件
+* ufw：防火墙
+* rsync：文件夹同步
 
 ```bash
-apt install curl vim ufw
+apt install curl vim ufw rsync
 ```
 
 安装完 `ufw` 之后，需要开启防火墙，同时开放常用端口
@@ -172,10 +173,10 @@ npm install pnpm pm2 yarn live-server nodemon -g
 pnpm setup && source ~/.bashrc
 ```
 
-### 新建用户
+### 新建部署用户
 
-为每个部署的服务都新增一个单独的user
+为每个部署的服务都新增一个单独的user，避免直接使用Root权限操作
 
 ```bash
-user add <username> -m && passwd <username>
+useradd <username> -m && sudo usermod -aG sudo <username> && passwd <username>
 ```
