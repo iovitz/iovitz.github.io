@@ -111,7 +111,7 @@ banner:
     position: top
     fit: cover
   index:
-    bannerText: 希望自己能成为一个能独当一面的工程师
+    bannerText: 希望自己能成为一个优秀的工程师
     bannerTitle: 这个Blog用来记一些学习笔记
     videoUrl:
   archive:
@@ -125,7 +125,7 @@ banner:
 # Sidebar settings
 sidebar:
   typedTextPrefix: 我是一个
-  typedText: ['艺术家', '饭桶', 'Vimer']
+  typedText: ['软件工程师', '游戏玩家', '饭桶', 'Vimer']
   info:
     - key: 职业
       val: 前端开发工程师
