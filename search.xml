@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Flutter</title>
+    <url>/2023/06/14/Flutter/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Flutter</tag>
+        <tag>跨端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker使用</title>
     <url>/2024/02/05/Docker%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p>更新包版本</p>
@@ -50,21 +62,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Flutter</title>
-    <url>/2023/06/14/Flutter/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
-        <tag>跨端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Flutter笔记</title>
     <url>/2024/08/13/Flutter%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Frp内网穿透</title>
+    <url>/2025/06/20/Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://gofrp.org/zh-cn/docs/">FRP文档</a></p>
+<h2 id="服务端搭建"><a href="#服务端搭建" class="headerlink" title="服务端搭建"></a>服务端搭建</h2><h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># ==============================</span><br><span class="line"># FRP 服务器端（frps.ini）配置</span><br><span class="line"># ==============================</span><br><span class="line"></span><br><span class="line"># 绑定监听地址（默认 `0.0.0.0` 代表监听所有 IP）</span><br><span class="line">bindAddr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line">#  服务器监听端口（客户端需要通过该端口连接 FRP 服务器）</span><br><span class="line">bindPort = 7000</span><br><span class="line"></span><br><span class="line"># HTTP 端口（用于内网 HTTP 代理穿透）</span><br><span class="line"># vhostHTTPPort = 8080</span><br><span class="line"></span><br><span class="line"># HTTPS 端口（用于内网 HTTPS 代理穿透）</span><br><span class="line"># vhostHTTPSPort = 8443</span><br><span class="line"></span><br><span class="line"># 子域名支持</span><br><span class="line"># 可以通过 `subDomainHost` 解析动态子域名</span><br><span class="line"># 例如：如果 `subDomainHost` 配置为 &quot;example.com&quot;</span><br><span class="line"># 那么客户端可以使用 `test.example.com` 访问内网服务</span><br><span class="line"># 如果你没有域名或不使用此功能，请删除此行！</span><br><span class="line"># 如果你要用IP直连例如:168.0.0.1:8848，就把这行删掉，不要配置！</span><br><span class="line">subDomainHost = &quot;xxxx.com&quot;  # 请替换为你的真实域名</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># Web 控制台（Dashboard）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line"># 监控界面监听地址（`0.0.0.0` 代表所有 IP 可访问）</span><br><span class="line">webServer.addr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line"># Web 管理面板端口（可在浏览器访问，默认 7500）</span><br><span class="line"># 你可以通过 `http://你的公网IP:7500` 访问 FRP 管理面板</span><br><span class="line">webServer.port = 7500</span><br><span class="line"></span><br><span class="line"># Web 控制台管理账号（可自定义）</span><br><span class="line">webServer.user = &quot;iovitz&quot;</span><br><span class="line"></span><br><span class="line"># Web 控制台密码（请自行修改）</span><br><span class="line">webServer.password = &quot;a123123.&quot;</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># 身份验证（Authentication）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line">#  认证方式（防止未经授权的客户端连接）</span><br><span class="line"># 目前 FRP 支持 `token` 和 `oidc` 方式，我们选用token</span><br><span class="line">auth.method = &quot;token&quot;</span><br><span class="line"></span><br><span class="line">#  Token 认证（客户端需要匹配相同 token 才能连接）</span><br><span class="line"># 通俗来说就是密码，写一个你能记住的，尽量长一点</span><br><span class="line">auth.token = &quot;a123123.&quot;   # 请自行修改，不要用我的</span><br></pre></td></tr></table></figure>
+
+<h2 id="客户端搭建"><a href="#客户端搭建" class="headerlink" title="客户端搭建"></a>客户端搭建</h2>]]></content>
+      <categories>
+        <category>研发基建</category>
+      </categories>
+      <tags>
+        <tag>工程化</tag>
+        <tag>研发基建</tag>
+      </tags>
   </entry>
   <entry>
     <title>Git</title>
@@ -211,6 +226,18 @@
       </tags>
   </entry>
   <entry>
+    <title>MySQL</title>
+    <url>/2023/06/14/MySQL/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>NestJS最佳实践</title>
     <url>/2023/06/14/NestJS%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<h1 id="NestJS笔记"><a href="#NestJS笔记" class="headerlink" title="NestJS笔记"></a>NestJS笔记</h1>]]></content>
@@ -221,18 +248,6 @@
         <tag>NestJS</tag>
         <tag>NodeJS</tag>
         <tag>后端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MySQL</title>
-    <url>/2023/06/14/MySQL/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>MySQL</tag>
       </tags>
   </entry>
   <entry>
@@ -636,8 +651,8 @@
         <category>项目</category>
       </categories>
       <tags>
-        <tag>NestJS</tag>
         <tag>MySQL</tag>
+        <tag>NestJS</tag>
         <tag>UniApp</tag>
         <tag>项目</tag>
       </tags>

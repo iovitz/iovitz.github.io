@@ -7,22 +7,22 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="MySQL">
+<meta name="description" content="Frp搭建和连接的一些笔记">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL">
-<meta property="og:url" content="https://iovitz.github.io/2023/06/14/MySQL/index.html">
+<meta property="og:title" content="Frp内网穿透">
+<meta property="og:url" content="https://iovitz.github.io/2025/06/20/Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="MySQL">
+<meta property="og:description" content="Frp搭建和连接的一些笔记">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-06-14T11:31:00.000Z">
+<meta property="article:published_time" content="2025-06-20T02:36:36.000Z">
 <meta property="article:modified_time" content="2025-06-20T02:43:20.110Z">
 <meta property="article:author" content="iovitz">
-<meta property="article:tag" content="数据库">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="工程化">
+<meta property="article:tag" content="研发基建">
 <meta name="twitter:card" content="summary">
 
 
-<title >MySQL</title>
+<title >Frp内网穿透</title>
 
 <!-- Favicon -->
 
@@ -245,7 +245,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            MySQL
+                            Frp内网穿透
                         </h1>
 
                         
@@ -255,7 +255,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        2023
+                                        2025
                                     </span
                                 ></li>
                             </ul>
@@ -287,7 +287,17 @@
 <div class="trm-main-card-frame trm-sidebar">
     <div class="trm-main-card" data-scroll data-scroll-repeat data-scroll-sticky data-scroll-target=".locomotive-scroll__sticky-target" data-scroll-offset="60"> 
     
-        <!-- card header -->
+        <div class="trm-user-tabs" id="sidebar-tabs">
+           <div class="trm-tabs-nav trm-mb-40" id="trm-tabs-nav">
+                <div data-to="tabs-user" class="trm-tabs-nav-item">
+                    <i class="iconfont fas fa-user-alt"></i>
+                </div>
+                <div data-to="tabs-toc" class="trm-tabs-nav-item active">
+                    <i class="iconfont fas fa-th-list"></i>
+                </div>
+           </div>
+            <div name="tabs-user" class="trm-tabs-item">
+                <!-- card header -->
 <div class="trm-mc-header">
     <div class="trm-avatar-frame trm-mb-20">
         <img alt="Avatar" class="trm-avatar" src="/images/avatar.jpg">
@@ -305,10 +315,10 @@
     
 </div>
 <!-- card header end -->
-        <!-- sidebar social -->
+                <!-- sidebar social -->
 
 <!-- sidebar social end -->
-        <!-- info -->
+                <!-- info -->
 <div class="trm-divider trm-mb-40 trm-mt-40"></div>
 <ul class="trm-table trm-mb-20">
     
@@ -342,7 +352,7 @@
 </ul>
 <!-- info end -->
 
-        
+                
     <div class="trm-divider trm-mb-40 trm-mt-40"></div>
     <!-- action button -->
     <div class="text-center">
@@ -353,6 +363,13 @@
     </div>
     <!-- action button end -->
 
+            </div>
+            <div name="tabs-toc" class="trm-tabs-item active">
+                <div class="post-toc">
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#介绍"  data-scroll-to="#介绍"><span class="toc-number">1.</span> <span class="toc-text">介绍</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#服务端搭建"  data-scroll-to="#服务端搭建"><span class="toc-number">2.</span> <span class="toc-text">服务端搭建</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a rel="nofollow" class="toc-link" href="#服务端配置"  data-scroll-to="#服务端配置"><span class="toc-number">2.1.</span> <span class="toc-text">服务端配置</span></a></li></ol></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#客户端搭建"  data-scroll-to="#客户端搭建"><span class="toc-number">3.</span> <span class="toc-text">客户端搭建</span></a></li></ol>
+</div>
+            </div>
+        </div>
     
     </div>
 </div>
@@ -367,13 +384,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            06/14
+            06/20
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            19:31
+            10:36
         </div>
     </div>
     <div class="col-sm-4">
@@ -385,7 +402,10 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    
+    <h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a target="_blank" rel="noopener" href="https://gofrp.org/zh-cn/docs/">FRP文档</a></p>
+<h2 id="服务端搭建"><a href="#服务端搭建" class="headerlink" title="服务端搭建"></a>服务端搭建</h2><h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"># ==============================</span><br><span class="line"># FRP 服务器端（frps.ini）配置</span><br><span class="line"># ==============================</span><br><span class="line"></span><br><span class="line"># 绑定监听地址（默认 `0.0.0.0` 代表监听所有 IP）</span><br><span class="line">bindAddr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line">#  服务器监听端口（客户端需要通过该端口连接 FRP 服务器）</span><br><span class="line">bindPort = 7000</span><br><span class="line"></span><br><span class="line"># HTTP 端口（用于内网 HTTP 代理穿透）</span><br><span class="line"># vhostHTTPPort = 8080</span><br><span class="line"></span><br><span class="line"># HTTPS 端口（用于内网 HTTPS 代理穿透）</span><br><span class="line"># vhostHTTPSPort = 8443</span><br><span class="line"></span><br><span class="line"># 子域名支持</span><br><span class="line"># 可以通过 `subDomainHost` 解析动态子域名</span><br><span class="line"># 例如：如果 `subDomainHost` 配置为 &quot;example.com&quot;</span><br><span class="line"># 那么客户端可以使用 `test.example.com` 访问内网服务</span><br><span class="line"># 如果你没有域名或不使用此功能，请删除此行！</span><br><span class="line"># 如果你要用IP直连例如:168.0.0.1:8848，就把这行删掉，不要配置！</span><br><span class="line">subDomainHost = &quot;xxxx.com&quot;  # 请替换为你的真实域名</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># Web 控制台（Dashboard）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line"># 监控界面监听地址（`0.0.0.0` 代表所有 IP 可访问）</span><br><span class="line">webServer.addr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line"># Web 管理面板端口（可在浏览器访问，默认 7500）</span><br><span class="line"># 你可以通过 `http://你的公网IP:7500` 访问 FRP 管理面板</span><br><span class="line">webServer.port = 7500</span><br><span class="line"></span><br><span class="line"># Web 控制台管理账号（可自定义）</span><br><span class="line">webServer.user = &quot;iovitz&quot;</span><br><span class="line"></span><br><span class="line"># Web 控制台密码（请自行修改）</span><br><span class="line">webServer.password = &quot;a123123.&quot;</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># 身份验证（Authentication）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line">#  认证方式（防止未经授权的客户端连接）</span><br><span class="line"># 目前 FRP 支持 `token` 和 `oidc` 方式，我们选用token</span><br><span class="line">auth.method = &quot;token&quot;</span><br><span class="line"></span><br><span class="line">#  Token 认证（客户端需要匹配相同 token 才能连接）</span><br><span class="line"># 通俗来说就是密码，写一个你能记住的，尽量长一点</span><br><span class="line">auth.token = &quot;a123123.&quot;   # 请自行修改，不要用我的</span><br></pre></td></tr></table></figure>
+
+<h2 id="客户端搭建"><a href="#客户端搭建" class="headerlink" title="客户端搭建"></a>客户端搭建</h2>
 </article>
     
     
@@ -400,42 +420,22 @@
         </h5>
     </div>
     
-        <div class="col-lg-6">
-    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
-        <div class="trm-older-publication">
-            
-            <a class="trm-op-top trm-anima-link" href="/2023/06/14/MongoDB/">
-                <span class="trm-op-cover">
-                    <img alt="cover" class="no-fancybox" src="/img/block.jpg">
-                </span>
-                <h6 class="trm-op-title">MongoDB</h6>
-            </a>
-            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/06/14</li>
-                <li>19:31</li>
-                <li>数据库</li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
     
         <div class="col-lg-6">
     <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
         <div class="trm-older-publication">
             
-            <a class="trm-op-top trm-anima-link" href="/2023/06/14/Flutter/">
+            <a class="trm-op-top trm-anima-link" href="/2025/02/26/Node%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/">
                 <span class="trm-op-cover">
                     <img alt="cover" class="no-fancybox" src="/img/block.jpg">
                 </span>
-                <h6 class="trm-op-title">Flutter</h6>
+                <h6 class="trm-op-title">Node服务部署最佳实践</h6>
             </a>
             <div class="trm-divider trm-mb-15 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>23/06/14</li>
-                <li>19:28</li>
-                <li>前端</li>
+                <li>25/02/26</li>
+                <li>11:12</li>
+                <li>NodeJS</li>
             </ul>
         </div>
     </div>
