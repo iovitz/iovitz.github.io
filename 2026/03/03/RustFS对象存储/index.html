@@ -7,23 +7,22 @@
 <meta name="full-screen" content="yes">
 <meta name="theme-color" content="#317EFB" />
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=0" name="viewport">
-<meta name="description" content="前端工程质量">
+<meta name="description" content="安装RustFS 使用 1panel 或者 宝塔面板 进行安装就好了 JS连接 官方JS文档  首先需要安装依赖，安装完成后可以在 node 中进行连接 1npm i @aws-sdk&#x2F;client-s3 @aws-sdk&#x2F;s3-request-presigner  安装好依赖之后，就可以在代码中进行连接了 1234567891011import &amp;#123; CreateBucketComman">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端工程质量">
-<meta property="og:url" content="https://iovitz.github.io/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/index.html">
+<meta property="og:title" content="RustFS对象存储">
+<meta property="og:url" content="https://iovitz.github.io/2026/03/03/RustFS%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/index.html">
 <meta property="og:site_name" content="学习笔记">
-<meta property="og:description" content="前端工程质量">
+<meta property="og:description" content="安装RustFS 使用 1panel 或者 宝塔面板 进行安装就好了 JS连接 官方JS文档  首先需要安装依赖，安装完成后可以在 node 中进行连接 1npm i @aws-sdk&#x2F;client-s3 @aws-sdk&#x2F;s3-request-presigner  安装好依赖之后，就可以在代码中进行连接了 1234567891011import &amp;#123; CreateBucketComman">
 <meta property="og:locale">
-<meta property="article:published_time" content="2023-06-14T11:35:14.000Z">
-<meta property="article:modified_time" content="2026-03-03T12:00:24.307Z">
+<meta property="article:published_time" content="2026-03-03T11:48:40.000Z">
+<meta property="article:modified_time" content="2026-03-03T12:00:24.306Z">
 <meta property="article:author" content="iovitz">
-<meta property="article:tag" content="工程化">
-<meta property="article:tag" content="研发基建">
-<meta property="article:tag" content="工程质量">
+<meta property="article:tag" content="RustFS">
+<meta property="article:tag" content="OSS">
 <meta name="twitter:card" content="summary">
 
 
-<title >前端工程质量</title>
+<title >RustFS对象存储</title>
 
 <!-- Favicon -->
 
@@ -246,7 +245,7 @@
                             NEWS LETTER
                         </div>
                         <h1 class="trm-mb-30 trm-hsmb-font">
-                            前端工程质量
+                            RustFS对象存储
                         </h1>
 
                         
@@ -256,7 +255,7 @@
                                 </li>
                                 <li>
                                     <span>
-                                        2023
+                                        2026
                                     </span
                                 ></li>
                             </ul>
@@ -367,7 +366,7 @@
             </div>
             <div name="tabs-toc" class="trm-tabs-item active">
                 <div class="post-toc">
-    <ol class="toc"><li class="toc-item toc-level-1"><a rel="nofollow" class="toc-link" href="#Eslint和Prettier配置"  data-scroll-to="#Eslint和Prettier配置"><span class="toc-number">1.</span> <span class="toc-text">Eslint和Prettier配置</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#安装"  data-scroll-to="#安装"><span class="toc-number">1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a rel="nofollow" class="toc-link" href="#JS连接"  data-scroll-to="#JS连接"><span class="toc-number">2.</span> <span class="toc-text">JS连接</span></a></li></ol>
 </div>
             </div>
         </div>
@@ -385,13 +384,13 @@
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-calendar-alt trm-icon"></i><br>
-            06/14
+            03/03
         </div>
     </div>
     <div class="col-sm-4">
         <div class="trm-card trm-label trm-label-light text-center">
             <i class="iconfont far fa-clock trm-icon"></i><br>
-            19:35
+            19:48
         </div>
     </div>
     <div class="col-sm-4">
@@ -403,7 +402,16 @@
 </div>
 <div class="trm-card ">
     <article id="article-container" class="trm-publication">
-    <h1 id="Eslint和Prettier配置"><a href="#Eslint和Prettier配置" class="headerlink" title="Eslint和Prettier配置"></a>Eslint和Prettier配置</h1>
+    <h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>RustFS 使用 1panel 或者 宝塔面板 进行安装就好了</p>
+<h2 id="JS连接"><a href="#JS连接" class="headerlink" title="JS连接"></a>JS连接</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://docs.rustfs.com/developer/sdk/javascript.html">官方JS文档</a></p>
+</blockquote>
+<p>首先需要安装依赖，安装完成后可以在 node 中进行连接</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i @aws-sdk/client-s3 @aws-sdk/s3-request-presigner</span><br></pre></td></tr></table></figure>
+
+<p>安装好依赖之后，就可以在代码中进行连接了</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">CreateBucketCommand</span>, S3Client &#125; <span class="keyword">from</span> <span class="string">&quot;@aws-sdk/client-s3&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> s3 = <span class="keyword">new</span> <span class="title function_">S3Client</span>(&#123;</span><br><span class="line">  <span class="attr">endpoint</span>: <span class="string">&quot;http://&lt;IP&gt;:&lt;port&gt;&quot;</span>, <span class="comment">// RustFS endpoint</span></span><br><span class="line">  <span class="attr">region</span>: <span class="string">&quot;cn&quot;</span>, <span class="comment">// Any value is accepted</span></span><br><span class="line">  <span class="attr">credentials</span>: &#123;</span><br><span class="line">    <span class="attr">accessKeyId</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">secretAccessKey</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">forcePathStyle</span>: <span class="literal">true</span>, <span class="comment">// Must be enabled for RustFS compatibility</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
 </article>
     
     
@@ -418,42 +426,22 @@
         </h5>
     </div>
     
-        <div class="col-lg-6">
-    <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
-        <div class="trm-older-publication">
-            
-            <a class="trm-op-top trm-anima-link" href="/2023/06/14/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
-                <span class="trm-op-cover">
-                    <img alt="cover" class="no-fancybox" src="/img/block.jpg">
-                </span>
-                <h6 class="trm-op-title">前端性能优化</h6>
-            </a>
-            <div class="trm-divider trm-mb-15 trm-mt-20"></div>
-            <ul class="trm-card-data trm-label">
-                <li>23/06/14</li>
-                <li>19:36</li>
-                <li>前端</li>
-            </ul>
-        </div>
-    </div>
-</div>
-    
     
         <div class="col-lg-6">
     <div class="trm-older-publications-card trm-scroll-animation trm-active-el" data-scroll="" data-scroll-offset="40">
         <div class="trm-older-publication">
             
-            <a class="trm-op-top trm-anima-link" href="/2023/06/14/Radis/">
+            <a class="trm-op-top trm-anima-link" href="/2026/03/03/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/">
                 <span class="trm-op-cover">
                     <img alt="cover" class="no-fancybox" src="/img/block.jpg">
                 </span>
-                <h6 class="trm-op-title">Radis</h6>
+                <h6 class="trm-op-title">AI编程工具</h6>
             </a>
             <div class="trm-divider trm-mb-15 trm-mt-20"></div>
             <ul class="trm-card-data trm-label">
-                <li>23/06/14</li>
-                <li>19:31</li>
-                <li>数据库</li>
+                <li>26/03/03</li>
+                <li>11:19</li>
+                <li>AI</li>
             </ul>
         </div>
     </div>

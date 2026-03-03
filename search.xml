@@ -237,17 +237,6 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
-    <title>Linux学习笔记</title>
-    <url>/2023/06/06/Linux/</url>
-    <content><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
-      <categories>
-        <category>Linux</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MAC下常用软件安装</title>
     <url>/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>进入官网<a href="https://sspai.com/link?target=https://brew.sh/">https://brew.sh</a>复制以下命令</p>
@@ -271,6 +260,17 @@
       <tags>
         <tag>MAC</tag>
         <tag>环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux学习笔记</title>
+    <url>/2023/06/06/Linux/</url>
+    <content><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
       </tags>
   </entry>
   <entry>
@@ -438,6 +438,27 @@
     <title>ReactNative笔记</title>
     <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>RustFS对象存储</title>
+    <url>/2026/03/03/RustFS%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>RustFS 使用 1panel 或者 宝塔面板 进行安装就好了</p>
+<h2 id="JS连接"><a href="#JS连接" class="headerlink" title="JS连接"></a>JS连接</h2><blockquote>
+<p><a href="https://docs.rustfs.com/developer/sdk/javascript.html">官方JS文档</a></p>
+</blockquote>
+<p>首先需要安装依赖，安装完成后可以在 node 中进行连接</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm i @aws-sdk/client-s3 @aws-sdk/s3-request-presigner</span><br></pre></td></tr></table></figure>
+
+<p>安装好依赖之后，就可以在代码中进行连接了</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">CreateBucketCommand</span>, S3Client &#125; <span class="keyword">from</span> <span class="string">&quot;@aws-sdk/client-s3&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> s3 = <span class="keyword">new</span> <span class="title function_">S3Client</span>(&#123;</span><br><span class="line">  <span class="attr">endpoint</span>: <span class="string">&quot;http://&lt;IP&gt;:&lt;port&gt;&quot;</span>, <span class="comment">// RustFS endpoint</span></span><br><span class="line">  <span class="attr">region</span>: <span class="string">&quot;cn&quot;</span>, <span class="comment">// Any value is accepted</span></span><br><span class="line">  <span class="attr">credentials</span>: &#123;</span><br><span class="line">    <span class="attr">accessKeyId</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">    <span class="attr">secretAccessKey</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">forcePathStyle</span>: <span class="literal">true</span>, <span class="comment">// Must be enabled for RustFS compatibility</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>OSS</category>
+      </categories>
+      <tags>
+        <tag>RustFS</tag>
+        <tag>OSS</tag>
+      </tags>
   </entry>
   <entry>
     <title>UniApp最佳实践</title>
