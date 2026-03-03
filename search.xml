@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Flutter</title>
-    <url>/2023/06/14/Flutter/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
-        <tag>跨端开发</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Docker使用</title>
     <url>/2024/02/05/Docker%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p>更新包版本</p>
@@ -60,6 +48,63 @@
         <tag>工程化</tag>
         <tag>研发基建</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Flutter</title>
+    <url>/2023/06/14/Flutter/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Flutter</tag>
+        <tag>跨端开发</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>AI编程工具</title>
+    <url>/2026/03/03/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/</url>
+    <content><![CDATA[<h2 id="ClaudeCode"><a href="#ClaudeCode" class="headerlink" title="ClaudeCode"></a>ClaudeCode</h2><h3 id="ClaudeCode安装"><a href="#ClaudeCode安装" class="headerlink" title="ClaudeCode安装"></a>ClaudeCode安装</h3><p><a href="https://code.claude.com/docs/zh-CN/quickstart">官方安装文档</a></p>
+<h3 id="ClaudeCode配置"><a href="#ClaudeCode配置" class="headerlink" title="ClaudeCode配置"></a>ClaudeCode配置</h3><p>Step1: 跳过 Claude Code 的登录流程，编辑或新增 <code>.claude.json</code> 文件，新增 <code>hasCompletedOnboarding</code> 参数</p>
+<ul>
+<li>MacOS &amp; Linux 为 <code>~/.claude.json</code></li>
+<li>Windows 为<code>用户目录/.claude.json</code></li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hasCompletedOnboarding&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>编辑或创建 Claude Code 的配置文件，添加模型配置</p>
+<ul>
+<li>MacOS &amp; Linux 为 <code>~/.claude/settings.json</code></li>
+<li>Windows 为<code>用户目录/.claude/settings.json</code></li>
+</ul>
+<blockquote>
+<p>环境变量 <code>ANTHROPIC_AUTH_TOKEN</code> 和 <code>ANTHROPIC_BASE_URL</code> 优先级高于配置文件</p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;env&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;ANTHROPIC_BASE_URL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ANTHROPIC_AUTH_TOKEN&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MINIMAX_API_KEY&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;API_TIMEOUT_MS&quot;</span><span class="punctuation">:</span> <span class="string">&quot;3000000&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ANTHROPIC_MODEL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ANTHROPIC_SMALL_FAST_MODEL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ANTHROPIC_DEFAULT_SONNET_MODEL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ANTHROPIC_DEFAULT_OPUS_MODEL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;ANTHROPIC_DEFAULT_HAIKU_MODEL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="OpenCode"><a href="#OpenCode" class="headerlink" title="OpenCode"></a>OpenCode</h2><h3 id="OpenCode安装"><a href="#OpenCode安装" class="headerlink" title="OpenCode安装"></a>OpenCode安装</h3><blockquote>
+<p><a href="https://opencode.ai/">官方安装文档</a></p>
+</blockquote>
+<h3 id="OpenCode配置"><a href="#OpenCode配置" class="headerlink" title="OpenCode配置"></a>OpenCode配置</h3><blockquote>
+<p><a href="https://opencode.ai/docs/zh-cn/config/">官方配置文档</a></p>
+</blockquote>
+<ul>
+<li>全局配置: ~&#x2F;.config&#x2F;opencode&#x2F;opencode.json</li>
+<li>项目配置: 项目中的 opencode.json</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://opencode.ai/config.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;provider&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;minimax&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;npm&quot;</span><span class="punctuation">:</span> <span class="string">&quot;@ai-sdk/anthropic&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;baseURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;apiKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt; (可选)&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Droid"><a href="#Droid" class="headerlink" title="Droid"></a>Droid</h2><blockquote>
+<p><a href="https://factory.ai/product/cli">官方安装文档</a></p>
+</blockquote>
+<h3 id="Droid配置"><a href="#Droid配置" class="headerlink" title="Droid配置"></a>Droid配置</h3><blockquote>
+<p><a href="https://docs.factory.ai/cli/configuration/settings">官方配置文档</a></p>
+</blockquote>
+<ul>
+<li>全局配置：~&#x2F;.factory&#x2F;settings.json</li>
+</ul>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;custom_models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">    <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;model_display_name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;model&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;base_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api_key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;provider&quot;</span><span class="punctuation">:</span> <span class="string">&quot;anthropic&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;max_tokens&quot;</span><span class="punctuation">:</span> <span class="number">64000</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+]]></content>
   </entry>
   <entry>
     <title>Flutter笔记</title>
