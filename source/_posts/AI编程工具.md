@@ -4,7 +4,9 @@ author: 不锈钢盆
 date: 2026-03-03 11:19:14
 description:
 categories:
+  - AI
 tags:
+  - VibeCoding
 ---
 
 ## ClaudeCode
@@ -77,6 +79,40 @@ Step1: 跳过 Claude Code 的登录流程，编辑或新增 `.claude.json` 文�
           "name": "MiniMax-M2.5"
         }
       }
+    }
+  }
+}
+```
+
+## Crush
+
+> [官方文档](https://github.com/charmbracelet/crush)
+
+### Crush配置
+
+* Unix: $HOME/.local/share/crush/crush.json
+* Windows: %LOCALAPPDATA%\crush\crush.json
+
+```json
+{
+  "$schema": "https://charm.land/crush.json",
+  "providers": {
+    "deepseek": {
+      "type": "openai-compat",
+      "base_url": "https://api.deepseek.com/v1",
+      "api_key": "$DEEPSEEK_API_KEY",
+      "models": [
+        {
+          "id": "deepseek-chat",
+          "name": "Deepseek V3",
+          "cost_per_1m_in": 0.27,
+          "cost_per_1m_out": 1.1,
+          "cost_per_1m_in_cached": 0.07,
+          "cost_per_1m_out_cached": 1.1,
+          "context_window": 64000,
+          "default_max_tokens": 5000
+        }
+      ]
     }
   }
 }

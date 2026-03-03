@@ -120,26 +120,26 @@ banner:
     bannerTitle: 杂七杂八
   about:
     bannerText: 谁往下水道扔东西了，怎么连下水道的老鼠也要打扰吗
-    bannerTitle: 路边一条
+    bannerTitle: 关于我
 
 # Sidebar settings
 sidebar:
   typedTextPrefix: 我是一个
-  typedText: ['软件工程师', '游戏玩家', '饭桶', 'Vimer']
+  typedText: ["软件工程师", "UI Designer", "饭桶", "Vimer"]
   info:
     - key: 职业
-      val: 前端开发工程师
+      val: 全栈开发工程师
     - key: 居住地
       val: 深圳
     - key: 爱好
-      val: 游戏 文学 艺术
+      val: 游戏 文学 Coding
 
   social:
 
 # About page settings
 about:
-  title: 就是很垃圾
-  introduction: 一个饭桶
+  title: I won’t run because I'm reticent
+  introduction: 不锈钢盆
   blog: https://iovitz.github.io/
   privacy: ♥
 
