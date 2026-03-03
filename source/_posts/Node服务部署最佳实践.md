@@ -1,5 +1,5 @@
 ---
-title: Node服务部署最佳实践
+title: Node服务部署
 author: 不锈钢盆
 date: 2025-02-26 11:12:11
 description: Node项目部署的最佳实践
@@ -22,7 +22,7 @@ apt update
 
 #### 安装一些常用的小软件
 
-* curl: 有一些软件，用 `curl` 安装会很方便
+* curl: 有一些服务器不会自带curl
 * vim/neovim: 比 `vi` 更好用的编辑器
 * ufw：防火墙
 * rsync：文件夹同步
@@ -109,7 +109,7 @@ set scrolloff=3
 添加 [NodeSource](https://deb.nodesource.com/) 的仓库来安装特定版本
 
 ```bash
-curl -fsSL <https://deb.nodesource.com/setup_20.x> | sudo bash -
+curl -fsSL <https://deb.nodesource.com/setup_24.x> | sudo bash -
 ```
 
 展示所有可用的nodejs版本
@@ -118,37 +118,15 @@ curl -fsSL <https://deb.nodesource.com/setup_20.x> | sudo bash -
 apt-cache showpkg nodejs
 ```
 
-安装指定版本的nodejs版本，这里以 `nodejs@20.18.0` 版本为例
+安装指定版本的nodejs版本，这里以 `nodejs@24.14.0` 版本为例
 
 ```bash
-sudo apt-get install -y nodejs=20.18.0-1nodesource1
+sudo apt-get install -y nodejs=24.14.0-1nodesource1
 ```
 
-#### 使用NVM安装Node
+#### 安装常用NodeJS库
 
-前往 [NVM的官网](https://github.com/nvm-sh/nvm) 找到安装指令，在控制台执行
-
-```bash
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-# OR
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
-```
-
-安装完成之后需要执行一下 `source ~/.bashrc` 更新一下环境，否则控制台可能找不到nvm命令
-
-```bash
-source ~/.bashrc
-```
-
-在安装完nvm之后，控制台执行 `nvm install x.x.x` 以安装指定Node版本
-
-```bash
-nvm install 20.18.0
-```
-
-#### 安装常用库
-
-安装完Nodejs之后需要安装常用的一些全局依赖，同时设置好npm源，首先安装 `nrm`，直接安装可能会失败（被墙），所以安装的时候指定一下使用淘宝源
+安装完NodeJS之后需要安装常用的一些全局依赖，同时设置好npm源，首先安装 `nrm`，直接安装可能会失败（被墙），所以安装的时候指定一下使用淘宝源
 
 ```bash
 # 普通安装
@@ -167,7 +145,7 @@ nrm use taobao
 配置好registry之后，可以继续安装其他常用npm包了
 
 ```bash
-npm install pnpm pm2 yarn live-server nodemon -g
+npm install pnpm pm2 yarn live-server -g
 
 # 设置pnpm
 pnpm setup && source ~/.bashrc
@@ -175,8 +153,8 @@ pnpm setup && source ~/.bashrc
 
 ### 新建部署用户
 
-为每个部署的服务都新增一个单独的user，避免直接使用Root权限操作
+为每个部署的服务都新增一个单独的user，避免直接使用Root账号操作
 
 ```bash
-useradd <username> -m && sudo usermod -aG sudo <username> && passwd <username>
+useradd -m -s /bin/bash newuser && usermod -aG sudo newuser && passwd newuser
 ```
