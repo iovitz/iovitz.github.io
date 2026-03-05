@@ -4,12 +4,18 @@
     <title>AI编程工具</title>
     <url>/2026/03/03/AI%E7%BC%96%E7%A8%8B%E5%B7%A5%E5%85%B7/</url>
     <content><![CDATA[<h2 id="ClaudeCode"><a href="#ClaudeCode" class="headerlink" title="ClaudeCode"></a>ClaudeCode</h2><h3 id="ClaudeCode安装"><a href="#ClaudeCode安装" class="headerlink" title="ClaudeCode安装"></a>ClaudeCode安装</h3><p><a href="https://code.claude.com/docs/zh-CN/quickstart">官方安装文档</a></p>
-<h3 id="ClaudeCode配置"><a href="#ClaudeCode配置" class="headerlink" title="ClaudeCode配置"></a>ClaudeCode配置</h3><p>Step1: 跳过 Claude Code 的登录流程，编辑或新增 <code>.claude.json</code> 文件，新增 <code>hasCompletedOnboarding</code> 参数</p>
+<h3 id="ClaudeCode配置"><a href="#ClaudeCode配置" class="headerlink" title="ClaudeCode配置"></a>ClaudeCode配置</h3><p>编辑或新增 <code>.claude.json</code> 文件，新增 <code>hasCompletedOnboarding</code> 参数，以跳过登录流程</p>
 <ul>
 <li>MacOS &amp; Linux 为 <code>~/.claude.json</code></li>
 <li>Windows 为<code>用户目录/.claude.json</code></li>
 </ul>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;hasCompletedOnboarding&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">true</span></span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>安装 mcp</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g typescript-language-server typescript</span><br><span class="line">claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest</span><br></pre></td></tr></table></figure>
+
+<p>安装 plugins</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/plugin marketplace add anthropics/claude-code</span><br><span class="line">/plugin install typescript-lsp</span><br></pre></td></tr></table></figure>
 
 <p>编辑或创建 Claude Code 的配置文件，添加模型配置</p>
 <ul>
@@ -40,7 +46,7 @@
 <li>Unix: $HOME&#x2F;.local&#x2F;share&#x2F;crush&#x2F;crush.json</li>
 <li>Windows: %LOCALAPPDATA%\crush\crush.json</li>
 </ul>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://charm.land/crush.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;deepseek&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openai-compat&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;base_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.deepseek.com/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api_key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$DEEPSEEK_API_KEY&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;deepseek-chat&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Deepseek V3&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in&quot;</span><span class="punctuation">:</span> <span class="number">0.27</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in_cached&quot;</span><span class="punctuation">:</span> <span class="number">0.07</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out_cached&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;context_window&quot;</span><span class="punctuation">:</span> <span class="number">64000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;default_max_tokens&quot;</span><span class="punctuation">:</span> <span class="number">5000</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://charm.land/crush.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lsp&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;typescript-language-server&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;--stdio&quot;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mcp&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;chrome-devtools&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stdio&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npx&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;-y&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;chrome-devtools-mcp@latest&quot;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;deepseek&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openai-compat&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;base_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.deepseek.com/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api_key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;$DEEPSEEK_API_KEY&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;deepseek-chat&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Deepseek V3&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in&quot;</span><span class="punctuation">:</span> <span class="number">0.27</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in_cached&quot;</span><span class="punctuation">:</span> <span class="number">0.07</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out_cached&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;context_window&quot;</span><span class="punctuation">:</span> <span class="number">64000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;default_max_tokens&quot;</span><span class="punctuation">:</span> <span class="number">5000</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Droid"><a href="#Droid" class="headerlink" title="Droid"></a>Droid</h2><blockquote>
 <p><a href="https://factory.ai/product/cli">官方安装文档</a></p>
@@ -237,6 +243,17 @@
     <content><![CDATA[]]></content>
   </entry>
   <entry>
+    <title>Linux学习笔记</title>
+    <url>/2023/06/06/Linux/</url>
+    <content><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
+      <categories>
+        <category>Linux</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MAC下常用软件安装</title>
     <url>/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>进入官网<a href="https://sspai.com/link?target=https://brew.sh/">https://brew.sh</a>复制以下命令</p>
@@ -263,14 +280,15 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux学习笔记</title>
-    <url>/2023/06/06/Linux/</url>
-    <content><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
+    <title>MinIO对象存储</title>
+    <url>/2026/03/04/MinIO%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[]]></content>
       <categories>
-        <category>Linux</category>
+        <category>OSS</category>
       </categories>
       <tags>
-        <tag>Linux</tag>
+        <tag>MinIO</tag>
+        <tag>OSS</tag>
       </tags>
   </entry>
   <entry>
@@ -456,8 +474,8 @@
         <category>OSS</category>
       </categories>
       <tags>
-        <tag>RustFS</tag>
         <tag>OSS</tag>
+        <tag>RustFS</tag>
       </tags>
   </entry>
   <entry>
