@@ -100,6 +100,8 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
 
 ## PI
 
+创建 `~/.pi/agent/models.json`，内容如下
+
 ```json
 {
   "providers": {
@@ -109,8 +111,8 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
       "apiKey": "xxx",
       "models": [
         {
-          "id": "Qwen3-Max",
-          "name": "Qwen3-Max",
+          "id": "MiniMax-M2.5",
+          "name": "MiniMax-M2.5",
           "reasoning": false,
           "input": ["text"],
           "contextWindow": 256000,
