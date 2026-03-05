@@ -98,6 +98,31 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
 }
 ```
 
+## PI
+
+```json
+{
+  "providers": {
+    "ollama": {
+      "baseUrl": "https://api.minimaxi.com/anthropic/v1",
+      "api": "<MINIMAX_API_KEY> (可选)",
+      "apiKey": "xxx",
+      "models": [
+        {
+          "id": "Qwen3-Max",
+          "name": "Qwen3-Max",
+          "reasoning": false,
+          "input": ["text"],
+          "contextWindow": 256000,
+          "maxTokens": 64000,
+          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 }
+        }
+      ]
+    }
+  }
+}
+```
+
 ## Crush
 
 > [官方文档](https://github.com/charmbracelet/crush)
@@ -131,8 +156,8 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
   "providers": {
     "deepseek": {
       "type": "openai-compat",
-      "base_url": "https://api.deepseek.com/v1",
-      "api_key": "$DEEPSEEK_API_KEY",
+      "base_url": "https://api.minimaxi.com/anthropic/v1",
+      "api_key": "<MINIMAX_API_KEY> (可选)",
       "models": [
         {
           "id": "deepseek-chat",
