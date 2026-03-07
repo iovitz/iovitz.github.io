@@ -103,24 +103,31 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
 ```json
 {
   "providers": {
-    "ollama": {
-      "baseUrl": "https://api.minimaxi.com/anthropic/v1",
-      "api": "<MINIMAX_API_KEY> (可选)",
-      "apiKey": "xxx",
+    "MiniMax": {
+      "baseUrl": "https://api.minimaxi.com/v1",
+      "api": "openai-completions",
+      "apiKey": "sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
       "models": [
         {
-          "id": "Qwen3-Max",
-          "name": "Qwen3-Max",
+          "id": "MiniMax-M2.5",
+          "name": "MiniMax-M2.5",
           "reasoning": false,
-          "input": ["text"],
+          "input": [
+            "text"
+          ],
           "contextWindow": 256000,
           "maxTokens": 64000,
-          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 }
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          }
         }
       ]
     }
   }
-}
+} 
 ```
 
 ## Crush
@@ -154,7 +161,7 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
     }
   },
   "providers": {
-    "deepseek": {
+    "MiniMax": {
       "type": "openai-compat",
       "base_url": "https://api.minimaxi.com/anthropic/v1",
       "api_key": "<MINIMAX_API_KEY> (可选)",
