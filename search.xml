@@ -39,7 +39,7 @@
 </ul>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://opencode.ai/config.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;provider&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;minimax&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;npm&quot;</span><span class="punctuation">:</span> <span class="string">&quot;@ai-sdk/anthropic&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;baseURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;apiKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt; (可选)&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="PI"><a href="#PI" class="headerlink" title="PI"></a>PI</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;ollama&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt; (可选)&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;apiKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;xxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Qwen3-Max&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Qwen3-Max&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;reasoning&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;input&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="string">&quot;text&quot;</span><span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;contextWindow&quot;</span><span class="punctuation">:</span> <span class="number">256000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;maxTokens&quot;</span><span class="punctuation">:</span> <span class="number">64000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span> <span class="attr">&quot;input&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span> <span class="attr">&quot;output&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span> <span class="attr">&quot;cacheRead&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span> <span class="attr">&quot;cacheWrite&quot;</span><span class="punctuation">:</span> <span class="number">0</span> <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<h2 id="PI"><a href="#PI" class="headerlink" title="PI"></a>PI</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;MiniMax&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openai-completions&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;apiKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;reasoning&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;input&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">            <span class="string">&quot;text&quot;</span></span><br><span class="line">          <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;contextWindow&quot;</span><span class="punctuation">:</span> <span class="number">256000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;maxTokens&quot;</span><span class="punctuation">:</span> <span class="number">64000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;input&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;output&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cacheRead&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cacheWrite&quot;</span><span class="punctuation">:</span> <span class="number">0</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span> </span><br></pre></td></tr></table></figure>
 
 <h2 id="Crush"><a href="#Crush" class="headerlink" title="Crush"></a>Crush</h2><blockquote>
 <p><a href="https://github.com/charmbracelet/crush">官方文档</a></p>
@@ -48,7 +48,7 @@
 <li>Unix: $HOME&#x2F;.local&#x2F;share&#x2F;crush&#x2F;crush.json</li>
 <li>Windows: %LOCALAPPDATA%\crush\crush.json</li>
 </ul>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://charm.land/crush.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lsp&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;typescript-language-server&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;--stdio&quot;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mcp&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;chrome-devtools&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stdio&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npx&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;-y&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;chrome-devtools-mcp@latest&quot;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;deepseek&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openai-compat&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;base_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api_key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt; (可选)&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;deepseek-chat&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Deepseek V3&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in&quot;</span><span class="punctuation">:</span> <span class="number">0.27</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in_cached&quot;</span><span class="punctuation">:</span> <span class="number">0.07</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out_cached&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;context_window&quot;</span><span class="punctuation">:</span> <span class="number">64000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;default_max_tokens&quot;</span><span class="punctuation">:</span> <span class="number">5000</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://charm.land/crush.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;lsp&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;typescript&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;typescript-language-server&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;--stdio&quot;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;mcp&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;chrome-devtools&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;stdio&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;command&quot;</span><span class="punctuation">:</span> <span class="string">&quot;npx&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;args&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;-y&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;chrome-devtools-mcp@latest&quot;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;MiniMax&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;type&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openai-compat&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;base_url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api_key&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt; (可选)&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;deepseek-chat&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Deepseek V3&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in&quot;</span><span class="punctuation">:</span> <span class="number">0.27</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_in_cached&quot;</span><span class="punctuation">:</span> <span class="number">0.07</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost_per_1m_out_cached&quot;</span><span class="punctuation">:</span> <span class="number">1.1</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;context_window&quot;</span><span class="punctuation">:</span> <span class="number">64000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;default_max_tokens&quot;</span><span class="punctuation">:</span> <span class="number">5000</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="Droid"><a href="#Droid" class="headerlink" title="Droid"></a>Droid</h2><blockquote>
 <p><a href="https://factory.ai/product/cli">官方安装文档</a></p>
@@ -66,6 +66,18 @@
       </categories>
       <tags>
         <tag>VibeCoding</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Flutter</title>
+    <url>/2023/06/14/Flutter/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Flutter</tag>
+        <tag>跨端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -115,18 +127,6 @@
       <tags>
         <tag>工程化</tag>
         <tag>研发基建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flutter</title>
-    <url>/2023/06/14/Flutter/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
-        <tag>跨端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -196,11 +196,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Ionic笔记</title>
-    <url>/2024/08/13/Ionic%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>Github Action</title>
     <url>/2024/09/27/Github-Action/</url>
     <content><![CDATA[<h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h2 id="分支限制"><a href="#分支限制" class="headerlink" title="分支限制"></a>分支限制</h2><h2 id="好用的Action"><a href="#好用的Action" class="headerlink" title="好用的Action"></a>好用的Action</h2><h3 id="Checkout"><a href="#Checkout" class="headerlink" title="Checkout"></a>Checkout</h3><h4 id="action-x2F-checkout"><a href="#action-x2F-checkout" class="headerlink" title="action&#x2F;checkout"></a>action&#x2F;checkout</h4><blockquote>
@@ -245,6 +240,11 @@
       </tags>
   </entry>
   <entry>
+    <title>Ionic笔记</title>
+    <url>/2024/08/13/Ionic%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>Linux学习笔记</title>
     <url>/2023/06/06/Linux/</url>
     <content><![CDATA[<h2 id="Linux学习笔记"><a href="#Linux学习笔记" class="headerlink" title="Linux学习笔记"></a>Linux学习笔记</h2><h2 id="123123"><a href="#123123" class="headerlink" title="123123"></a>123123</h2>]]></content>
@@ -253,6 +253,18 @@
       </categories>
       <tags>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MinIO对象存储</title>
+    <url>/2026/03/04/MinIO%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>OSS</category>
+      </categories>
+      <tags>
+        <tag>MinIO</tag>
+        <tag>OSS</tag>
       </tags>
   </entry>
   <entry>
@@ -282,18 +294,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MongoDB</title>
-    <url>/2023/06/14/MongoDB/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>MongoDB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL</title>
     <url>/2023/06/14/MySQL/</url>
     <content><![CDATA[]]></content>
@@ -306,15 +306,15 @@
       </tags>
   </entry>
   <entry>
-    <title>MinIO对象存储</title>
-    <url>/2026/03/04/MinIO%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</url>
+    <title>MongoDB</title>
+    <url>/2023/06/14/MongoDB/</url>
     <content><![CDATA[]]></content>
       <categories>
-        <category>OSS</category>
+        <category>数据库</category>
       </categories>
       <tags>
-        <tag>MinIO</tag>
-        <tag>OSS</tag>
+        <tag>数据库</tag>
+        <tag>MongoDB</tag>
       </tags>
   </entry>
   <entry>
