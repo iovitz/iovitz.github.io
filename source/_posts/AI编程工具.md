@@ -86,7 +86,7 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
       "npm": "@ai-sdk/anthropic",
       "options": {
         "baseURL": "https://api.minimaxi.com/anthropic/v1",
-        "apiKey": "<MINIMAX_API_KEY> (可选)"
+        "apiKey": "<MINIMAX_API_KEY>"
       },
       "models": {
         "MiniMax-M2.5": {
@@ -105,22 +105,50 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
 ```json
 {
   "providers": {
-    "ollama": {
-      "baseUrl": "https://api.minimaxi.com/anthropic/v1",
-      "api": "<MINIMAX_API_KEY> (可选)",
-      "apiKey": "xxx",
+    "Minimaxi": {
+      "baseUrl": "https://api.minimaxi.com/v1",
+      "api": "openai-completions",
+      "apiKey": "<MINIMAX_API_KEY>",
       "models": [
         {
           "id": "MiniMax-M2.5",
           "name": "MiniMax-M2.5",
           "reasoning": false,
-          "input": ["text"],
+          "input": [
+            "text"
+          ],
           "contextWindow": 256000,
           "maxTokens": 64000,
-          "cost": { "input": 0, "output": 0, "cacheRead": 0, "cacheWrite": 0 }
+          "cost": {
+            "input": 0,
+            "output": 0,
+            "cacheRead": 0,
+            "cacheWrite": 0
+          }
         }
       ]
     }
+  }
+}
+```
+
+系统设置`code ~/.pi/agent/settings.json`
+
+```json
+{
+  "lastChangelogVersion": "0.56.2",
+  "defaultProvider": "Minimaxi",
+  "defaultModel": "MiniMax-M2.5",
+  "compaction": {
+    "enabled": true,
+    "reserveTokens": 16384,
+    "keepRecentTokens": 20000
+  },
+  "retry": {
+    "enabled": true,
+    "maxRetries": 100,
+    "baseDelayMs": 2000,
+    "maxDelayMs": 2000
   }
 }
 ```
@@ -156,7 +184,7 @@ claude mcp add chrome-devtools --scope user npx chrome-devtools-mcp@latest
     }
   },
   "providers": {
-    "deepseek": {
+    "MiniMax": {
       "type": "openai-compat",
       "base_url": "https://api.minimaxi.com/anthropic/v1",
       "api_key": "<MINIMAX_API_KEY> (可选)",
