@@ -39,7 +39,7 @@
 </ul>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;$schema&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://opencode.ai/config.json&quot;</span><span class="punctuation">,</span></span><br><span class="line">  <span class="attr">&quot;provider&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;minimax&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;npm&quot;</span><span class="punctuation">:</span> <span class="string">&quot;@ai-sdk/anthropic&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;options&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;baseURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/anthropic/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;apiKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt;&quot;</span></span><br><span class="line">      <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="PI"><a href="#PI" class="headerlink" title="PI"></a>PI</h2><p>设置模型<code>code ~/.pi/agent/models.json</code></p>
+<h2 id="PI"><a href="#PI" class="headerlink" title="PI"></a>PI</h2><p>创建 <code>~/.pi/agent/models.json</code>，内容如下</p>
 <figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  <span class="attr">&quot;providers&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;Minimaxi&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">      <span class="attr">&quot;baseUrl&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://api.minimaxi.com/v1&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;api&quot;</span><span class="punctuation">:</span> <span class="string">&quot;openai-completions&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;apiKey&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&lt;MINIMAX_API_KEY&gt;&quot;</span><span class="punctuation">,</span></span><br><span class="line">      <span class="attr">&quot;models&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">          <span class="attr">&quot;id&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MiniMax-M2.5&quot;</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;reasoning&quot;</span><span class="punctuation">:</span> <span class="literal"><span class="keyword">false</span></span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;input&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">            <span class="string">&quot;text&quot;</span></span><br><span class="line">          <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;contextWindow&quot;</span><span class="punctuation">:</span> <span class="number">256000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;maxTokens&quot;</span><span class="punctuation">:</span> <span class="number">64000</span><span class="punctuation">,</span></span><br><span class="line">          <span class="attr">&quot;cost&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;input&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;output&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cacheRead&quot;</span><span class="punctuation">:</span> <span class="number">0</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;cacheWrite&quot;</span><span class="punctuation">:</span> <span class="number">0</span></span><br><span class="line">          <span class="punctuation">&#125;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">      <span class="punctuation">]</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <p>系统设置<code>code ~/.pi/agent/settings.json</code></p>
@@ -70,18 +70,6 @@
       </categories>
       <tags>
         <tag>VibeCoding</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flutter</title>
-    <url>/2023/06/14/Flutter/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
-        <tag>跨端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -134,24 +122,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Flutter</title>
+    <url>/2023/06/14/Flutter/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Flutter</tag>
+        <tag>跨端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Flutter笔记</title>
     <url>/2024/08/13/Flutter%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>Frp内网穿透</title>
-    <url>/2025/06/20/Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
-    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://gofrp.org/zh-cn/docs/">FRP文档</a></p>
-<h2 id="服务端搭建"><a href="#服务端搭建" class="headerlink" title="服务端搭建"></a>服务端搭建</h2><h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># ==============================</span><br><span class="line"># FRP 服务器端（frps.ini）配置</span><br><span class="line"># ==============================</span><br><span class="line"></span><br><span class="line"># 绑定监听地址（默认 `0.0.0.0` 代表监听所有 IP）</span><br><span class="line">bindAddr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line">#  服务器监听端口（客户端需要通过该端口连接 FRP 服务器）</span><br><span class="line">bindPort = 7000</span><br><span class="line"></span><br><span class="line"># HTTP 端口（用于内网 HTTP 代理穿透）</span><br><span class="line"># vhostHTTPPort = 8080</span><br><span class="line"></span><br><span class="line"># HTTPS 端口（用于内网 HTTPS 代理穿透）</span><br><span class="line"># vhostHTTPSPort = 8443</span><br><span class="line"></span><br><span class="line"># 子域名支持</span><br><span class="line"># 可以通过 `subDomainHost` 解析动态子域名</span><br><span class="line"># 例如：如果 `subDomainHost` 配置为 &quot;example.com&quot;</span><br><span class="line"># 那么客户端可以使用 `test.example.com` 访问内网服务</span><br><span class="line"># 如果你没有域名或不使用此功能，请删除此行！</span><br><span class="line"># 如果你要用IP直连例如:168.0.0.1:8848，就把这行删掉，不要配置！</span><br><span class="line">subDomainHost = &quot;xxxx.com&quot;  # 请替换为你的真实域名</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># Web 控制台（Dashboard）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line"># 监控界面监听地址（`0.0.0.0` 代表所有 IP 可访问）</span><br><span class="line">webServer.addr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line"># Web 管理面板端口（可在浏览器访问，默认 7500）</span><br><span class="line"># 你可以通过 `http://你的公网IP:7500` 访问 FRP 管理面板</span><br><span class="line">webServer.port = 7500</span><br><span class="line"></span><br><span class="line"># Web 控制台管理账号（可自定义）</span><br><span class="line">webServer.user = &quot;iovitz&quot;</span><br><span class="line"></span><br><span class="line"># Web 控制台密码（请自行修改）</span><br><span class="line">webServer.password = &quot;a123123.&quot;</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># 身份验证（Authentication）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line">#  认证方式（防止未经授权的客户端连接）</span><br><span class="line"># 目前 FRP 支持 `token` 和 `oidc` 方式，我们选用token</span><br><span class="line">auth.method = &quot;token&quot;</span><br><span class="line"></span><br><span class="line">#  Token 认证（客户端需要匹配相同 token 才能连接）</span><br><span class="line"># 通俗来说就是密码，写一个你能记住的，尽量长一点</span><br><span class="line">auth.token = &quot;a123123.&quot;   # 请自行修改，不要用我的</span><br></pre></td></tr></table></figure>
-
-<h2 id="客户端搭建"><a href="#客户端搭建" class="headerlink" title="客户端搭建"></a>客户端搭建</h2>]]></content>
-      <categories>
-        <category>研发基建</category>
-      </categories>
-      <tags>
-        <tag>工程化</tag>
-        <tag>研发基建</tag>
-      </tags>
   </entry>
   <entry>
     <title>Git</title>
@@ -197,6 +182,21 @@
       <tags>
         <tag>研发基建</tag>
         <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Frp内网穿透</title>
+    <url>/2025/06/20/Frp%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</url>
+    <content><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><p><a href="https://gofrp.org/zh-cn/docs/">FRP文档</a></p>
+<h2 id="服务端搭建"><a href="#服务端搭建" class="headerlink" title="服务端搭建"></a>服务端搭建</h2><h3 id="服务端配置"><a href="#服务端配置" class="headerlink" title="服务端配置"></a>服务端配置</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># ==============================</span><br><span class="line"># FRP 服务器端（frps.ini）配置</span><br><span class="line"># ==============================</span><br><span class="line"></span><br><span class="line"># 绑定监听地址（默认 `0.0.0.0` 代表监听所有 IP）</span><br><span class="line">bindAddr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line">#  服务器监听端口（客户端需要通过该端口连接 FRP 服务器）</span><br><span class="line">bindPort = 7000</span><br><span class="line"></span><br><span class="line"># HTTP 端口（用于内网 HTTP 代理穿透）</span><br><span class="line"># vhostHTTPPort = 8080</span><br><span class="line"></span><br><span class="line"># HTTPS 端口（用于内网 HTTPS 代理穿透）</span><br><span class="line"># vhostHTTPSPort = 8443</span><br><span class="line"></span><br><span class="line"># 子域名支持</span><br><span class="line"># 可以通过 `subDomainHost` 解析动态子域名</span><br><span class="line"># 例如：如果 `subDomainHost` 配置为 &quot;example.com&quot;</span><br><span class="line"># 那么客户端可以使用 `test.example.com` 访问内网服务</span><br><span class="line"># 如果你没有域名或不使用此功能，请删除此行！</span><br><span class="line"># 如果你要用IP直连例如:168.0.0.1:8848，就把这行删掉，不要配置！</span><br><span class="line">subDomainHost = &quot;xxxx.com&quot;  # 请替换为你的真实域名</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># Web 控制台（Dashboard）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line"># 监控界面监听地址（`0.0.0.0` 代表所有 IP 可访问）</span><br><span class="line">webServer.addr = &quot;0.0.0.0&quot;</span><br><span class="line"></span><br><span class="line"># Web 管理面板端口（可在浏览器访问，默认 7500）</span><br><span class="line"># 你可以通过 `http://你的公网IP:7500` 访问 FRP 管理面板</span><br><span class="line">webServer.port = 7500</span><br><span class="line"></span><br><span class="line"># Web 控制台管理账号（可自定义）</span><br><span class="line">webServer.user = &quot;iovitz&quot;</span><br><span class="line"></span><br><span class="line"># Web 控制台密码（请自行修改）</span><br><span class="line">webServer.password = &quot;a123123.&quot;</span><br><span class="line"></span><br><span class="line"># =============================================</span><br><span class="line"># 身份验证（Authentication）配置</span><br><span class="line"># =============================================</span><br><span class="line"></span><br><span class="line">#  认证方式（防止未经授权的客户端连接）</span><br><span class="line"># 目前 FRP 支持 `token` 和 `oidc` 方式，我们选用token</span><br><span class="line">auth.method = &quot;token&quot;</span><br><span class="line"></span><br><span class="line">#  Token 认证（客户端需要匹配相同 token 才能连接）</span><br><span class="line"># 通俗来说就是密码，写一个你能记住的，尽量长一点</span><br><span class="line">auth.token = &quot;a123123.&quot;   # 请自行修改，不要用我的</span><br></pre></td></tr></table></figure>
+
+<h2 id="客户端搭建"><a href="#客户端搭建" class="headerlink" title="客户端搭建"></a>客户端搭建</h2>]]></content>
+      <categories>
+        <category>研发基建</category>
+      </categories>
+      <tags>
+        <tag>工程化</tag>
+        <tag>研发基建</tag>
       </tags>
   </entry>
   <entry>
@@ -260,18 +260,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MongoDB</title>
-    <url>/2023/06/14/MongoDB/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>MongoDB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MAC下常用软件安装</title>
     <url>/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>进入官网<a href="https://sspai.com/link?target=https://brew.sh/">https://brew.sh</a>复制以下命令</p>
@@ -295,6 +283,18 @@
       <tags>
         <tag>MAC</tag>
         <tag>环境搭建</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MongoDB</title>
+    <url>/2023/06/14/MongoDB/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>MongoDB</tag>
       </tags>
   </entry>
   <entry>
@@ -383,6 +383,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Radis</title>
+    <url>/2023/06/14/Radis/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>Radis</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Node服务部署</title>
     <url>/2025/02/26/Node%E6%9C%8D%E5%8A%A1%E9%83%A8%E7%BD%B2%E6%9C%80%E4%BD%B3%E5%AE%9E%E8%B7%B5/</url>
     <content><![CDATA[<h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><h3 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h3><h4 id="软件升级"><a href="#软件升级" class="headerlink" title="软件升级"></a>软件升级</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">apt update</span><br></pre></td></tr></table></figure>
@@ -435,16 +447,9 @@
       </tags>
   </entry>
   <entry>
-    <title>Radis</title>
-    <url>/2023/06/14/Radis/</url>
+    <title>ReactNative笔记</title>
+    <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>Radis</tag>
-      </tags>
   </entry>
   <entry>
     <title>RustFS对象存储</title>
@@ -466,11 +471,6 @@
         <tag>RustFS</tag>
         <tag>OSS</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>ReactNative笔记</title>
-    <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>UniApp最佳实践</title>
@@ -525,6 +525,19 @@
       <tags>
         <tag>跨端开发</tag>
         <tag>UniApp</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>前端工程质量</title>
+    <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/</url>
+    <content><![CDATA[<h1 id="Eslint和Prettier配置"><a href="#Eslint和Prettier配置" class="headerlink" title="Eslint和Prettier配置"></a>Eslint和Prettier配置</h1>]]></content>
+      <categories>
+        <category>研发基建</category>
+      </categories>
+      <tags>
+        <tag>工程化</tag>
+        <tag>研发基建</tag>
+        <tag>工程质量</tag>
       </tags>
   </entry>
   <entry>
@@ -598,19 +611,6 @@
       </tags>
   </entry>
   <entry>
-    <title>前端工程质量</title>
-    <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/</url>
-    <content><![CDATA[<h1 id="Eslint和Prettier配置"><a href="#Eslint和Prettier配置" class="headerlink" title="Eslint和Prettier配置"></a>Eslint和Prettier配置</h1>]]></content>
-      <categories>
-        <category>研发基建</category>
-      </categories>
-      <tags>
-        <tag>工程化</tag>
-        <tag>研发基建</tag>
-        <tag>工程质量</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>前端请求建设</title>
     <url>/2023/06/06/%E5%89%8D%E7%AB%AF%E8%AF%B7%E6%B1%82%E5%BB%BA%E8%AE%BE/</url>
     <content><![CDATA[<h1 id="请求封装"><a href="#请求封装" class="headerlink" title="请求封装"></a>请求封装</h1><p>Axios原生请求功能太多了，开发中不一定需要这么多功能，所以这里简单封装一下Axios，简化一下使用流程，并且提供更好的Typescript支持，实际使用时可以根据具体情况对代码进行更改</p>
@@ -645,6 +645,100 @@
         <tag>请求</tag>
         <tag>Axios</tag>
         <tag>稳定性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>积极心理学</title>
+    <url>/2024/04/18/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/</url>
+    <content><![CDATA[<h2 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h2><h2 id="人类的本能是消"><a href="#人类的本能是消" class="headerlink" title="人类的本能是消?"></a>人类的本能是消?</h2><h2 id="积极心理学的四位奠基人"><a href="#积极心理学的四位奠基人" class="headerlink" title="积极心理学的四位奠基人"></a>积极心理学的四位奠基人</h2><h2 id="ACE幸福能力模型"><a href="#ACE幸福能力模型" class="headerlink" title="ACE幸福能力模型"></a>ACE幸福能力模型</h2><h2 id="幸福的悖论"><a href="#幸福的悖论" class="headerlink" title="幸福的悖论"></a>幸福的悖论</h2><p>经济学家提出的自私悖论：</p>
+<blockquote>
+<p>一个人特别想得到自己的好处，最后反而越得不到</p>
+</blockquote>
+<p>爱出者爱返</p>
+<p>幸福越多越好？</p>
+<h3 id="果酱实验"><a href="#果酱实验" class="headerlink" title="果酱实验"></a>果酱实验</h3><table>
+<thead>
+<tr>
+<th>摊位上摆放的果酱数量</th>
+<th>试吃数量</th>
+<th>购买数量</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>6</td>
+<td>少</td>
+<td>多</td>
+</tr>
+<tr>
+<td>24</td>
+<td>多</td>
+<td>少</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>选择越多，越难做出选择</p>
+</blockquote>
+<p>需要从当下开始，用心体验用心挖掘</p>
+<h3 id="有意义的快乐"><a href="#有意义的快乐" class="headerlink" title="有意义的快乐"></a>有意义的快乐</h3><p>意义是人类幸福的一个重要因素</p>
+<p>意义：</p>
+<ul>
+<li>我是谁<ul>
+<li><blockquote>
+<p>家庭的责任</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>我从哪里来<ul>
+<li><blockquote>
+<p>来自于家庭</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>我要到哪里去</li>
+</ul>
+<p>三角定位理论：</p>
+<p>虚无主义：</p>
+<p>西西弗斯推巨石到山顶之后，巨石又会滚下来，西西弗斯周而复始的做这么一件事情，他的意义在于<code>下定决心重回山顶</code></p>
+<p>存在主义哲学家 萨特：存在先于本质</p>
+<blockquote>
+<p>与其花时间思考为什么活着，不如花时间想怎么活着</p>
+</blockquote>
+<p>积极心理学：<code>好好活着</code></p>
+<h2 id="痛苦的意义"><a href="#痛苦的意义" class="headerlink" title="痛苦的意义"></a>痛苦的意义</h2><p>痛苦的体验本身也是有意义的</p>
+<p>痛苦：</p>
+<ul>
+<li>思考意义</li>
+<li>发现自己的品格（顽强不息</li>
+<li>追求超越（不局限于享乐</li>
+</ul>
+<p>意义来自于成长过程中的发现</p>
+<p>意义就是：灵性悟性，感性，德性<br>意义感觉</p>
+<blockquote>
+<p>意义因人而异，需要自己探索，坚持自己所相信</p>
+</blockquote>
+<p>幸福因素非常多，但是积极是主观的</p>
+]]></content>
+      <categories>
+        <category>心理学</category>
+      </categories>
+      <tags>
+        <tag>心理学</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目:HaHaChat</title>
+    <url>/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>NestJS</tag>
+        <tag>UniApp</tag>
+        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -729,6 +823,12 @@
 <td>社区支持</td>
 </tr>
 </tbody></table>
+<h3 id="Minio解决方案"><a href="#Minio解决方案" class="headerlink" title="Minio解决方案"></a>Minio解决方案</h3><h4 id="Web-Console-UI"><a href="#Web-Console-UI" class="headerlink" title="Web Console UI"></a>Web Console UI</h4><p>Minio的WebUI被阉割了，现在只是一个简单的文件浏览器，但是开源社区维护了一个超棒的Web Console，下面请出唯一真神：<a href="https://github.com/georgmangold/console">georgmangold&#x2F;console</a></p>
+<p>推荐使用Docker启动，使用下面的命令启动：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">services:</span></span><br><span class="line">  <span class="attr">minio:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">minio/minio:RELEASE.2025-09-07T16-13-09Z</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">minio</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">command:</span> <span class="string">server</span> <span class="string">/data</span> <span class="string">--console-address</span> <span class="string">:9001</span> <span class="string">--address</span> <span class="string">:9000</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;9000:9000&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">MINIO_ROOT_USER:</span> <span class="string">admin</span></span><br><span class="line">      <span class="attr">MINIO_ROOT_PASSWORD:</span> <span class="number">12345678</span></span><br><span class="line">      <span class="attr">MINIO_BROWSER:</span> <span class="string">&quot;on&quot;</span></span><br><span class="line">    <span class="attr">volumes:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./data:/data</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">./certs:/root/.minio/certs</span></span><br><span class="line">    <span class="attr">logging:</span></span><br><span class="line">      <span class="attr">driver:</span> <span class="string">json-file</span></span><br><span class="line">      <span class="attr">options:</span></span><br><span class="line">        <span class="attr">max-file:</span> <span class="string">&quot;10&quot;</span></span><br><span class="line">        <span class="attr">max-size:</span> <span class="string">5M</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">minio-console:</span></span><br><span class="line">    <span class="attr">image:</span> <span class="string">ghcr.io/georgmangold/console</span></span><br><span class="line">    <span class="attr">container_name:</span> <span class="string">minio-console</span></span><br><span class="line">    <span class="attr">restart:</span> <span class="string">always</span></span><br><span class="line">    <span class="attr">ports:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">&quot;9001:9090&quot;</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">CONSOLE_MINIO_SERVER=http://minio:9000</span></span><br><span class="line">    <span class="attr">depends_on:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">minio</span></span><br></pre></td></tr></table></figure>
+
+<p>使用 <code>1panel</code> 安装的可以使用这个脚本</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker run -d \</span><br><span class="line">  --name minio-console \</span><br><span class="line">  --restart=always \</span><br><span class="line">  --network 1panel-network \</span><br><span class="line">  -p 9001:9090 \</span><br><span class="line">  -e CONSOLE_MINIO_SERVER=http://minio:9000 \</span><br><span class="line">  ghcr.io/georgmangold/console</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>OSS</category>
@@ -736,100 +836,6 @@
       <tags>
         <tag>OSS</tag>
         <tag>MinIO</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目:HaHaChat</title>
-    <url>/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>项目</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>NestJS</tag>
-        <tag>UniApp</tag>
-        <tag>项目</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>积极心理学</title>
-    <url>/2024/04/18/%E7%A7%AF%E6%9E%81%E5%BF%83%E7%90%86%E5%AD%A6/</url>
-    <content><![CDATA[<h2 id="导言"><a href="#导言" class="headerlink" title="导言"></a>导言</h2><h2 id="人类的本能是消"><a href="#人类的本能是消" class="headerlink" title="人类的本能是消?"></a>人类的本能是消?</h2><h2 id="积极心理学的四位奠基人"><a href="#积极心理学的四位奠基人" class="headerlink" title="积极心理学的四位奠基人"></a>积极心理学的四位奠基人</h2><h2 id="ACE幸福能力模型"><a href="#ACE幸福能力模型" class="headerlink" title="ACE幸福能力模型"></a>ACE幸福能力模型</h2><h2 id="幸福的悖论"><a href="#幸福的悖论" class="headerlink" title="幸福的悖论"></a>幸福的悖论</h2><p>经济学家提出的自私悖论：</p>
-<blockquote>
-<p>一个人特别想得到自己的好处，最后反而越得不到</p>
-</blockquote>
-<p>爱出者爱返</p>
-<p>幸福越多越好？</p>
-<h3 id="果酱实验"><a href="#果酱实验" class="headerlink" title="果酱实验"></a>果酱实验</h3><table>
-<thead>
-<tr>
-<th>摊位上摆放的果酱数量</th>
-<th>试吃数量</th>
-<th>购买数量</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>6</td>
-<td>少</td>
-<td>多</td>
-</tr>
-<tr>
-<td>24</td>
-<td>多</td>
-<td>少</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>选择越多，越难做出选择</p>
-</blockquote>
-<p>需要从当下开始，用心体验用心挖掘</p>
-<h3 id="有意义的快乐"><a href="#有意义的快乐" class="headerlink" title="有意义的快乐"></a>有意义的快乐</h3><p>意义是人类幸福的一个重要因素</p>
-<p>意义：</p>
-<ul>
-<li>我是谁<ul>
-<li><blockquote>
-<p>家庭的责任</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>我从哪里来<ul>
-<li><blockquote>
-<p>来自于家庭</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li>我要到哪里去</li>
-</ul>
-<p>三角定位理论：</p>
-<p>虚无主义：</p>
-<p>西西弗斯推巨石到山顶之后，巨石又会滚下来，西西弗斯周而复始的做这么一件事情，他的意义在于<code>下定决心重回山顶</code></p>
-<p>存在主义哲学家 萨特：存在先于本质</p>
-<blockquote>
-<p>与其花时间思考为什么活着，不如花时间想怎么活着</p>
-</blockquote>
-<p>积极心理学：<code>好好活着</code></p>
-<h2 id="痛苦的意义"><a href="#痛苦的意义" class="headerlink" title="痛苦的意义"></a>痛苦的意义</h2><p>痛苦的体验本身也是有意义的</p>
-<p>痛苦：</p>
-<ul>
-<li>思考意义</li>
-<li>发现自己的品格（顽强不息</li>
-<li>追求超越（不局限于享乐</li>
-</ul>
-<p>意义来自于成长过程中的发现</p>
-<p>意义就是：灵性悟性，感性，德性<br>意义感觉</p>
-<blockquote>
-<p>意义因人而异，需要自己探索，坚持自己所相信</p>
-</blockquote>
-<p>幸福因素非常多，但是积极是主观的</p>
-]]></content>
-      <categories>
-        <category>心理学</category>
-      </categories>
-      <tags>
-        <tag>心理学</tag>
       </tags>
   </entry>
 </search>
