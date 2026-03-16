@@ -73,6 +73,18 @@
       </tags>
   </entry>
   <entry>
+    <title>Flutter</title>
+    <url>/2023/06/14/Flutter/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>Flutter</tag>
+        <tag>跨端开发</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker使用</title>
     <url>/2024/02/05/Docker%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h1 id="安装Docker"><a href="#安装Docker" class="headerlink" title="安装Docker"></a>安装Docker</h1><p>更新包版本</p>
@@ -119,18 +131,6 @@
       <tags>
         <tag>工程化</tag>
         <tag>研发基建</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Flutter</title>
-    <url>/2023/06/14/Flutter/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>Flutter</tag>
-        <tag>跨端开发</tag>
       </tags>
   </entry>
   <entry>
@@ -260,6 +260,18 @@
       </tags>
   </entry>
   <entry>
+    <title>MongoDB</title>
+    <url>/2023/06/14/MongoDB/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>数据库</tag>
+        <tag>MongoDB</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>MAC下常用软件安装</title>
     <url>/2024/03/20/MAC%E4%B8%8B%E5%B8%B8%E7%94%A8%E8%BD%AF%E4%BB%B6%E5%AE%89%E8%A3%85/</url>
     <content><![CDATA[<h1 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h1><p>进入官网<a href="https://sspai.com/link?target=https://brew.sh/">https://brew.sh</a>复制以下命令</p>
@@ -286,30 +298,6 @@
       </tags>
   </entry>
   <entry>
-    <title>MinIO对象存储</title>
-    <url>/2026/03/04/MinIO%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>OSS</category>
-      </categories>
-      <tags>
-        <tag>MinIO</tag>
-        <tag>OSS</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>MongoDB</title>
-    <url>/2023/06/14/MongoDB/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>数据库</tag>
-        <tag>MongoDB</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>MySQL</title>
     <url>/2023/06/14/MySQL/</url>
     <content><![CDATA[]]></content>
@@ -332,20 +320,6 @@
         <tag>NestJS</tag>
         <tag>NodeJS</tag>
         <tag>服务端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>NodeJS的Web框架Sails.js</title>
-    <url>/2024/08/13/NodeJS%E7%9A%84Web%E6%A1%86%E6%9E%B6Sails-js/</url>
-    <content><![CDATA[<h1 id="Sails框架"><a href="#Sails框架" class="headerlink" title="Sails框架"></a>Sails框架</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="发"><a href="#发" class="headerlink" title="发"></a>发</h3><h3 id="接口开发"><a href="#接口开发" class="headerlink" title="接口开发"></a>接口开发</h3><h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>sails自带一个ORM，但是并不好用，并且资料也很少</p>
-<h2 id="日志方案"><a href="#日志方案" class="headerlink" title="日志方案"></a>日志方案</h2><h2 id="Rest-Client"><a href="#Rest-Client" class="headerlink" title="Rest Client"></a>Rest Client</h2><h2 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h2>]]></content>
-      <categories>
-        <category>服务端框架</category>
-      </categories>
-      <tags>
-        <tag>NodeJS</tag>
-        <tag>Web Framework</tag>
-        <tag>Javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -392,6 +366,20 @@
       <tags>
         <tag>研发基建</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>NodeJS的Web框架Sails.js</title>
+    <url>/2024/08/13/NodeJS%E7%9A%84Web%E6%A1%86%E6%9E%B6Sails-js/</url>
+    <content><![CDATA[<h1 id="Sails框架"><a href="#Sails框架" class="headerlink" title="Sails框架"></a>Sails框架</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><h3 id="发"><a href="#发" class="headerlink" title="发"></a>发</h3><h3 id="接口开发"><a href="#接口开发" class="headerlink" title="接口开发"></a>接口开发</h3><h3 id="日志"><a href="#日志" class="headerlink" title="日志"></a>日志</h3><h1 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h1><h2 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h2><p>sails自带一个ORM，但是并不好用，并且资料也很少</p>
+<h2 id="日志方案"><a href="#日志方案" class="headerlink" title="日志方案"></a>日志方案</h2><h2 id="Rest-Client"><a href="#Rest-Client" class="headerlink" title="Rest Client"></a>Rest Client</h2><h2 id="开发规范"><a href="#开发规范" class="headerlink" title="开发规范"></a>开发规范</h2>]]></content>
+      <categories>
+        <category>服务端框架</category>
+      </categories>
+      <tags>
+        <tag>NodeJS</tag>
+        <tag>Web Framework</tag>
+        <tag>Javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -459,11 +447,6 @@
       </tags>
   </entry>
   <entry>
-    <title>ReactNative笔记</title>
-    <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>RustFS对象存储</title>
     <url>/2026/03/03/RustFS%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</url>
     <content><![CDATA[<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>RustFS 使用 1panel 或者 宝塔面板 进行安装就好了</p>
@@ -480,9 +463,14 @@
         <category>OSS</category>
       </categories>
       <tags>
-        <tag>OSS</tag>
         <tag>RustFS</tag>
+        <tag>OSS</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>ReactNative笔记</title>
+    <url>/2024/08/13/ReactNative%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>UniApp最佳实践</title>
@@ -599,6 +587,17 @@
       </tags>
   </entry>
   <entry>
+    <title>前端性能优化</title>
+    <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>性能优化</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>前端工程质量</title>
     <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E5%B7%A5%E7%A8%8B%E8%B4%A8%E9%87%8F/</url>
     <content><![CDATA[<h1 id="Eslint和Prettier配置"><a href="#Eslint和Prettier配置" class="headerlink" title="Eslint和Prettier配置"></a>Eslint和Prettier配置</h1>]]></content>
@@ -609,17 +608,6 @@
         <tag>工程化</tag>
         <tag>研发基建</tag>
         <tag>工程质量</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>前端性能优化</title>
-    <url>/2023/06/14/%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>性能优化</tag>
       </tags>
   </entry>
   <entry>
@@ -657,6 +645,111 @@
         <tag>请求</tag>
         <tag>Axios</tag>
         <tag>稳定性</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>对象存储</title>
+    <url>/2026/03/04/%E5%AF%B9%E8%B1%A1%E5%AD%98%E5%82%A8/</url>
+    <content><![CDATA[<h2 id="Nodejs中S3-SDK的安装和使用"><a href="#Nodejs中S3-SDK的安装和使用" class="headerlink" title="Nodejs中S3 SDK的安装和使用"></a>Nodejs中S3 SDK的安装和使用</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install @aws-sdk/client-s3 @aws-sdk/s3-request-presigner</span><br></pre></td></tr></table></figure>
+
+<h2 id="初始化-S3Client"><a href="#初始化-S3Client" class="headerlink" title="初始化 S3Client"></a>初始化 S3Client</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; <span class="title class_">PutObjectCommand</span>, S3Client &#125; <span class="keyword">from</span> <span class="string">&quot;@aws-sdk/client-s3&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; getSignedUrl &#125; <span class="keyword">from</span> <span class="string">&quot;@aws-sdk/s3-request-presigner&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> s3 = <span class="keyword">new</span> <span class="title function_">S3Client</span>(&#123;</span><br><span class="line">    <span class="attr">endpoint</span>: <span class="string">&quot;https://oss.wulidisk.top&quot;</span>, <span class="comment">// OSS 服务地址</span></span><br><span class="line">    <span class="attr">region</span>: <span class="string">&quot;us-east-1&quot;</span>, <span class="comment">// 任意值，S3 兼容存储不强制校验</span></span><br><span class="line">    <span class="attr">credentials</span>: &#123;</span><br><span class="line">        <span class="attr">accessKeyId</span>: <span class="string">&quot;your-access-key&quot;</span>, <span class="comment">// 访问密钥 ID</span></span><br><span class="line">        <span class="attr">secretAccessKey</span>: <span class="string">&quot;your-secret-key&quot;</span>, <span class="comment">// 秘密访问密钥</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">forcePathStyle</span>: <span class="literal">true</span>, <span class="comment">// 强制路径样式，对 MinIO 等自建服务必须设为 true</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h2 id="生成预签名上传-URL"><a href="#生成预签名上传-URL" class="headerlink" title="生成预签名上传 URL"></a>生成预签名上传 URL</h2><figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> url = <span class="keyword">await</span> <span class="title function_">getSignedUrl</span>(</span><br><span class="line"> s3,</span><br><span class="line"> <span class="keyword">new</span> <span class="title class_">PutObjectCommand</span>(&#123;</span><br><span class="line">  <span class="title class_">Bucket</span>: <span class="string">&quot;bucket-name&quot;</span>,</span><br><span class="line">  <span class="title class_">Key</span>: <span class="string">&quot;file.js&quot;</span>,</span><br><span class="line">  <span class="title class_">ContentType</span>: <span class="string">&quot;application/javascript&quot;</span>,</span><br><span class="line">  <span class="title class_">Metadata</span>: &#123;</span><br><span class="line">   <span class="attr">foo</span>: <span class="string">&quot;bar&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="title class_">ChecksumAlgorithm</span>: <span class="string">&quot;SHA256&quot;</span>,</span><br><span class="line">  <span class="title class_">ChecksumSHA256</span>: <span class="string">&quot;content checksum&quot;</span>,</span><br><span class="line"> &#125;),</span><br><span class="line"> &#123;</span><br><span class="line">  <span class="attr">expiresIn</span>: <span class="number">6000</span>,</span><br><span class="line">  <span class="attr">unhoistableHeaders</span>: <span class="keyword">new</span> <span class="title class_">Set</span>([<span class="string">&quot;x-amz-checksum-sha256&quot;</span>, <span class="string">&quot;x-amz-meta-foo&quot;</span>]),</span><br><span class="line"> &#125;,</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>生成URL之后，客户端需要在请求中携带预签名的 URL，请求头中携带预签名的签名信息</p>
+<h2 id="不同开源OSS服务的区别"><a href="#不同开源OSS服务的区别" class="headerlink" title="不同开源OSS服务的区别"></a>不同开源OSS服务的区别</h2><blockquote>
+<p>MinIO官方已经停止维护了，推荐使用RustFS，或者使用Minio的2025.4.22这个版本，这是最后一个功能完整的版本</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>特性</th>
+<th>MinIO</th>
+<th>rustfs</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>编程语言</td>
+<td>Go</td>
+<td>Rust</td>
+</tr>
+<tr>
+<td>S3 兼容性</td>
+<td>完全兼容</td>
+<td>完全兼容</td>
+</tr>
+<tr>
+<td>许可证</td>
+<td>Apache 2.0</td>
+<td>MIT</td>
+</tr>
+<tr>
+<td>发布版本</td>
+<td>2015年</td>
+<td>2020年</td>
+</tr>
+<tr>
+<td>社区活跃度</td>
+<td>非常活跃</td>
+<td>活跃</td>
+</tr>
+<tr>
+<td>文档完善度</td>
+<td>非常完善</td>
+<td>较完善</td>
+</tr>
+<tr>
+<td>适用场景</td>
+<td>企业级生产环境</td>
+<td>Rust 项目集成</td>
+</tr>
+<tr>
+<td>性能</td>
+<td>高性能</td>
+<td>高性能</td>
+</tr>
+<tr>
+<td>分布式支持</td>
+<td>支持纠删码模式</td>
+<td>单节点为主</td>
+</tr>
+<tr>
+<td>SDK 支持</td>
+<td>多语言 SDK</td>
+<td>主要 Rust SDK</td>
+</tr>
+<tr>
+<td>Docker 支持</td>
+<td>官方镜像</td>
+<td>官方镜像</td>
+</tr>
+<tr>
+<td>Kubernetes</td>
+<td>原生支持</td>
+<td>社区支持</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>OSS</category>
+      </categories>
+      <tags>
+        <tag>OSS</tag>
+        <tag>MinIO</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>项目:HaHaChat</title>
+    <url>/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>项目</category>
+      </categories>
+      <tags>
+        <tag>MySQL</tag>
+        <tag>NestJS</tag>
+        <tag>UniApp</tag>
+        <tag>项目</tag>
       </tags>
   </entry>
   <entry>
@@ -737,20 +830,6 @@
       </categories>
       <tags>
         <tag>心理学</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>项目:HaHaChat</title>
-    <url>/2023/06/14/%E9%A1%B9%E7%9B%AE-HaHaChat/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>项目</category>
-      </categories>
-      <tags>
-        <tag>MySQL</tag>
-        <tag>NestJS</tag>
-        <tag>UniApp</tag>
-        <tag>项目</tag>
       </tags>
   </entry>
 </search>
